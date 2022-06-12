@@ -1,0 +1,31 @@
+.contH {
+  height: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Noto Sans Georgian", sans-serif;
+  margin-bottom: 2%;
+}
+
+.contH > div {
+  width: 33%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.imgDiv {
+  width: 30%;
+  height: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+@media only screen and (max-width: 600px) {
+  .contH {
+    height: 100px;
+  }
+  .contH > div {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
