@@ -3,6 +3,7 @@
   height: 500px;
   display: flex;
   justify-content: space-evenly;
+  margin-top: 2%;
 }
 .chartGraphs > .BarChartAll {
   width: 40%;

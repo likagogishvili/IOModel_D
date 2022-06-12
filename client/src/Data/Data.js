@@ -38,38 +38,39 @@ function Data() {
   ];
 
   for (let i = 0; i < gamoshvebisMult.length; i++) {
-    axaliGamoshveba[0].push(gamoshvebisMult[i].Soflis);
-    axaliGamoshveba[1].push(gamoshvebisMult[i].Samto);
-    axaliGamoshveba[2].push(gamoshvebisMult[i].Damamushavebeli);
-    axaliGamoshveba[3].push(gamoshvebisMult[i].Eleqtroenergiis);
-    axaliGamoshveba[4].push(gamoshvebisMult[i].Wyalbobarageba);
-    axaliGamoshveba[5].push(gamoshvebisMult[i].Mshenebloba);
-    axaliGamoshveba[6].push(gamoshvebisMult[i].Sabitumo);
-    axaliGamoshveba[7].push(gamoshvebisMult[i].Transporti);
-    axaliGamoshveba[8].push(gamoshvebisMult[i].Gantavsebis);
-    axaliGamoshveba[9].push(gamoshvebisMult[i].Informacia);
-    axaliGamoshveba[10].push(gamoshvebisMult[i].Safinanso);
-    axaliGamoshveba[11].push(gamoshvebisMult[i].UdzraviQoneba);
-    axaliGamoshveba[12].push(gamoshvebisMult[i].Profesiuli);
-    axaliGamoshveba[13].push(gamoshvebisMult[i].Administraciuli);
-    axaliGamoshveba[14].push(gamoshvebisMult[i].Saxelmwifo);
-    axaliGamoshveba[15].push(gamoshvebisMult[i].Ganatleba);
-    axaliGamoshveba[16].push(gamoshvebisMult[i].Jandacva);
-    axaliGamoshveba[17].push(gamoshvebisMult[i].Xelovneba);
-    axaliGamoshveba[18].push(gamoshvebisMult[i].Sxva);
-    axaliGamoshveba[19].push(gamoshvebisMult[i].Shinameurneoba);
+    axaliGamoshveba[i].push(
+      gamoshvebisMult[i].Soflis,
+      gamoshvebisMult[i].Samto,
+      gamoshvebisMult[i].Damamushavebeli,
+      gamoshvebisMult[i].Eleqtroenergiis,
+      gamoshvebisMult[i].Wyalbobarageba,
+      gamoshvebisMult[i].Mshenebloba,
+      gamoshvebisMult[i].Sabitumo,
+      gamoshvebisMult[i].Transporti,
+      gamoshvebisMult[i].Gantavsebis,
+      gamoshvebisMult[i].Informacia,
+      gamoshvebisMult[i].Safinanso,
+      gamoshvebisMult[i].UdzraviQoneba,
+      gamoshvebisMult[i].Profesiuli,
+      gamoshvebisMult[i].Administraciuli,
+      gamoshvebisMult[i].Saxelmwifo,
+      gamoshvebisMult[i].Ganatleba,
+      gamoshvebisMult[i].Jandacva,
+      gamoshvebisMult[i].Xelovneba,
+      gamoshvebisMult[i].Sxva,
+      gamoshvebisMult[i].Shinameurneoba
+    );
   }
 
-  console.log(axaliGamoshveba);
-
-  //dzveli SabolooMoxmareba
   const sabolooMoxmareba = [];
   mimdinareGirebuleba.map((item) =>
     sabolooMoxmareba.push(item.SabolooMoxmareba * 1)
   );
   //dzveli gamoshveba
   const sabolooGamoshveba = [];
-  mimdinareGirebuleba.map((item) => sabolooGamoshveba.push(item.Gamoshveba));
+  mimdinareGirebuleba.map((item) =>
+    sabolooGamoshveba.push(item.Gamoshveba * 1)
+  );
 
   useEffect(() => {
     Axios.get("http://localhost:4000/GamoshvebisMult").then((response) => {
@@ -135,7 +136,7 @@ function Data() {
     <div>
       <MainPage
         sabolooMoxmareba={sabolooMoxmareba}
-        sabolooGamoshveba = {sabolooGamoshveba}
+        sabolooGamoshveba={sabolooGamoshveba}
         mimdinareGirebuleba={mimdinareGirebuleba}
         axaliGamoshveba={axaliGamoshveba}
       />

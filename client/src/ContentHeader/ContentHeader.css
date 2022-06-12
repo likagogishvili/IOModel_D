@@ -1,9 +1,12 @@
 .contH {
-  height: 150px;
+  height: 70px;
   display: flex;
   justify-content: space-evenly;
   font-family: "Noto Sans Georgian", sans-serif;
   margin-bottom: 2%;
+  width: 88%;
+  margin: auto;
+  margin-top: 1%;
 }
 
 .contH > div {

@@ -1,13 +1,27 @@
 .inputContainerPerent {
   width: 100%;
-  height: 320px;
+  height: 400px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 2%;
 }
+
+.inputFields {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40%;
+}
+.inputFields > p {
+  height: 12%;
+  font-size: 1rem;
+  color: #ea1f30;
+}
+
 .inputContainer {
-  width: 50%;
   height: 250px;
   display: flex;
   flex-direction: row;
@@ -20,40 +34,44 @@
   width: 18%;
   background-color: #d6d7d7;
   border-radius: 5px;
-  font-size: 1rem;
-  padding-left: 2%;
+  font-size: 0.9rem;
+  padding-left: 1%;
   border: none;
 }
-::placeholder {
+.inputContainer > input > ::placeholder {
   color: #727272;
   opacity: 1; /* Firefox */
 }
-.inpButton {
-  width: 20%;
-  height: 40px;
-  background-color: #ea1f30;
-  border: none;
-  border-radius: 15px;
-  font-size: 1rem;
-  color: #c1bfbf;
-}
 
 .inputConteinetBTN {
-  width: 50%;
+  width: 100%;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: right;
   padding-right: 1%;
 }
-
+.inpButton {
+  width: 30%;
+  height: 40px;
+  background-color: #5a80b8;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  color: hsl(0, 0%, 98%);
+}
 @media only screen and (max-width: 600px) {
   .inputContainer > input {
     font-size: 0.7rem;
     text-align: center;
   }
   .inpButton {
-    width: 40%;
+    width: 50%;
+    font-size: 0.7rem;
+    height: 30px;
+  }
+
+  .inputFields > p {
     font-size: 0.7rem;
   }
 }

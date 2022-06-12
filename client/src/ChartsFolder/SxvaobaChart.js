@@ -25,12 +25,15 @@ function Sxvaoba(props) {
     "S",
     "T",
   ];
-
-  var x = props.secondValue.map(function (item, index) {
-    return item - props.firstValue[index];
-  });
-  console.log(x);
-
+  let sxvaoba = [];
+  for (let i = 0; i < props.secondValue.length; i++) {
+    sxvaoba.push(props.secondValue[i] - props.firstValue[i]);
+  }
+  for (let i = 0; i < sxvaoba.length; i++) {
+    if (sxvaoba[i] < 0) {
+      sxvaoba[i] = 0;
+    }
+  }
   return (
     <div>
       <Bar
@@ -39,28 +42,7 @@ function Sxvaoba(props) {
           datasets: [
             {
               label: "სხვაობა",
-              data: [
-                // props.sabolooMoxmareba[0],
-                // props.sabolooMoxmareba[1],
-                // props.sabolooMoxmareba[2],
-                // props.sabolooMoxmareba[3],
-                // props.sabolooMoxmareba[4],
-                // props.sabolooMoxmareba[5],
-                // props.sabolooMoxmareba[6],
-                // props.sabolooMoxmareba[7],
-                // props.sabolooMoxmareba[8],
-                // props.sabolooMoxmareba[9],
-                // props.sabolooMoxmareba[10],
-                // props.sabolooMoxmareba[11],
-                // props.sabolooMoxmareba[12],
-                // props.sabolooMoxmareba[13],
-                // props.sabolooMoxmareba[14],
-                // props.sabolooMoxmareba[15],
-                // props.sabolooMoxmareba[16],
-                // props.sabolooMoxmareba[17],
-                // props.sabolooMoxmareba[18],
-                // props.sabolooMoxmareba[19],
-              ],
+              data: sxvaoba,
               backgroundColor: ["#5a80b8"],
             },
           ],
