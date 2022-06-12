@@ -12,74 +12,55 @@ function Data() {
   const [mtlianiMultipikatorebi, SetMtlianiMultipikatorebi] = useState([]);
   const [mimdinareGirebuleba, SetMimdinareGirebuleba] = useState([]);
 
-
   //axali gamoshvebis multiplikatoris matricis sheqmna
-  const axaliGamoshvebasoflis = [];
-  const axaliGamoshvebaSamto = [];
-  const axaliDamamushavebeli = [];
-  const axaliEleqtroenergiis = [];
-  const axaliWyalbobarageba = [];
-  const axaliMshenebloba = [];
-  const axaliSabitumo = [];
-  const axaliTransporti = [];
-  const axaliGantavsebis = [];
-  const axaliInformacia = [];
-  const axaliSafinanso = [];
-  const axaliUdzraviQoneba = [];
-  const axaliProfesiuli = [];
-  const axaliAdministraciuli = [];
-  const axaliSaxelmwifo = [];
-  const axaliGanatleba = [];
-  const axaliJandacva = [];
-  const axaliXelovneba = [];
-  const axaliSxva = [];
-  const axaliShinameurneoba = [];
+
   const axaliGamoshveba = [
-    axaliGamoshvebasoflis,
-    axaliGamoshvebaSamto,
-    axaliDamamushavebeli,
-    axaliEleqtroenergiis,
-    axaliWyalbobarageba,
-    axaliMshenebloba,
-    axaliSabitumo,
-    axaliTransporti,
-    axaliGantavsebis,
-    axaliInformacia,
-    axaliSafinanso,
-    axaliUdzraviQoneba,
-    axaliProfesiuli,
-    axaliAdministraciuli,
-    axaliSaxelmwifo,
-    axaliGanatleba,
-    axaliJandacva,
-    axaliXelovneba,
-    axaliSxva,
-    axaliShinameurneoba,
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
   ];
+
   for (let i = 0; i < gamoshvebisMult.length; i++) {
-    axaliGamoshvebasoflis.push(gamoshvebisMult[i].Soflis);
-    axaliGamoshvebaSamto.push(gamoshvebisMult[i].Samto);
-    axaliDamamushavebeli.push(gamoshvebisMult[i].Damamushavebeli);
-    axaliEleqtroenergiis.push(gamoshvebisMult[i].Eleqtroenergiis);
-    axaliWyalbobarageba.push(gamoshvebisMult[i].Wyalbobarageba);
-    axaliMshenebloba.push(gamoshvebisMult[i].Mshenebloba);
-    axaliSabitumo.push(gamoshvebisMult[i].Sabitumo);
-    axaliTransporti.push(gamoshvebisMult[i].Transporti);
-    axaliGantavsebis.push(gamoshvebisMult[i].Gantavsebis);
-    axaliInformacia.push(gamoshvebisMult[i].Informacia);
-    axaliSafinanso.push(gamoshvebisMult[i].Safinanso);
-    axaliUdzraviQoneba.push(gamoshvebisMult[i].UdzraviQoneba);
-    axaliProfesiuli.push(gamoshvebisMult[i].Profesiuli);
-    axaliAdministraciuli.push(gamoshvebisMult[i].Administraciuli);
-    axaliSaxelmwifo.push(gamoshvebisMult[i].Saxelmwifo);
-    axaliGanatleba.push(gamoshvebisMult[i].Ganatleba);
-    axaliJandacva.push(gamoshvebisMult[i].Jandacva);
-    axaliXelovneba.push(gamoshvebisMult[i].Xelovneba);
-    axaliSxva.push(gamoshvebisMult[i].Sxva);
-    axaliShinameurneoba.push(gamoshvebisMult[i].Shinameurneoba);
+    axaliGamoshveba[0].push(gamoshvebisMult[i].Soflis);
+    axaliGamoshveba[1].push(gamoshvebisMult[i].Samto);
+    axaliGamoshveba[2].push(gamoshvebisMult[i].Damamushavebeli);
+    axaliGamoshveba[3].push(gamoshvebisMult[i].Eleqtroenergiis);
+    axaliGamoshveba[4].push(gamoshvebisMult[i].Wyalbobarageba);
+    axaliGamoshveba[5].push(gamoshvebisMult[i].Mshenebloba);
+    axaliGamoshveba[6].push(gamoshvebisMult[i].Sabitumo);
+    axaliGamoshveba[7].push(gamoshvebisMult[i].Transporti);
+    axaliGamoshveba[8].push(gamoshvebisMult[i].Gantavsebis);
+    axaliGamoshveba[9].push(gamoshvebisMult[i].Informacia);
+    axaliGamoshveba[10].push(gamoshvebisMult[i].Safinanso);
+    axaliGamoshveba[11].push(gamoshvebisMult[i].UdzraviQoneba);
+    axaliGamoshveba[12].push(gamoshvebisMult[i].Profesiuli);
+    axaliGamoshveba[13].push(gamoshvebisMult[i].Administraciuli);
+    axaliGamoshveba[14].push(gamoshvebisMult[i].Saxelmwifo);
+    axaliGamoshveba[15].push(gamoshvebisMult[i].Ganatleba);
+    axaliGamoshveba[16].push(gamoshvebisMult[i].Jandacva);
+    axaliGamoshveba[17].push(gamoshvebisMult[i].Xelovneba);
+    axaliGamoshveba[18].push(gamoshvebisMult[i].Sxva);
+    axaliGamoshveba[19].push(gamoshvebisMult[i].Shinameurneoba);
   }
 
-
+  console.log(axaliGamoshveba);
 
   //dzveli SabolooMoxmareba
   const sabolooMoxmareba = [];
@@ -87,11 +68,8 @@ function Data() {
     sabolooMoxmareba.push(item.SabolooMoxmareba * 1)
   );
   //dzveli gamoshveba
-  const sabolooGamoshveba = []
-  mimdinareGirebuleba.map((item) =>
-  sabolooGamoshveba.push(item.Gamoshveba)
-);
-
+  const sabolooGamoshveba = [];
+  mimdinareGirebuleba.map((item) => sabolooGamoshveba.push(item.Gamoshveba));
 
   useEffect(() => {
     Axios.get("http://localhost:4000/GamoshvebisMult").then((response) => {
@@ -99,9 +77,6 @@ function Data() {
       SetGamoshvebisMult(data);
     });
   }, []);
-
-  console.log(axaliGamoshveba)
-  
 
   useEffect(() => {
     Axios.get("http://localhost:4000/DamatebuliMult").then((response) => {
