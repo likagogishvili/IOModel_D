@@ -1,6 +1,7 @@
 import { useState } from "react";
 import BarChart from "../ChartsFolder/BarChart";
 import "../ChartsFolder/ChartStyles.css";
+import PieChart from "../ChartsFolder/PieChart";
 import Sxvaoba from "../ChartsFolder/SxvaobaChart";
 import ContentHeader from "../ContentHeader/ContentHeader";
 import InputRender from "./InputRender";
@@ -114,6 +115,99 @@ function MainPage(props) {
     sixthDiagramValue = multiply([newval], props.axaliShroma)[0];
   }
 
+  //transforming array
+  const transposedOSArray = props.axaliMtlianiMultiplikatorebi[0].map(
+    (_, colIndex) =>
+      props.axaliMtlianiMultiplikatorebi.map((row) => row[colIndex])
+  );
+
+  //mesame grafikebis shqmna
+  // first
+  let df1 = [];
+  let df2 = [];
+  let thirdDiagramValues1 = [];
+
+  for (let i = 0; i < transposedOSArray.length; i++) {
+    if (newval.length !== 1) {
+      df1.push(transposedOSArray[i][0] * axalisabolooMoxmareba[i]);
+      df2.push(transposedOSArray[i][0] * newval[i]);
+    }
+  }
+  for (let i = 0; i < df1.length; i++) {
+    thirdDiagramValues1.push(df2[i] - df1[i]);
+  }
+
+  // second
+  let ds1 = [];
+  let ds2 = [];
+  let thirdDiagramValues2 = [];
+
+  for (let i = 0; i < transposedOSArray.length; i++) {
+    if (newval.length !== 1) {
+      ds1.push(transposedOSArray[i][1] * axalisabolooMoxmareba[i]);
+      ds2.push(transposedOSArray[i][1] * newval[i]);
+    }
+  }
+  for (let i = 0; i < ds1.length; i++) {
+    thirdDiagramValues2.push(ds2[i] - ds1[i]);
+  }
+
+  // third
+  let dt1 = [];
+  let dt2 = [];
+  let thirdDiagramValues3 = [];
+
+  for (let i = 0; i < transposedOSArray.length; i++) {
+    if (newval.length !== 1) {
+      dt1.push(transposedOSArray[i][2] * axalisabolooMoxmareba[i]);
+      dt2.push(transposedOSArray[i][2] * newval[i]);
+    }
+  }
+  for (let i = 0; i < dt1.length; i++) {
+    thirdDiagramValues3.push(dt2[i] - dt1[i]);
+  }
+
+  // forth
+  let dfo1 = [];
+  let dfo2 = [];
+  let thirdDiagramValues4 = [];
+  for (let i = 0; i < transposedOSArray.length; i++) {
+    if (newval.length !== 1) {
+      dfo1.push(transposedOSArray[i][3] * axalisabolooMoxmareba[i]);
+      dfo2.push(transposedOSArray[i][3] * newval[i]);
+    }
+  }
+  for (let i = 0; i < df1.length; i++) {
+    thirdDiagramValues4.push(dfo2[i] - dfo1[i]);
+  }
+
+  // fifth
+  let dfif1 = [];
+  let dfif2 = [];
+  let thirdDiagramValues5 = [];
+  for (let i = 0; i < transposedOSArray.length; i++) {
+    if (newval.length !== 1) {
+      dfif1.push(transposedOSArray[i][4] * axalisabolooMoxmareba[i]);
+      dfif2.push(transposedOSArray[i][4] * newval[i]);
+    }
+  }
+  for (let i = 0; i < dfif1.length; i++) {
+    thirdDiagramValues5.push(dfif2[i] - dfif1[i]);
+  }
+
+  // six
+  let dsix1 = [];
+  let dsix2 = [];
+  let thirdDiagramValues6 = [];
+  for (let i = 0; i < transposedOSArray.length; i++) {
+    if (newval.length !== 1) {
+      dsix1.push(transposedOSArray[i][5] * axalisabolooMoxmareba[i]);
+      dsix2.push(transposedOSArray[i][5] * newval[i]);
+    }
+  }
+  for (let i = 0; i < dsix1.length; i++) {
+    thirdDiagramValues6.push(dsix2[i] - dsix1[i]);
+  }
   return (
     <div>
       <ContentHeader />
@@ -144,10 +238,7 @@ function MainPage(props) {
           </div>
 
           <div className="BarChartSxvaoba">
-            <Sxvaoba
-              firstValue={props.sabolooGamoshveba}
-              secondValue={firstDiagramNewValues}
-            />
+            <PieChart thirdDiagramValues1={thirdDiagramValues1} />
           </div>
         </div>
       </div>
@@ -169,10 +260,7 @@ function MainPage(props) {
           </div>
 
           <div className="BarChartSxvaoba">
-            <Sxvaoba
-              firstValue={props.dzveliDamatebiti}
-              secondValue={secondDiagramValue}
-            />
+            <PieChart thirdDiagramValues1={thirdDiagramValues2} />
           </div>
         </div>
       </div>
@@ -194,10 +282,7 @@ function MainPage(props) {
           </div>
 
           <div className="BarChartSxvaoba">
-            <Sxvaoba
-              firstValue={props.dzveliDasaqmebis}
-              secondValue={thirdDiagramValue}
-            />
+            <PieChart thirdDiagramValues1={thirdDiagramValues3} />
           </div>
         </div>
       </div>
@@ -219,10 +304,7 @@ function MainPage(props) {
           </div>
 
           <div className="BarChartSxvaoba">
-            <Sxvaoba
-              firstValue={props.dzveliImporti}
-              secondValue={fourthDiagramValue}
-            />
+            <PieChart thirdDiagramValues1={thirdDiagramValues4} />
           </div>
         </div>
       </div>
@@ -244,10 +326,7 @@ function MainPage(props) {
           </div>
 
           <div className="BarChartSxvaoba">
-            <Sxvaoba
-              firstValue={props.dzveliKapitali}
-              secondValue={fifthDiagramValue}
-            />
+            <PieChart thirdDiagramValues1={thirdDiagramValues5} />
           </div>
         </div>
       </div>
@@ -269,10 +348,7 @@ function MainPage(props) {
           </div>
 
           <div className="BarChartSxvaoba">
-            <Sxvaoba
-              firstValue={props.dzveliShroma}
-              secondValue={sixthDiagramValue}
-            />
+            <PieChart thirdDiagramValues1={thirdDiagramValues6} />
           </div>
         </div>
       </div>

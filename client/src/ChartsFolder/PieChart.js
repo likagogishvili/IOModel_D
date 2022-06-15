@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import Chart from "chart.js/auto";
-import { Bar } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
-function Sxvaoba(props) {
+function PieChart(props) {
   const ekonomikuriMomsaxurebisSaxeebi = [
     "A",
     "B",
@@ -25,20 +25,36 @@ function Sxvaoba(props) {
     "S",
     "T",
   ];
-  let sxvaoba = [];
-  for (let i = 0; i < props.secondValue.length; i++) {
-    sxvaoba.push(props.secondValue[i] - props.firstValue[i]);
-  }
   return (
     <div>
-      <Bar
+      <Pie
         data={{
           labels: ekonomikuriMomsaxurebisSaxeebi,
           datasets: [
             {
-              label: "სხვაობა",
-              data: sxvaoba,
-              backgroundColor: ["#5a80b8"],
+              data: props.thirdDiagramValues1,
+              backgroundColor: [
+                "#37B067",
+                "#6296BC",
+                "#EDB40D",
+                "#7FD7C1",
+                "#9F8CAE",
+                "#366C72",
+                "#BCC7EE",
+                "#DAF7A6",
+                "#FFC300",
+                "#FF5733",
+                "#C70039",
+                "#900C3F",
+                "#581845",
+                "#34495E",
+                "#839192",
+                "#F39C12",
+                "#5DADE2",
+                "#17A589",
+                "#EBDEF0",
+                "#AED6F1"
+              ],
             },
           ],
         }}
@@ -68,4 +84,4 @@ function Sxvaoba(props) {
   );
 }
 
-export default Sxvaoba;
+export default PieChart;
