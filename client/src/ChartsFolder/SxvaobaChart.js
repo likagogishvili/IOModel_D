@@ -47,7 +47,7 @@ function Sxvaoba(props) {
             },
           ],
         }}
-        height={"400"}
+        height={"500"}
         options={{
           indexAxis: "y",
           maintainAspectRatio: false,

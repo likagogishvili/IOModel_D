@@ -1,12 +1,12 @@
 var express = require("express");
 var app = express();
 var connection = require("./database");
-var cors = require('cors')
+var cors = require("cors");
 
-app.use(cors())
+app.use(cors());
 
 app.get("/GamoshvebisMult", function (req, res) {
-  let sql = "SELECT * FROM GamoshvebisMult";
+  let sql = "SELECT * FROM GamoshvebisMultipikatori";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;
@@ -16,7 +16,7 @@ app.get("/GamoshvebisMult", function (req, res) {
 });
 
 app.get("/DamatebuliMult", function (req, res) {
-  let sql = "SELECT * FROM DamatebuliMult";
+  let sql = "SELECT * FROM DamatebuliMultiplikatori";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;
@@ -26,7 +26,7 @@ app.get("/DamatebuliMult", function (req, res) {
 });
 
 app.get("/DasaqmebisMult", function (req, res) {
-  let sql = "SELECT * FROM DasaqmebisMult";
+  let sql = "SELECT * FROM DasaqmebisMultiplikatori1";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;
@@ -36,7 +36,7 @@ app.get("/DasaqmebisMult", function (req, res) {
 });
 
 app.get("/ImportisMult", function (req, res) {
-  let sql = "SELECT * FROM ImportisMult";
+  let sql = "SELECT * FROM ImportisMultiplikatori";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;
@@ -45,7 +45,7 @@ app.get("/ImportisMult", function (req, res) {
   });
 });
 app.get("/DziritadiKapitaliMult", function (req, res) {
-  let sql = "SELECT * FROM DziritadiKapitaliMult";
+  let sql = "SELECT * FROM DziritadiKapitaliMultiplikatori";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;
@@ -55,7 +55,7 @@ app.get("/DziritadiKapitaliMult", function (req, res) {
 });
 
 app.get("/ShromisAnazgaureba", function (req, res) {
-  let sql = "SELECT * FROM ShromisAnazgaureba";
+  let sql = "SELECT * FROM ShromisMultiplikatori";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;
@@ -65,7 +65,7 @@ app.get("/ShromisAnazgaureba", function (req, res) {
 });
 
 app.get("/MtlianiMultipikatorebi", function (req, res) {
-  let sql = "SELECT * FROM MtlianiMultipikatorebi";
+  let sql = "SELECT * FROM MtlianiMultiplikatorebi1";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;
@@ -75,7 +75,7 @@ app.get("/MtlianiMultipikatorebi", function (req, res) {
 });
 
 app.get("/MimdinareGirebuleba", function (req, res) {
-  let sql = "SELECT * FROM MimdinareGirebuleba";
+  let sql = "SELECT * FROM MimdinareGirebulebaDzveli1";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;

@@ -5,6 +5,7 @@ import Sxvaoba from "../ChartsFolder/SxvaobaChart";
 import ContentHeader from "../ContentHeader/ContentHeader";
 import InputRender from "./InputRender";
 import "./mainPage.css";
+
 function MainPage(props) {
   const [infoprecent, SetInfoPrecent] = useState({
     a: "",
@@ -59,37 +60,6 @@ function MainPage(props) {
     axalisabolooMoxmareba.push(item.SabolooMoxmareba * 1)
   );
 
-  console.log(axalisabolooMoxmareba);
-
-  //   const ar = [
-  //     [1.22, 	 0.02, 	 0.15, 	 0.00, 	 0.01 ,	 0.02 ,	 0.01 ,	 0.01, 	 0.07, 	 0.00, 	 0.00 ,	 0.00 ,	 0.01, 	 0.01, 	 0.01, 	 0.01 ,	 0.02 	, 0.03, 	 0.01 ,	 0.00 ] ,
-  //     [0.00, 	 1.01, 	 0.01, 	 0.00, 	 0.00 ,	 0.01 ,	 0.00 ,	 0.00, 	 0.00, 	 0.00, 	 0.00 ,	 0.00 ,	 0.00, 	 0.00, 	 0.00, 	 0.00 ,	 0.00 	, 0.00, 	 0.00 ,	 0.00 ] ,
-  //     [0.05, 	 0.12, 	 1.17, 	 0.03, 	 0.10 ,	 0.17 ,	 0.04 ,	 0.09, 	 0.11, 	 0.03, 	 0.02 ,	 0.01 ,	 0.04, 	 0.05, 	 0.05, 	 0.02 ,	 0.11 	, 0.05, 	 0.07 ,	 0.00 ] ,
-  //     [0.01, 	 0.04, 	 0.03, 	 1.10, 	 0.05 ,	 0.01 ,	 0.01 ,	 0.02, 	 0.03, 	 0.02, 	 0.01 ,	 0.01 ,	 0.01, 	 0.01, 	 0.02, 	 0.01 ,	 0.03 	, 0.02, 	 0.03 ,	 0.00 ] ,
-  //     [0.00, 	 0.00, 	 0.00, 	 0.00, 	 1.01 ,	 0.00 ,	 0.00 ,	 0.00, 	 0.01, 	 0.00, 	 0.00 ,	 0.00 ,	 0.00, 	 0.00, 	 0.01, 	 0.00 ,	 0.00 	, 0.00, 	 0.01 ,	 0.00 ] ,
-  //     [0.00, 	 0.01, 	 0.01, 	 0.02, 	 0.03 ,	 1.21 ,	 0.01 ,	 0.01, 	 0.02, 	 0.02, 	 0.01 ,	 0.01 ,	 0.02, 	 0.01, 	 0.01, 	 0.01 ,	 0.02 	, 0.02, 	 0.01 ,	 0.00 ] ,
-  //     [0.05, 	 0.08, 	 0.11, 	 0.03, 	 0.06 ,	 0.10 ,	 1.04 ,	 0.07, 	 0.07, 	 0.02, 	 0.02 ,	 0.01 ,	 0.03, 	 0.04, 	 0.04, 	 0.01 ,	 0.07 	, 0.04, 	 0.04 ,	 0.00 ] ,
-  //     [0.02, 	 0.04, 	 0.05, 	 0.02, 	 0.02 ,	 0.04 ,	 0.06 ,	 1.12, 	 0.03, 	 0.01, 	 0.02 ,	 0.01 ,	 0.02, 	 0.05, 	 0.02, 	 0.01 ,	 0.03 	, 0.03, 	 0.04 ,	 0.00 ] ,
-  //     [0.00, 	 0.00, 	 0.01, 	 0.01, 	 0.00 ,	 0.01 ,	 0.01 ,	 0.02, 	 1.01, 	 0.01, 	 0.02 ,	 0.00 ,	 0.01, 	 0.03, 	 0.03, 	 0.02 ,	 0.02 	, 0.02, 	 0.05 ,	 0.00 ] ,
-  //     [0.00, 	 0.01, 	 0.01, 	 0.04, 	 0.01 ,	 0.01 ,	 0.01 ,	 0.01, 	 0.01, 	 1.13, 	 0.05 ,	 0.01 ,	 0.03, 	 0.04, 	 0.01, 	 0.01 ,	 0.01 	, 0.03, 	 0.02 ,	 0.00 ] ,
-  //     [0.03, 	 0.03, 	 0.03, 	 0.04, 	 0.03 ,	 0.04 ,	 0.03 ,	 0.03, 	 0.03, 	 0.03, 	 1.01 ,	 0.06 ,	 0.03, 	 0.04, 	 0.01, 	 0.01 ,	 0.03 	, 0.03, 	 0.03 ,	 0.00 ] ,
-  //     [0.01, 	 0.01, 	 0.02, 	 0.01, 	 0.01 ,	 0.02 ,	 0.08 ,	 0.04, 	 0.07, 	 0.03, 	 0.07 ,	 1.03 ,	 0.03, 	 0.12, 	 0.04, 	 0.01 ,	 0.04 	, 0.04, 	 0.12 ,	 0.00 ] ,
-  //     [0.01, 	 0.01, 	 0.02, 	 0.07, 	 0.01 ,	 0.02 ,	 0.02 ,	 0.02, 	 0.01, 	 0.03, 	 0.05 ,	 0.01 ,	 1.11, 	 0.01, 	 0.01, 	 0.01 ,	 0.01 	, 0.02, 	 0.04 ,	 0.00 ] ,
-  //     [0.00, 	 0.00, 	 0.01, 	 0.01, 	 0.00 ,	 0.00 ,	 0.00 ,	 0.01, 	 0.01, 	 0.02, 	 0.01 ,	 0.00 ,	 0.01, 	 1.02, 	 0.01, 	 0.00 ,	 0.00 	, 0.02, 	 0.01 ,	 0.00 ] ,
-  //     [0.00, 	 0.00, 	 0.00, 	 0.00, 	 0.00 ,	 0.00 ,	 0.00 ,	 0.00, 	 0.00, 	 0.00, 	 0.00 ,	 0.00 ,	 0.00, 	 0.01, 	 1.00, 	 0.00 ,	 0.00 	, 0.00, 	 0.00 ,	 0.00 ] ,
-  //     [0.00, 	 0.00, 	 0.00, 	 0.00, 	 0.00 ,	 0.00 ,	 0.00 ,	 0.00, 	 0.00, 	 0.00, 	 0.00 ,	 0.00 ,	 0.00, 	 0.00, 	 0.00, 	 1.01 ,	 0.01 	, 0.00, 	 0.00 ,	 0.00 ] ,
-  //     [0.00, 	 0.01, 	 0.00, 	 0.00, 	 0.00 ,	 0.00 ,	 0.00 ,	 0.00, 	 0.00, 	 0.00, 	 0.00 ,	 0.00 ,	 0.00, 	 0.00, 	 0.00, 	 0.00 ,	 1.09 	, 0.00, 	 0.00 ,	 0.00 ] ,
-  //     [0.00, 	 0.00, 	 0.00, 	 0.00, 	 0.00 ,	 0.00 ,	 0.00 ,	 0.00, 	 0.01, 	 0.00, 	 0.01 ,	 0.00 ,	 0.00, 	 0.00, 	 0.00, 	 0.00 ,	 0.00 	, 1.14, 	 0.00 ,	 0.00 ] ,
-  //     [0.00, 	 0.00, 	 0.00, 	 0.01, 	 0.00 ,	 0.00 ,	 0.00 ,	 0.00, 	 0.00, 	 0.01, 	 0.01 ,	 0.00 ,	 0.00, 	 0.00, 	 0.00, 	 0.00 ,	 0.00 	, 0.00, 	 1.01 ,	 0.00 ] ,
-  //     [0.00,  	 0.00,   0.00,   0.00,   0.00 ,	 0.00 ,  0.00 , 0.00 ,   0.00,   0.00,   0.00 ,  	 0.00, 0.00,   0.00,   0.00,  0.00  , 	 0.00 , 0.00,  0.00,1.00    ]
-  //   ]
-
-  // console.log(axalisabolooMoxmareba)
-  // console.log(ar)
-
-  console.log(infoprecent);
-  console.log(newval);
-
   function multiply(a, b) {
     var aNumRows = a.length,
       aNumCols = a[0].length,
@@ -100,7 +70,7 @@ function MainPage(props) {
       for (var c = 0; c < bNumCols; ++c) {
         m[r][c] = 0;
         for (var i = 0; i < aNumCols; ++i) {
-          m[r][c] += a[r][i] * b[i][c];
+          m[r][c] += a[r][i] * b[c][i];
         }
       }
     }
@@ -112,8 +82,36 @@ function MainPage(props) {
       [axalisabolooMoxmareba],
       props.axaliGamoshveba
     )[0];
+
+    var secondDiagramValue = multiply(
+      [axalisabolooMoxmareba],
+      props.axaliDamatebiti
+    )[0];
+    var thirdDiagramValue = multiply(
+      [axalisabolooMoxmareba],
+      props.axaliDasaqmebis
+    )[0];
+
+    var fourthDiagramValue = multiply(
+      [axalisabolooMoxmareba],
+      props.axaliImporti
+    )[0];
+
+    var fifthDiagramValue = multiply(
+      [axalisabolooMoxmareba],
+      props.axaliKapitali
+    )[0];
+    var sixthDiagramValue = multiply(
+      [axalisabolooMoxmareba],
+      props.axaliShroma
+    )[0];
   } else {
     firstDiagramNewValues = multiply([newval], props.axaliGamoshveba)[0];
+    secondDiagramValue = multiply([newval], props.axaliDamatebiti)[0];
+    thirdDiagramValue = multiply([newval], props.axaliDasaqmebis)[0];
+    fourthDiagramValue = multiply([newval], props.axaliImporti)[0];
+    fifthDiagramValue = multiply([newval], props.axaliKapitali)[0];
+    sixthDiagramValue = multiply([newval], props.axaliShroma)[0];
   }
 
   return (
@@ -128,18 +126,154 @@ function MainPage(props) {
         SetInfoPrecent={SetInfoPrecent}
         infoprecent={infoprecent}
       />
-      <div className="chartGraphs">
-        <div className="BarChartAll">
-          <BarChart
-            firstValue={props.sabolooGamoshveba}
-            secondValue={firstDiagramNewValues}
-          />
+
+      <div className="chartP">
+        <p>გამოშვება</p>
+        <div className="chartGraphs">
+          <div className="BarChartAll">
+            <BarChart
+              firstValue={props.sabolooGamoshveba}
+              secondValue={firstDiagramNewValues}
+            />
+          </div>
+          <div className="BarChartSxvaoba">
+            <Sxvaoba
+              firstValue={props.sabolooGamoshveba}
+              secondValue={firstDiagramNewValues}
+            />
+          </div>
+
+          <div className="BarChartSxvaoba">
+            <Sxvaoba
+              firstValue={props.sabolooGamoshveba}
+              secondValue={firstDiagramNewValues}
+            />
+          </div>
         </div>
-        <div className="BarChartAll">
-          <Sxvaoba
-            firstValue={props.sabolooGamoshveba}
-            secondValue={firstDiagramNewValues}
-          />
+      </div>
+
+      <div className="chartP">
+        <p>დამატებითი ღირებულების მულტიპლიკატორი</p>
+        <div className="chartGraphs">
+          <div className="BarChartAll">
+            <BarChart
+              firstValue={props.dzveliDamatebiti}
+              secondValue={secondDiagramValue}
+            />
+          </div>
+          <div className="BarChartSxvaoba">
+            <Sxvaoba
+              firstValue={props.dzveliDamatebiti}
+              secondValue={secondDiagramValue}
+            />
+          </div>
+
+          <div className="BarChartSxvaoba">
+            <Sxvaoba
+              firstValue={props.dzveliDamatebiti}
+              secondValue={secondDiagramValue}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="chartP">
+        <p>დასაქმება</p>
+        <div className="chartGraphs">
+          <div className="BarChartAll">
+            <BarChart
+              firstValue={props.dzveliDasaqmebis}
+              secondValue={thirdDiagramValue}
+            />
+          </div>
+          <div className="BarChartSxvaoba">
+            <Sxvaoba
+              firstValue={props.dzveliDasaqmebis}
+              secondValue={thirdDiagramValue}
+            />
+          </div>
+
+          <div className="BarChartSxvaoba">
+            <Sxvaoba
+              firstValue={props.dzveliDasaqmebis}
+              secondValue={thirdDiagramValue}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="chartP">
+        <p>იმპორტი</p>
+        <div className="chartGraphs">
+          <div className="BarChartAll">
+            <BarChart
+              firstValue={props.dzveliImporti}
+              secondValue={fourthDiagramValue}
+            />
+          </div>
+          <div className="BarChartSxvaoba">
+            <Sxvaoba
+              firstValue={props.dzveliImporti}
+              secondValue={fourthDiagramValue}
+            />
+          </div>
+
+          <div className="BarChartSxvaoba">
+            <Sxvaoba
+              firstValue={props.dzveliImporti}
+              secondValue={fourthDiagramValue}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="chartP">
+        <p>ძირითადი კაპიტალის მთლიანი ფორმირება</p>
+        <div className="chartGraphs">
+          <div className="BarChartAll">
+            <BarChart
+              firstValue={props.dzveliKapitali}
+              secondValue={fifthDiagramValue}
+            />
+          </div>
+          <div className="BarChartSxvaoba">
+            <Sxvaoba
+              firstValue={props.dzveliKapitali}
+              secondValue={fifthDiagramValue}
+            />
+          </div>
+
+          <div className="BarChartSxvaoba">
+            <Sxvaoba
+              firstValue={props.dzveliKapitali}
+              secondValue={fifthDiagramValue}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="chartP">
+        <p>შრომის ანაზღაურება</p>
+        <div className="chartGraphs">
+          <div className="BarChartAll">
+            <BarChart
+              firstValue={props.dzveliShroma}
+              secondValue={sixthDiagramValue}
+            />
+          </div>
+          <div className="BarChartSxvaoba">
+            <Sxvaoba
+              firstValue={props.dzveliShroma}
+              secondValue={sixthDiagramValue}
+            />
+          </div>
+
+          <div className="BarChartSxvaoba">
+            <Sxvaoba
+              firstValue={props.dzveliShroma}
+              secondValue={sixthDiagramValue}
+            />
+          </div>
         </div>
       </div>
     </div>
