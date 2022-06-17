@@ -1,77 +1,162 @@
-.inputContainerPerent {
-  width: 100%;
-  height: 400px;
+.inputCointeinerParent {
+  width: 92%;
+  height: 1200px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-evenly;
-  margin-top: 2%;
+  margin-top: 10px;
+  margin: auto;
+  padding-top: 0.5%;
 }
-
-.inputFields {
+.LeftInformation {
+  width: 50%;
+  height: 100%;
+  border-top: 2px solid rgb(107, 126, 181);
+  border-bottom: 2px solid rgb(107, 126, 181);
+  border-left: 2px solid rgb(107, 126, 181);
+  justify-content: space-between;
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 40%;
 }
-.inputFields > p {
-  height: 12%;
-  font-size: 1rem;
-  color: #ea1f30;
-}
-
-.inputContainer {
-  height: 250px;
+/* headerNames */
+.inputHeader {
+  height: 80px;
+  width: 100%;
+  border-bottom: 2px solid rgb(107, 126, 181);
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-evenly;
+  color: white;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.firT {
+  background-color: rgb(22, 55, 150);
+  width: 7%;
+  height: 70%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.7rem;
+}
+.secT {
+  background-color: rgb(22, 55, 150);
+  width: 40%;
+  height: 80%;
+  border-radius: 25px;
+  font-size: 0.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   align-items: center;
 }
-.inputContainer > input {
-  height: 40px;
-  width: 18%;
-  background-color: #d6d7d7;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  padding-left: 1%;
-  border: none;
+.thirdT {
+  background-color: rgb(22, 55, 150);
+  width: 12%;
+  height: 80%;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.8rem;
 }
-.inputContainer > input > ::placeholder {
-  color: #727272;
-  opacity: 1; /* Firefox */
+.last2T {
+  background-color: rgb(22, 55, 150);
+  width: 20%;
+  height: 80%;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.8rem;
 }
 
-.inputConteinetBTN {
+/* input lines */
+.inputFieldWhite {
   width: 100%;
   height: 50px;
+  background-color: rgb(232, 232, 232);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 2px solid rgb(107, 126, 181);
+}
+
+.inputFieldDark {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 2px solid rgb(107, 126, 181);
+}
+
+.inputAlphabet {
+  width: 7%;
+  text-align: center;
+}
+.inputP {
+  width: 40%;
   display: flex;
   align-items: center;
-  justify-content: right;
-  padding-right: 1%;
+  justify-content: space-between;
+  height: 100%;
 }
-.inpButton {
+.inputP > p {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.inputSymbol {
+  background-color: rgb(168, 168, 168);
+  width: 10%;
+  height: 50%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.sabolooMoxmareba {
+  width: 12%;
+}
+
+.inputClasses {
+  width: 20%;
+  height: 80%;
+  border-radius: 10px;
+  border: solid 2px black;
+}
+
+.RightInformation {
+  background-color: antiquewhite;
+  width: 50%;
+  height: 100%;
+  border: 2px solid rgb(107, 126, 181);
+}
+.LeftInformation > button {
   width: 30%;
-  height: 40px;
-  background-color: #5a80b8;
+  height: 50px;
+  background-color: rgb(22, 55, 150);
+  border-radius: 20px;
+  color: white;
   border: none;
-  border-radius: 15px;
-  font-size: 1rem;
-  color: hsl(0, 0%, 98%);
+  margin-bottom: 0.5%;
 }
 @media only screen and (max-width: 600px) {
-  .inputContainer > input {
-    font-size: 0.7rem;
-    text-align: center;
-  }
-  .inpButton {
-    width: 50%;
-    font-size: 0.7rem;
-    height: 30px;
-  }
-
-  .inputFields > p {
-    font-size: 0.7rem;
-  }
 }

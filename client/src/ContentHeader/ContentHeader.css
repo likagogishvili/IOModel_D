@@ -1,20 +1,21 @@
 .contH {
-  height: 70px;
+  height: 100px;
   display: flex;
   justify-content: space-evenly;
   font-family: "Noto Sans Georgian", sans-serif;
   margin-bottom: 2%;
-  width: 88%;
+  width: 100%;
   margin: auto;
-  margin-top: 1%;
 }
 
 .contH > div {
-  width: 33%;
+  width: 30%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   font-size: 1.2rem;
+  color: white;
+  font-size: 2rem;
 }
 .imgDiv {
   width: 30%;

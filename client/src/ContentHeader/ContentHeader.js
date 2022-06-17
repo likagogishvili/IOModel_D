@@ -2,10 +2,12 @@ import "./ContentHeader.css";
 import facebook from "./img/facebook.png";
 import twitter from "./img/twitter.png";
 import youtube from "./img/youtube.png";
-
+import headerImage from "./img/headerBG.png"
 function ContentHeader() {
   return (
-    <header className="contH">
+    <header className="contH"
+    style={{ backgroundImage: `url(${headerImage})` }}
+    >
       <div>
         <a href="https://www.geostat.ge/ka" target="_blank" rel="noreferrer">
           <img
