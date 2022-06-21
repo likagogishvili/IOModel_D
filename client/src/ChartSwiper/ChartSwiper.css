@@ -1,0 +1,25 @@
+.rightSideChartsp {
+  text-align: center;
+  display: flex;
+}
+.swiperCharts {
+  width: 90%;
+  height: 800px;
+}
+.rightSideChartsp {
+  text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #003f5b;
+}
+@media only screen and (max-width: 900px) {
+
+.swiperCharts {
+  width: 80%;
+}
+}

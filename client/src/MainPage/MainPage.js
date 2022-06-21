@@ -1,11 +1,10 @@
 import { useState } from "react";
-import BarChart from "../ChartsFolder/BarChart";
+import BottomCharts from "../BottomCharts/BottomCharts";
 import "../ChartsFolder/ChartStyles.css";
-import PieChart from "../ChartsFolder/PieChart";
-import Sxvaoba from "../ChartsFolder/SxvaobaChart";
 import ContentHeader from "../ContentHeader/ContentHeader";
 import InputRender from "./InputRender";
 import "./mainPage.css";
+import RightSide from "./RightSide";
 
 function MainPage(props) {
   const [infoprecent, SetInfoPrecent] = useState({
@@ -115,8 +114,6 @@ function MainPage(props) {
     sixthDiagramValue = multiply([newval], props.axaliShroma)[0];
   }
 
-
-
   //transforming array
   const transposedOSArray = props.axaliMtlianiMultiplikatorebi[0].map(
     (_, colIndex) =>
@@ -210,150 +207,84 @@ function MainPage(props) {
   for (let i = 0; i < dsix1.length; i++) {
     thirdDiagramValues6.push(dsix2[i] - dsix1[i]);
   }
+
   return (
     <div>
       <ContentHeader />
-      <InputRender
-        axalisabolooMoxmareba={axalisabolooMoxmareba}
-        setnewvalue={setnewvalue}
-        newval={newval}
-        SetInfo={SetInfo}
-        info={info}
-        SetInfoPrecent={SetInfoPrecent}
-        infoprecent={infoprecent}
+
+      <div className="inputCointeinerParent">
+        {newval.length === 1 ? (
+          <InputRender
+            axalisabolooMoxmareba={axalisabolooMoxmareba}
+            setnewvalue={setnewvalue}
+            newval={newval}
+            SetInfo={SetInfo}
+            info={info}
+            SetInfoPrecent={SetInfoPrecent}
+            infoprecent={infoprecent}
+            data={axalisabolooMoxmareba}
+          />
+        ) : (
+          <InputRender
+            axalisabolooMoxmareba={axalisabolooMoxmareba}
+            setnewvalue={setnewvalue}
+            newval={newval}
+            SetInfo={SetInfo}
+            info={info}
+            SetInfoPrecent={SetInfoPrecent}
+            infoprecent={infoprecent}
+            data={newval}
+          />
+        )}
+
+        <RightSide
+          gamoshveba={props.sabolooGamoshveba}
+          gamoshvebaAxali={firstDiagramNewValues}
+          damatebiti={props.dzveliDamatebiti}
+          damatebitiAxali={secondDiagramValue}
+          dasaqmeba={props.dzveliDasaqmebis}
+          dasaqmebaAxali={thirdDiagramValue}
+          importi={props.dzveliImporti}
+          importiAxali={fourthDiagramValue}
+          kapitali={props.dzveliKapitali}
+          kapitaliAxali={fifthDiagramValue}
+          shroma={props.dzveliShroma}
+          shromaAxali={sixthDiagramValue}
+          thirdDiagramValues1={thirdDiagramValues1}
+          thirdDiagramValues2={thirdDiagramValues2}
+          thirdDiagramValues3={thirdDiagramValues3}
+          thirdDiagramValues4={thirdDiagramValues4}
+          thirdDiagramValues5={thirdDiagramValues5}
+          thirdDiagramValues6={thirdDiagramValues6}
+        />
+      </div>
+
+      <BottomCharts
+        gamoshvebaBCfirstValue={props.sabolooGamoshveba}
+        gamoshvebaBCsecondValue={firstDiagramNewValues}
+        gamoshvebaSxvaobafirstValue={props.sabolooGamoshveba}
+        gamoshvebaSxvaobasecondValue={firstDiagramNewValues}
+        damatebitiBCfirstValue={props.dzveliDamatebiti}
+        damatebitiBCsecondValue={secondDiagramValue}
+        damatebitiSxvaobafirstValue={props.dzveliDamatebiti}
+        damatebitiSxvaobasecondValue={secondDiagramValue}
+        dasaqmebaBCfirstValue={props.dzveliDasaqmebis}
+        dasaqmebaBCsecondValue={thirdDiagramValue}
+        dasaqmebaSxvaobafirstValue={props.dzveliDasaqmebis}
+        dasaqmebaSxvaobasecondValue={thirdDiagramValue}
+        importiBCfirstValue={props.dzveliImporti}
+        importiBCsecondValue={fourthDiagramValue}
+        importiSxvaobafirstValue={props.dzveliImporti}
+        importiSxvaobasecondValue={fourthDiagramValue}
+        kapitaliBCfirstValue={props.dzveliKapitali}
+        kapitaliBCsecondValue={fifthDiagramValue}
+        kapitaliSxvaobafirstValue={props.dzveliKapitali}
+        kapitaliSxvaobasecondValue={fifthDiagramValue}
+        shromaBCfirstValue={props.dzveliShroma}
+        shromaBCsecondValue={sixthDiagramValue}
+        shromaSxvaobafirstValue={props.dzveliShroma}
+        shromaSxvaobasecondValue={sixthDiagramValue}
       />
-
-      <div className="chartP">
-        <p>გამოშვება</p>
-        <div className="chartGraphs">
-          <div className="BarChartAll">
-            <BarChart
-              firstValue={props.sabolooGamoshveba}
-              secondValue={firstDiagramNewValues}
-            />
-          </div>
-          <div className="BarChartSxvaoba">
-            <Sxvaoba
-              firstValue={props.sabolooGamoshveba}
-              secondValue={firstDiagramNewValues}
-            />
-          </div>
-
-          <div className="BarChartSxvaoba">
-            <PieChart thirdDiagramValues1={thirdDiagramValues1} />
-          </div>
-        </div>
-      </div>
-
-      <div className="chartP">
-        <p>დამატებითი ღირებულების მულტიპლიკატორი</p>
-        <div className="chartGraphs">
-          <div className="BarChartAll">
-            <BarChart
-              firstValue={props.dzveliDamatebiti}
-              secondValue={secondDiagramValue}
-            />
-          </div>
-          <div className="BarChartSxvaoba">
-            <Sxvaoba
-              firstValue={props.dzveliDamatebiti}
-              secondValue={secondDiagramValue}
-            />
-          </div>
-
-          <div className="BarChartSxvaoba">
-            <PieChart thirdDiagramValues1={thirdDiagramValues2} />
-          </div>
-        </div>
-      </div>
-
-      <div className="chartP">
-        <p>დასაქმება</p>
-        <div className="chartGraphs">
-          <div className="BarChartAll">
-            <BarChart
-              firstValue={props.dzveliDasaqmebis}
-              secondValue={thirdDiagramValue}
-            />
-          </div>
-          <div className="BarChartSxvaoba">
-            <Sxvaoba
-              firstValue={props.dzveliDasaqmebis}
-              secondValue={thirdDiagramValue}
-            />
-          </div>
-
-          <div className="BarChartSxvaoba">
-            <PieChart thirdDiagramValues1={thirdDiagramValues3} />
-          </div>
-        </div>
-      </div>
-
-      <div className="chartP">
-        <p>იმპორტი</p>
-        <div className="chartGraphs">
-          <div className="BarChartAll">
-            <BarChart
-              firstValue={props.dzveliImporti}
-              secondValue={fourthDiagramValue}
-            />
-          </div>
-          <div className="BarChartSxvaoba">
-            <Sxvaoba
-              firstValue={props.dzveliImporti}
-              secondValue={fourthDiagramValue}
-            />
-          </div>
-
-          <div className="BarChartSxvaoba">
-            <PieChart thirdDiagramValues1={thirdDiagramValues4} />
-          </div>
-        </div>
-      </div>
-
-      <div className="chartP">
-        <p>ძირითადი კაპიტალის მთლიანი ფორმირება</p>
-        <div className="chartGraphs">
-          <div className="BarChartAll">
-            <BarChart
-              firstValue={props.dzveliKapitali}
-              secondValue={fifthDiagramValue}
-            />
-          </div>
-          <div className="BarChartSxvaoba">
-            <Sxvaoba
-              firstValue={props.dzveliKapitali}
-              secondValue={fifthDiagramValue}
-            />
-          </div>
-
-          <div className="BarChartSxvaoba">
-            <PieChart thirdDiagramValues1={thirdDiagramValues5} />
-          </div>
-        </div>
-      </div>
-
-      <div className="chartP">
-        <p>შრომის ანაზღაურება</p>
-        <div className="chartGraphs">
-          <div className="BarChartAll">
-            <BarChart
-              firstValue={props.dzveliShroma}
-              secondValue={sixthDiagramValue}
-            />
-          </div>
-          <div className="BarChartSxvaoba">
-            <Sxvaoba
-              firstValue={props.dzveliShroma}
-              secondValue={sixthDiagramValue}
-            />
-          </div>
-
-          <div className="BarChartSxvaoba">
-            <PieChart thirdDiagramValues1={thirdDiagramValues6} />
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

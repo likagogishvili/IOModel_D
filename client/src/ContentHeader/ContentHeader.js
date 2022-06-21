@@ -2,26 +2,23 @@ import "./ContentHeader.css";
 import facebook from "./img/facebook.png";
 import twitter from "./img/twitter.png";
 import youtube from "./img/youtube.png";
-import headerImage from "./img/headerBG.png"
+import headerImage from "./img/headerBG.png";
+import headerLogo from "./img/headerLogo.png";
 function ContentHeader() {
   return (
-    <header className="contH"
-    style={{ backgroundImage: `url(${headerImage})` }}
+    <header
+      className="contH"
+      style={{ backgroundImage: `url(${headerImage})` }}
     >
-      <div>
-        <a href="https://www.geostat.ge/ka" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.geostat.ge/img/logo.svg"
-            alt=""
-            width={"90%"}
-            height={"90%"}
-          />
-        </a>
-      </div>
-      <div>
-        <p>დარგთაშორისი ანალიზი</p>
-      </div>
-      <div>
+      <div className="divHeaderCont">
+        <div className="divHeaderCont1">
+          <a href="https://www.geostat.ge/ka" target="_blank" rel="noreferrer">
+            <img src={headerLogo} alt="" width={"60%"} height={"100%"} />
+          </a>
+        </div>
+        <div className="divHeaderCont2">
+          <p>დარგთაშორისი ანალიზი</p>
+        </div>
         <div className="imgDiv">
           <a
             href="https://www.facebook.com/geostat.ge/"
