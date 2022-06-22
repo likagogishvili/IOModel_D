@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import Chart from "chart.js/auto";
-import { Pie } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
 function PieChart(props) {
   const ekonomikuriMomsaxurebisSaxeebi = [
@@ -30,7 +30,7 @@ function PieChart(props) {
   } else data = props.thirdDiagramValues1;
   return (
     <div>
-      <Pie
+      <Bar
         data={{
           labels: ekonomikuriMomsaxurebisSaxeebi,
           datasets: [
@@ -38,14 +38,8 @@ function PieChart(props) {
               label: "გავლენა მთლიან ეკონომიკაზე",
               data: data,
               backgroundColor: [
-                "#003f5c",
-                "#2f4b7c",
-                "#665191",
-                "#a05195",
-                "#d45087",
-                "#f95d6a",
-                "#ff7c43",
-                "#ffa600",
+                "#597FB6",
+                "#B35751"
               ],
             },
           ],
