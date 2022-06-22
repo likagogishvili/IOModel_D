@@ -13,7 +13,7 @@
 
 @media only screen and (max-width: 600px) {
   .chartGraphs {
-    height: 1600px;
+    height: 1200px;
     display: flex;
     flex-direction: column;
   }

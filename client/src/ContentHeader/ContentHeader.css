@@ -2,14 +2,14 @@
   height: 100px;
   display: flex;
   justify-content: space-evenly;
-  font-family: "Noto Sans Georgian", sans-serif;
+  font-family: "Ninomtavruli";
   margin-bottom: 2%;
   width: 100%;
   margin: auto;
 }
 .contH > .divHeaderCont {
   display: flex;
-  width: 80%;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   color: white;
@@ -18,19 +18,46 @@
 .divHeaderCont1 {
   width: 20%;
   height: 100%;
+  display: flex;
+  justify-content: right;
 }
 .divHeaderCont2 {
   width: 60%;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .imgDiv {
-  width: 10%;
+  width: 15%;
   height: 100%;
-  text-align: center;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  text-align: center;
 }
+.imgDiv > img{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 30%;
+  margin-right: 5%;
+
+
+}
+.imgDiv > a{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 30%;
+  margin-right: 5%;
+
+}
+
 @media only screen and (max-width: 600px) {
   .contH {
     height: 100px;
@@ -42,14 +69,14 @@
     padding-top: 1%;
   }
   .divHeaderCont1 {
-    width: 30%;
+    width: 35%;
     height: 100%;
   }
   .divHeaderCont2 {
-    width: 40%;
-    text-align: left;
+    width: 30%;
+    text-align: center;
   }
   .imgDiv {
-    width: 30%;
+    width: 35%;
   }
 }

@@ -1,10 +1,17 @@
 import "./ContentHeader.css";
+import { useState } from "react";
 import facebook from "./img/facebook.png";
 import twitter from "./img/twitter.png";
 import youtube from "./img/youtube.png";
 import headerImage from "./img/headerBG.png";
 import headerLogo from "./img/headerLogo.png";
 function ContentHeader() {
+  const [languageChange, SetLanguageChange] = useState(false);
+  const imgLink = [
+    "http://sna.geostat.ge/img/home/en.png",
+    "http://sna.geostat.ge/img/home/ka.png",
+  ];
+  console.log(languageChange);
   return (
     <header
       className="contH"
@@ -13,7 +20,7 @@ function ContentHeader() {
       <div className="divHeaderCont">
         <div className="divHeaderCont1">
           <a href="https://www.geostat.ge/ka" target="_blank" rel="noreferrer">
-            <img src={headerLogo} alt="" width={"60%"} height={"100%"} />
+            <img src={headerLogo} alt="" width={"100%"} height={"100%"} />
           </a>
         </div>
         <div className="divHeaderCont2">
@@ -25,22 +32,39 @@ function ContentHeader() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={facebook} alt="" />
+            <img src={facebook} alt="" width={"100%"} height={"100%"} />
           </a>
           <a
             href="https://twitter.com/Geostat100"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={twitter} alt="" />
+            <img src={twitter} alt="" width={"100%"} height={"100%"} />
           </a>
           <a
             href="https://www.youtube.com/user/CensusGe"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={youtube} alt="" />
+            <img src={youtube} alt="" width={"100%"} height={"100%"} />
           </a>
+          {!languageChange ? (
+            <img
+              src={imgLink[0]}
+              alt=""
+              width={"100%"}
+              height={"100%"}
+              onClick={() => SetLanguageChange(!languageChange)}
+            />
+          ) : (
+            <img
+              src={imgLink[1]}
+              alt=""
+              width={"100%"}
+              height={"100%"}
+              onClick={() => SetLanguageChange(!languageChange)}
+            />
+          )}
         </div>
       </div>
     </header>

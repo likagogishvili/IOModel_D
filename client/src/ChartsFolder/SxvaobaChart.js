@@ -51,6 +51,7 @@ function Sxvaoba(props) {
               ticks: {
                 font: {
                   size: 8,
+                  family: "Ninomtavruli",
                 },
               },
             },
@@ -58,6 +59,7 @@ function Sxvaoba(props) {
               ticks: {
                 font: {
                   size: 8,
+                  family: "Ninomtavruli",
                 },
               },
             },

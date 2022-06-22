@@ -4,12 +4,14 @@
   background-color: rgb(232, 232, 232);
   border: 1px solid black;
   margin: 1%;
+  font-family: "Ninomtavruli";
 }
 .chartBottomLight {
   width: 98%;
   margin: auto;
   background-color: rgb(255, 255, 255);
   border: 1px solid black;
+  font-family: "Ninomtavruli";
 }
 .arrow {
   border: solid black;
@@ -37,4 +39,17 @@
 .renderingWithArrow > button {
   background-color: none;
   border: none;
+  font-family: "Ninomtavruli";
+
+}
+
+@media only screen and (max-width: 600px) {
+  .chartBottomDark {
+    width: 100%;
+    
+  }
+  .chartBottomLight {
+    width: 100%;
+  }
+  
 }

@@ -37,10 +37,7 @@ function PieChart(props) {
             {
               label: "გავლენა მთლიან ეკონომიკაზე",
               data: data,
-              backgroundColor: [
-                "#597FB6",
-                "#B35751"
-              ],
+              backgroundColor: ["#597FB6", "#B35751"],
             },
           ],
         }}
@@ -53,6 +50,7 @@ function PieChart(props) {
               ticks: {
                 font: {
                   size: 8,
+                  family: "Ninomtavruli",
                 },
               },
             },
@@ -60,10 +58,12 @@ function PieChart(props) {
               ticks: {
                 font: {
                   size: 8,
+                  family: "Ninomtavruli",
                 },
               },
             },
           },
+          responsive: true
         }}
       />
     </div>
