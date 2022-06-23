@@ -20,39 +20,39 @@ function ChartSwiper(props) {
       >
         <SwiperSlide>
           <div className="swiperCharts">
-            <p className="rightSideChartsp">გამოშვება</p>
+            <p className="rightSideChartsp">გამოშვება, მლნ ლარი</p>
             <PieChart thirdDiagramValues1={props.thirdDiagramValues1} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiperCharts">
-            <p className="rightSideChartsp">დამატებითი ღირებულება</p>
+            <p className="rightSideChartsp">დამატებული ღირებულება, მლნ ლარი</p>
             <PieChart thirdDiagramValues1={props.thirdDiagramValues2} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiperCharts">
-            <p className="rightSideChartsp">დასაქმება</p>
+            <p className="rightSideChartsp">დასაქმება, კაცი</p>
             <PieChart thirdDiagramValues1={props.thirdDiagramValues3} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiperCharts">
-            <p className="rightSideChartsp">იმპორტი</p>
+            <p className="rightSideChartsp">იმპორტი, მლნ ლარი</p>
             <PieChart thirdDiagramValues1={props.thirdDiagramValues4} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiperCharts">
             <p className="rightSideChartsp">
-              ძირითადი კაპიტალის მთლიანი ფორმირება
+              ძირითადი კაპიტალის მთლიანი ფორმირება, მლნ ლარი
             </p>
             <PieChart thirdDiagramValues1={props.thirdDiagramValues5} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiperCharts">
-            <p className="rightSideChartsp">შრომის ანაზღაურება</p>
+            <p className="rightSideChartsp">შრომის ანაზღაურება, მლნ ლარი</p>
             <PieChart thirdDiagramValues1={props.thirdDiagramValues6} />
           </div>
         </SwiperSlide>

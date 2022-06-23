@@ -3,6 +3,28 @@ import Chart from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 
 function PieChart(props) {
+  const namesarray = [
+    "სოფლის მეურნეობა",
+    "სამთომოპოვებითი მრეწველობა",
+    "დამამუშავებელი მრეწველობა",
+    "ელექტროენერგია",
+    "წყალმომარაგება და ნარჩენების მართვა",
+    "მშენებლობა",
+    "ვაჭრობა",
+    "ტრანსპორტი",
+    "სასტუმროები და რესტორნები",
+    "ინფორმაცია და კომუნიკაცია",
+    "საფინანსო და სადაზღვევო საქმიანობები",
+    "უძრავი ქონება",
+    "პროფესიული და სამეცნიერო საქმიანობები",
+    "ადმინისტრაციული საქმიანობები",
+    "სახელმწიფო მმართველობა",
+    "განათლება",
+    "ჯანდაცვა და სოციალური მომსახურებები",
+    "ხელოვნება, გართობა და დასვენება",
+    "სხვა სახის მომსახურება",
+    "შინამეურნეობების საქმიანობები",
+  ];
   const ekonomikuriMomsaxurebisSaxeebi = [
     "A",
     "B",
@@ -25,9 +47,6 @@ function PieChart(props) {
     "S",
     "T",
   ];
-  if (props.thirdDiagramValues1.length === 0) {
-    var data = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-  } else data = props.thirdDiagramValues1;
   return (
     <div>
       <Bar
@@ -36,8 +55,8 @@ function PieChart(props) {
           datasets: [
             {
               label: "გავლენა მთლიან ეკონომიკაზე",
-              data: data,
-              backgroundColor: ["#597FB6", "#B35751"],
+              data: props.thirdDiagramValues1,
+              backgroundColor: ["#597FB6"],
             },
           ],
         }}
@@ -49,7 +68,7 @@ function PieChart(props) {
             y: {
               ticks: {
                 font: {
-                  size: 8,
+                  size: 12,
                   family: "Ninomtavruli",
                 },
               },
@@ -57,13 +76,23 @@ function PieChart(props) {
             x: {
               ticks: {
                 font: {
-                  size: 8,
+                  size: 12,
                   family: "Ninomtavruli",
                 },
               },
             },
           },
-          responsive: true
+          responsive: true,
+          plugins: {
+            tooltip: {
+              callbacks: {
+                title: function (context) {
+                  console.log(context);
+                  return (context[0].label = namesarray[context[0].dataIndex]);
+                },
+              },
+            },
+          },
         }}
       />
     </div>

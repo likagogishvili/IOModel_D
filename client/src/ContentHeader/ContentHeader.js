@@ -18,13 +18,12 @@ function ContentHeader() {
       style={{ backgroundImage: `url(${headerImage})` }}
     >
       <div className="divHeaderCont">
-        <div className="divHeaderCont1">
-          <a href="https://www.geostat.ge/ka" target="_blank" rel="noreferrer">
-            <img src={headerLogo} alt="" width={"100%"} height={"100%"} />
+        <div className="headerContentSmall">
+          <a href="https://www.geostat.ge/ka" target="_blank" rel="noreferrer" className="divHeaderCont1">
+            <img src={headerLogo} alt="" width={"50%"} height={"100%"} />
           </a>
-        </div>
         <div className="divHeaderCont2">
-          <p>დარგთაშორისი ანალიზი</p>
+          <p>დარგების ეკონომიკური ანალიზი</p>
         </div>
         <div className="imgDiv">
           <a
@@ -66,6 +65,7 @@ function ContentHeader() {
             />
           )}
         </div>
+      </div>
       </div>
     </header>
   );

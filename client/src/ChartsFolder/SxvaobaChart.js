@@ -25,6 +25,28 @@ function Sxvaoba(props) {
     "S",
     "T",
   ];
+  const namesarray = [
+    "სოფლის მეურნეობა",
+    "სამთომოპოვებითი მრეწველობა",
+    "დამამუშავებელი მრეწველობა",
+    "ელექტროენერგია",
+    "წყალმომარაგება და ნარჩენების მართვა",
+    "მშენებლობა",
+    "ვაჭრობა",
+    "ტრანსპორტი",
+    "სასტუმროები და რესტორნები",
+    "ინფორმაცია და კომუნიკაცია",
+    "საფინანსო და სადაზღვევო საქმიანობები",
+    "უძრავი ქონება",
+    "პროფესიული და სამეცნიერო საქმიანობები",
+    "ადმინისტრაციული საქმიანობები",
+    "სახელმწიფო მმართველობა",
+    "განათლება",
+    "ჯანდაცვა და სოციალური მომსახურებები",
+    "ხელოვნება, გართობა და დასვენება",
+    "სხვა სახის მომსახურება",
+    "შინამეურნეობების საქმიანობები",
+  ];
   let sxvaoba = [];
   for (let i = 0; i < props.secondValue.length; i++) {
     sxvaoba.push(props.secondValue[i] - props.firstValue[i]);
@@ -50,7 +72,7 @@ function Sxvaoba(props) {
             y: {
               ticks: {
                 font: {
-                  size: 8,
+                  size: 12,
                   family: "Ninomtavruli",
                 },
               },
@@ -58,8 +80,18 @@ function Sxvaoba(props) {
             x: {
               ticks: {
                 font: {
-                  size: 8,
+                  size: 12,
                   family: "Ninomtavruli",
+                },
+              },
+            },
+          },
+          plugins: {
+            tooltip: {
+              callbacks: {
+                title: function (context) {
+                  console.log(context);
+                  return (context[0].label = namesarray[context[0].dataIndex]);
                 },
               },
             },

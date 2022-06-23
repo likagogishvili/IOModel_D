@@ -1,17 +1,20 @@
 .chartBottomDark {
-  width: 98%;
+  width: 80%;
   margin: auto;
   background-color: rgb(232, 232, 232);
   border: 1px solid black;
   margin: 1%;
   font-family: "Ninomtavruli";
+  margin: auto;
 }
 .chartBottomLight {
-  width: 98%;
+  width: 80%;
   margin: auto;
   background-color: rgb(255, 255, 255);
   border: 1px solid black;
   font-family: "Ninomtavruli";
+  margin: auto;
+
 }
 .arrow {
   border: solid black;
@@ -35,6 +38,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 1%;
+}
+.renderingWithArrow >p{
+  width: 100%;
+  text-align: center;
 }
 .renderingWithArrow > button {
   background-color: none;

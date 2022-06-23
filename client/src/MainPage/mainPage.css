@@ -91,6 +91,17 @@
 
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 /* input lines */
 .inputFieldWhite {
   width: 100%;
@@ -240,4 +251,7 @@
     border-radius: 50%;
     font-size: 0.5rem;
   }
+
+  /* Chrome, Safari, Edge, Opera */
+
 }
