@@ -223,6 +223,8 @@ function MainPage(props) {
             SetInfoPrecent={SetInfoPrecent}
             infoprecent={infoprecent}
             data={axalisabolooMoxmareba}
+            old={axalisabolooMoxmareba}
+
           />
         ) : (
           <InputRender
@@ -234,6 +236,8 @@ function MainPage(props) {
             SetInfoPrecent={SetInfoPrecent}
             infoprecent={infoprecent}
             data={newval}
+            old={axalisabolooMoxmareba}
+
           />
         )}
 

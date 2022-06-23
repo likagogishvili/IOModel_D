@@ -50,9 +50,6 @@ function Sxvaoba(props) {
   let sxvaoba = [];
   for (let i = 0; i < props.secondValue.length; i++) {
     sxvaoba.push(props.secondValue[i] - props.firstValue[i]);
-    console.log(
-      Math.round((props.secondValue[i] - props.firstValue[i]) * 100) / 100 === 0
-    );
   }
   for (let i = 0; i < sxvaoba.length; i++) {
     if (

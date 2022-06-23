@@ -11,7 +11,6 @@ function ContentHeader() {
     "http://sna.geostat.ge/img/home/en.png",
     "http://sna.geostat.ge/img/home/ka.png",
   ];
-  console.log(languageChange);
   return (
     <header
       className="contH"
