@@ -1,5 +1,5 @@
 .contH {
-  height: 120px;
+  height: 150px;
   display: flex;
   justify-content: space-evenly;
   font-family: "Ninomtavruli";
@@ -72,17 +72,28 @@
     padding-top: 1%;
   }
   .divHeaderCont1 {
-    width: 35%;
+    width: 20%;
     height: 100%;
+    margin: 0%;
+  }
+  .divHeaderCont1 > img {
+    width: 100%;
+    height: 90%;
   }
   .divHeaderCont2 {
-    width: 30%;
+    width: 45%;
     text-align: center;
   }
   .imgDiv {
-    width: 35%;
+    width: 20%;
   }
   .headerContentSmall {
     width: 100%;
+  }
+  .imgDiv > img {
+    width: 20%;
+  }
+  .imgDiv > a {
+    width: 20%;
   }
 }
