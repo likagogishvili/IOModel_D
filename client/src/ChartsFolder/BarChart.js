@@ -99,6 +99,13 @@ function BarChart(props) {
                 },
               },
             },
+            legend: {
+              labels: {
+                font: {
+                  size: 14,
+                },
+              },
+            },
           },
         }}
       />

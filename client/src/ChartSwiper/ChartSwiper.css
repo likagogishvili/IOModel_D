@@ -12,10 +12,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.3rem;
 }
 .swiper-button-next,
 .swiper-button-prev {
-  color: #003f5b;
+  color: #173795;
 }
 @media only screen and (max-width: 900px) {
 

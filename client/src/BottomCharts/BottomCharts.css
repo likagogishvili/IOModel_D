@@ -42,6 +42,7 @@
 .renderingWithArrow >p{
   width: 100%;
   text-align: center;
+  font-size: 1.3rem;
 }
 .renderingWithArrow > button {
   background-color: none;

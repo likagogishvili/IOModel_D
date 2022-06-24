@@ -92,6 +92,13 @@ function PieChart(props) {
                 },
               },
             },
+            legend: {
+              labels: {
+                font: {
+                  size: 14,
+                },
+              },
+            },
           },
         }}
       />

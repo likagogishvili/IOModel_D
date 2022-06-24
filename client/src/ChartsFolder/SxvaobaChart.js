@@ -103,6 +103,13 @@ function Sxvaoba(props) {
                 },
               },
             },
+            legend: {
+              labels: {
+                font: {
+                  size: 14,
+                },
+              },
+            },
           },
         }}
       />
