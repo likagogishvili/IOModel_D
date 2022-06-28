@@ -62,13 +62,10 @@ function InputRender(props) {
             (props.axalisabolooMoxmareba[z] * props.infoprecent[ar1[z]]) / 100
           ),
         });
-        props.axalisabolooMoxmareba[z] =
-        props.axalisabolooMoxmareba[z] +
-        (props.axalisabolooMoxmareba[z] * props.infoprecent[ar1[z]]) / 100;
+
       }
 
-      if (
-        event.target.id === ar1[z]) {
+      if (event.target.id === ar1[z]) {
         props.SetInfoPrecent({
           ...props.infoprecent,
           [ar1[z]]: Math.round(
@@ -83,7 +80,7 @@ function InputRender(props) {
 
     props.setnewvalue(props.axalisabolooMoxmareba);
   }
-  
+
   return (
     <div className="LeftInformation">
       <header className="inputHeader">
