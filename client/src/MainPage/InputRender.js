@@ -47,39 +47,40 @@ function InputRender(props) {
   function ClearData() {
     window.location.reload(false);
   }
+
+
+  
   function changeInputValue(event) {
-    for (let z = 0; z < ar1.length; z++) {
-      if (
-        event.target.id === ar2[z] &&
-        props.info[ar1[z]] !==
-          Math.round(
-            (props.axalisabolooMoxmareba[z] * props.infoprecent[ar1[z]]) / 100
-          )
-      ) {
-        props.SetInfo({
-          ...props.info,
-          [ar1[z]]: Math.round(
-            (props.axalisabolooMoxmareba[z] * props.infoprecent[ar1[z]]) / 100
-          ),
-        });
-
+    if(!event.currentTarget.contains(event.relatedTarget)){
+      for (let z = 0; z < ar1.length; z++) {
+        if (
+          event.target.id === ar2[z]
+        ) {
+          props.SetInfo({
+            ...props.info,
+            [ar1[z]]: Math.round(
+              (Math.round(props.axalisabolooMoxmareba[z]) * props.infoprecent[ar1[z]]) / 100
+            ),
+          });
+        }
+  
+        if (event.target.id === ar1[z]) {
+          props.SetInfoPrecent({
+            ...props.infoprecent,
+            [ar1[z]]: Math.round(
+              (props.info[ar1[z]] / Math.round(props.axalisabolooMoxmareba[z])) * 100
+            ),
+          });
+  
+        }
+        props.axalisabolooMoxmareba[z] =
+          props.axalisabolooMoxmareba[z] +
+          (props.axalisabolooMoxmareba[z] * props.infoprecent[ar1[z]]) / 100;
       }
-
-      if (event.target.id === ar1[z]) {
-        props.SetInfoPrecent({
-          ...props.infoprecent,
-          [ar1[z]]: Math.round(
-            (props.info[ar1[z]] / props.axalisabolooMoxmareba[z]) * 100
-          ),
-        });
-      }
-      props.axalisabolooMoxmareba[z] =
-        props.axalisabolooMoxmareba[z] +
-        (props.axalisabolooMoxmareba[z] * props.infoprecent[ar1[z]]) / 100;
+      props.setnewvalue(props.axalisabolooMoxmareba);
     }
-
-    props.setnewvalue(props.axalisabolooMoxmareba);
-  }
+    }
+   
 
   return (
     <div className="LeftInformation">
@@ -108,7 +109,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, a: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.a === 0 ? "" : props.infoprecent.a}
         />
         <input
@@ -117,7 +118,7 @@ function InputRender(props) {
           id="a1"
           onChange={(e) => props.SetInfo({ ...props.info, a: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.a === 0 ? "" : props.info.a}
         />
       </section>
@@ -139,7 +140,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, b: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.b === 0 ? "" : props.infoprecent.b}
         />
         <input
@@ -148,7 +149,7 @@ function InputRender(props) {
           id="b1"
           onChange={(e) => props.SetInfo({ ...props.info, b: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.b === 0 ? "" : props.info.b}
         />
       </section>
@@ -170,7 +171,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, c: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.c === 0 ? "" : props.infoprecent.c}
         />
         <input
@@ -179,7 +180,7 @@ function InputRender(props) {
           id="c1"
           onChange={(e) => props.SetInfo({ ...props.info, c: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.c === 0 ? "" : props.info.c}
         />
       </section>
@@ -201,7 +202,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, d: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.d === 0 ? "" : props.infoprecent.d}
         />
         <input
@@ -210,7 +211,7 @@ function InputRender(props) {
           id="d1"
           onChange={(e) => props.SetInfo({ ...props.info, d: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.d === 0 ? "" : props.info.d}
         />
       </section>
@@ -232,7 +233,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, e: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.e === 0 ? "" : props.infoprecent.e}
         />
         <input
@@ -241,7 +242,7 @@ function InputRender(props) {
           id="e1"
           onChange={(e) => props.SetInfo({ ...props.info, e: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.e === 0 ? "" : props.info.e}
         />
       </section>
@@ -263,7 +264,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, f: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.f === 0 ? "" : props.infoprecent.f}
         />
         <input
@@ -272,7 +273,7 @@ function InputRender(props) {
           id="f1"
           onChange={(e) => props.SetInfo({ ...props.info, f: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.f === 0 ? "" : props.info.f}
         />
       </section>
@@ -294,7 +295,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, g: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.g === 0 ? "" : props.infoprecent.g}
         />
         <input
@@ -303,7 +304,7 @@ function InputRender(props) {
           id="g1"
           onChange={(e) => props.SetInfo({ ...props.info, g: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.g === 0 ? "" : props.info.g}
         />
       </section>
@@ -325,7 +326,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, h: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.h === 0 ? "" : props.infoprecent.h}
         />
         <input
@@ -334,7 +335,7 @@ function InputRender(props) {
           id="h1"
           onChange={(e) => props.SetInfo({ ...props.info, h: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.h === 0 ? "" : props.info.h}
         />
       </section>
@@ -356,7 +357,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, i: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.i === 0 ? "" : props.infoprecent.i}
         />
         <input
@@ -365,7 +366,7 @@ function InputRender(props) {
           id="i1"
           onChange={(e) => props.SetInfo({ ...props.info, i: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.i === 0 ? "" : props.info.i}
         />
       </section>
@@ -387,7 +388,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, j: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.j === 0 ? "" : props.infoprecent.j}
         />
         <input
@@ -396,7 +397,7 @@ function InputRender(props) {
           id="j1"
           onChange={(e) => props.SetInfo({ ...props.info, j: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.j === 0 ? "" : props.info.j}
         />
       </section>
@@ -418,7 +419,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, k: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.k === 0 ? "" : props.infoprecent.k}
         />
         <input
@@ -427,7 +428,7 @@ function InputRender(props) {
           id="k1"
           onChange={(e) => props.SetInfo({ ...props.info, k: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.k === 0 ? "" : props.info.k}
         />
       </section>
@@ -449,7 +450,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, l: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.l === 0 ? "" : props.infoprecent.l}
         />
         <input
@@ -458,7 +459,7 @@ function InputRender(props) {
           id="l1"
           onChange={(e) => props.SetInfo({ ...props.info, l: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.l === 0 ? "" : props.info.l}
         />
       </section>
@@ -480,7 +481,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, m: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.m === 0 ? "" : props.infoprecent.m}
         />
         <input
@@ -489,7 +490,7 @@ function InputRender(props) {
           id="m1"
           onChange={(e) => props.SetInfo({ ...props.info, m: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.m === 0 ? "" : props.info.m}
         />
       </section>
@@ -511,7 +512,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, n: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.n === 0 ? "" : props.infoprecent.n}
         />
         <input
@@ -520,7 +521,7 @@ function InputRender(props) {
           id="n1"
           onChange={(e) => props.SetInfo({ ...props.info, n: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.n === 0 ? "" : props.info.n}
         />
       </section>
@@ -542,7 +543,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, o: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.o === 0 ? "" : props.infoprecent.o}
         />
         <input
@@ -551,7 +552,7 @@ function InputRender(props) {
           id="o1"
           onChange={(e) => props.SetInfo({ ...props.info, o: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.o === 0 ? "" : props.info.o}
         />
       </section>
@@ -573,7 +574,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, p: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.p === 0 ? "" : props.infoprecent.p}
         />
         <input
@@ -582,7 +583,7 @@ function InputRender(props) {
           id="p1"
           onChange={(e) => props.SetInfo({ ...props.info, p: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.p === 0 ? "" : props.info.p}
         />
       </section>
@@ -604,7 +605,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, q: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.q === 0 ? "" : props.infoprecent.q}
         />
         <input
@@ -613,7 +614,7 @@ function InputRender(props) {
           id="q1"
           onChange={(e) => props.SetInfo({ ...props.info, q: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.q === 0 ? "" : props.info.q}
         />
       </section>
@@ -635,7 +636,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, r: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.r === 0 ? "" : props.infoprecent.r}
         />
         <input
@@ -644,7 +645,7 @@ function InputRender(props) {
           id="r1"
           onChange={(e) => props.SetInfo({ ...props.info, r: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.r === 0 ? "" : props.info.r}
         />
       </section>
@@ -666,7 +667,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, s: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.s === 0 ? "" : props.infoprecent.s}
         />
         <input
@@ -675,7 +676,7 @@ function InputRender(props) {
           id="s1"
           onChange={(e) => props.SetInfo({ ...props.info, s: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.s === 0 ? "" : props.info.s}
         />
       </section>
@@ -697,7 +698,7 @@ function InputRender(props) {
             props.SetInfoPrecent({ ...props.infoprecent, t: e.target.value })
           }
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.infoprecent.t === 0 ? "" : props.infoprecent.t}
         />
         <input
@@ -706,7 +707,7 @@ function InputRender(props) {
           id="t1"
           onChange={(e) => props.SetInfo({ ...props.info, t: e.target.value })}
           onWheel={() => document.activeElement.blur()}
-          onClick={changeInputValue}
+          onFocus={changeInputValue}
           value={props.info.t === 0 ? "" : props.info.t}
         />
       </section>
