@@ -72,6 +72,9 @@ function PieChart(props) {
                   family: "Ninomtavruli",
                 },
               },
+              grid: {
+                display: false,
+              },
             },
             x: {
               ticks: {
@@ -79,6 +82,9 @@ function PieChart(props) {
                   size: 12,
                   family: "Ninomtavruli",
                 },
+              },
+              grid: {
+                display: false,
               },
             },
           },

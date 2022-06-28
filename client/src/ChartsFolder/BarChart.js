@@ -79,6 +79,9 @@ function BarChart(props) {
                   family: "Ninomtavruli",
                 },
               },
+              grid: {
+                display: false,
+              },
             },
             x: {
               ticks: {
@@ -86,6 +89,9 @@ function BarChart(props) {
                   size: 12,
                   family: "Ninomtavruli",
                 },
+              },
+              grid: {
+                display: false,
               },
             },
           },

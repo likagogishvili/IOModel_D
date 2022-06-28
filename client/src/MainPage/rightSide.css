@@ -6,20 +6,26 @@
   flex-direction: column;
   justify-content: space-between;
   font-family: "Ninomtavruli";
-
+}
+.inputHeader1 {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
 }
 .rightHeader {
   background-color: rgb(22, 55, 150);
   width: 100%;
-  height: 70px;
-  border-radius: 20px;
+  height: 80%;
+  border-radius: 2px;
   margin-top: 1%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   font-family: "Ninomtavruli";
   font-size: 0.8rem;
-
+  border-radius: 25px;
 }
 .rightHeaderChild1 {
   width: 39%;
@@ -30,7 +36,6 @@
   align-items: center;
   color: white;
   font-family: "Ninomtavruli";
-
 }
 .rightHeaderChild2 {
   width: 19%;
@@ -43,7 +48,6 @@
   border-radius: 20px;
   font-size: 0.8rem;
   font-family: "Ninomtavruli";
-
 }
 .RightContent {
   width: 100%;
@@ -54,7 +58,6 @@
   align-items: center;
   font-size: 0.7rem;
   font-family: "Ninomtavruli";
-
 }
 
 .RightContentChild1 {
@@ -79,8 +82,19 @@
   background-color: rgb(56, 126, 185);
   border-radius: 20px;
 }
+.RightContentChild3 {
+  width: 19%;
+  height: 90%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 20px;
+  background-color: rgb(33, 89, 135);
+}
 @media only screen and (max-width: 900px) {
-  .RightInformation{
+  .RightInformation {
     width: 100% !important;
   }
   .rightHeader {

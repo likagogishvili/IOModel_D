@@ -84,6 +84,9 @@ function Sxvaoba(props) {
                   family: "Ninomtavruli",
                 },
               },
+              grid: {
+                display: false,
+              },
             },
             x: {
               ticks: {
@@ -91,6 +94,9 @@ function Sxvaoba(props) {
                   size: 12,
                   family: "Ninomtavruli",
                 },
+              },
+              grid: {
+                display: false,
               },
             },
           },

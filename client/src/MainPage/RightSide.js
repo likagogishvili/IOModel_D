@@ -63,11 +63,13 @@ function RightSide(props) {
 
   return (
     <div className="RightInformation">
+      <div className="inputHeader1">
       <div className="rightHeader">
         <div className="rightHeaderChild1"></div>
         <div className="rightHeaderChild2">მთლიანი მიმდინარე ღირებულება</div>
         <div className="rightHeaderChild2">მთლიანი ახალი ღირებულება</div>
         <div className="rightHeaderChild2">ცვლილება</div>
+      </div>
       </div>
       <div>
         <section className="RightContent">
@@ -75,10 +77,10 @@ function RightSide(props) {
           <div className="RightContentChild2">
             {(Math.round(gamoshvebaDzveliSum * 10) / 10).toString()}
           </div>
-          <div className="RightContentChild2">
+          <div className="RightContentChild3">
             {(Math.round(gamoshvebAaxaliSum * 10) / 10).toString()}
           </div>
-          <div className="RightContentChild2">
+          <div className="RightContentChild3">
             {Math.round(gamoshvebaPerc * 10) / 10} %
           </div>
         </section>
@@ -88,10 +90,10 @@ function RightSide(props) {
           <div className="RightContentChild2">
             {(Math.round(damatebitiDzveliSum * 10) / 10).toString()}
           </div>
-          <div className="RightContentChild2">
+          <div className="RightContentChild3">
             {(Math.round(damatebitiAxaliSum * 10) / 10).toString()}
           </div>
-          <div className="RightContentChild2">
+          <div className="RightContentChild3">
             {Math.round(damatebitiPerc * 10) / 10} %
           </div>
         </section>
@@ -101,10 +103,10 @@ function RightSide(props) {
           <div className="RightContentChild2">
             {(Math.round(dasaqmebaSum * 10) / 10).toString()}
           </div>
-          <div className="RightContentChild2">
+          <div className="RightContentChild3">
             {(Math.round(dasaqmebaAxaliSum * 10) / 10).toString()}
           </div>
-          <div className="RightContentChild2">
+          <div className="RightContentChild3">
             {Math.round(dasaqmebaPerc * 10) / 10} %
           </div>
         </section>
@@ -114,10 +116,10 @@ function RightSide(props) {
           <div className="RightContentChild2">
             {(Math.round(importiSum * 10) / 10).toString()}
           </div>
-          <div className="RightContentChild2">
+          <div className="RightContentChild3">
             {(Math.round(importiAxaliSum * 10) / 10).toString()}
           </div>
-          <div className="RightContentChild2">
+          <div className="RightContentChild3">
             {Math.round(importiPerc * 10) / 10} %
           </div>
         </section>
@@ -129,10 +131,10 @@ function RightSide(props) {
           <div className="RightContentChild2">
             {(Math.round(kapitaliSum * 10) / 10).toString()}
           </div>
-          <div className="RightContentChild2">
+          <div className="RightContentChild3">
             {(Math.round(kapitaliAxaliSum * 10) / 10).toString()}
           </div>
-          <div className="RightContentChild2">
+          <div className="RightContentChild3">
             {Math.round(kapitaliPerc * 10) / 10} %
           </div>
         </section>
@@ -142,10 +144,10 @@ function RightSide(props) {
           <div className="RightContentChild2">
             {(Math.round(shromaSum * 10) / 10).toString()}
           </div>
-          <div className="RightContentChild2">
+          <div className="RightContentChild3">
             {(Math.round(shromaAxaliSum * 10) / 10).toString()}
           </div>
-          <div className="RightContentChild2">
+          <div className="RightContentChild3">
             {Math.round(shromaPerc * 10) / 10} %
           </div>
         </section>
