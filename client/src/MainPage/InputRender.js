@@ -62,11 +62,12 @@ function InputRender(props) {
             (props.axalisabolooMoxmareba[z] * props.infoprecent[ar1[z]]) / 100
           ),
         });
-        props.axalisabolooMoxmareba[z] =
-          props.axalisabolooMoxmareba[z] + props.info[ar1[z]] * 1;
       }
-
-      if (event.target.id === ar1[z]) {
+      if (event.target.id === ar1[z] && 
+        props.infoprecent[ar1[z] !== Math.round(
+          (props.info[ar1[z]] / props.axalisabolooMoxmareba[z]) * 100
+        )]
+        ) {
         props.SetInfoPrecent({
           ...props.infoprecent,
           [ar1[z]]: Math.round(
@@ -74,13 +75,18 @@ function InputRender(props) {
           ),
         });
       }
-      props.axalisabolooMoxmareba[z] =
-        props.axalisabolooMoxmareba[z] +
-        (props.axalisabolooMoxmareba[z] * props.infoprecent[ar1[z]]) / 100;
-    }
 
-    props.setnewvalue(props.axalisabolooMoxmareba);
+      if(props.infoprecent.length===0 || props.info.length !== 0)
+
+      // props.axalisabolooMoxmareba[z] =
+      // props.axalisabolooMoxmareba[z] + props.info[ar1[z]] * 1;
+      // props.axalisabolooMoxmareba[z] =
+      // props.axalisabolooMoxmareba[z] +
+      // (props.axalisabolooMoxmareba[z] * props.infoprecent[ar1[z]]) / 100;
+      props.setnewvalue(props.axalisabolooMoxmareba);
+    }
   }
+  console.log(props.infoprecent, props.info)
 
   return (
     <div className="LeftInformation">

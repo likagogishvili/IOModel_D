@@ -31,10 +31,11 @@
   color: white;
   align-items: center;
   font-family: "Ninomtavruli";
-  background-color:#387eb9 ;
+
 }
 .firT {
-  background-color: rgb(22, 55, 150);
+
+  background-color: #397CB9;
   width: 7%;
   height: 60%;
   border-radius: 50%;
@@ -46,7 +47,7 @@
   font-family: "Ninomtavruli";
 }
 .secT {
-  background-color: rgb(22, 55, 150);
+  background-color: #397DB9;
   width: 40%;
   height: 80%;
   border-radius: 25px;
@@ -59,7 +60,7 @@
   font-family: "Ninomtavruli";
 }
 .thirdT {
-  background-color: rgb(22, 55, 150);
+  background-color: #397DB9;
   width: 12%;
   height: 80%;
   border-radius: 25px;
@@ -73,7 +74,7 @@
   font-family: "Ninomtavruli";
 }
 .last2T {
-  background-color: rgb(22, 55, 150);
+  background-color: #397DB9;
   width: 20%;
   height: 80%;
   border-radius: 25px;
