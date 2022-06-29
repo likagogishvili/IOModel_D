@@ -24,7 +24,7 @@ function ContentHeader() {
             rel="noreferrer"
             className="divHeaderCont1"
           >
-            <img src={headerLogo} alt="" width={"50%"} height={"100%"} />
+            <img src={headerLogo} alt="" />
           </a>
           <div className="divHeaderCont2">
             <p>დარგების ეკონომიკური ანალიზი</p>

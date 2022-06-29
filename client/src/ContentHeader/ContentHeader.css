@@ -9,8 +9,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-
 }
 .contH > .divHeaderCont {
   display: flex;
@@ -22,7 +20,11 @@
 }
 .divHeaderCont1 {
   width: 30%;
-  height: 100%; 
+  display: flex;
+  height: auto;
+}
+.divHeaderCont1 > img {
+  max-width: 80%;
 }
 
 .divHeaderCont2 {
@@ -78,12 +80,10 @@
   }
   .divHeaderCont1 {
     width: 20%;
-    height: 100%;
     margin: 0%;
   }
   .divHeaderCont1 > img {
-    width: 100%;
-    height: 90%;
+    max-width: 80%;
   }
   .divHeaderCont2 {
     width: 45%;

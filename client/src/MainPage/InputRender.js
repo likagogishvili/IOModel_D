@@ -1,5 +1,3 @@
-
-
 function InputRender(props) {
   var ar1 = [
     "a",
@@ -46,62 +44,65 @@ function InputRender(props) {
     "t1",
   ];
 
-
-  // useEffect(() => {
-  //   if (props.newval.length === 0) {
-  //     props.setnewvalue(old => [...old, ...props.axalisabolooMoxmareba])
-  //   }
-  // });
-
   function ClearData() {
-
     window.location.reload(false);
   }
 
   function roundNumber(num) {
-    return Math.round((parseFloat(num) + Number.EPSILON) * 10) / 10
+    return Math.round((parseFloat(num) + Number.EPSILON) * 10) / 10;
   }
 
   function changeInputValue(event) {
-
     for (let z = 0; z < ar1.length; z++) {
+      if (event.target.value) {
+        if (event.target.id === ar2[z]) {
+          props.SetInfoPrecent({
+            ...props.infoprecent,
+            [ar1[z]]:
+              (parseFloat(props.info[ar1[z]]) /
+                parseFloat(props.axalisabolooMoxmareba[z])) *
+              100,
+          });
 
-      if ( event.target.id === ar2[z] ) {
+          props.axalisabolooMoxmareba[z] = roundNumber(
+            parseFloat(props.axalisabolooMoxmareba[z]) +
+              parseFloat(props.info[ar1[z]])
+          );
 
-         props.SetInfoPrecent({
-                ...props.infoprecent,
-                [ar1[z]]: (parseFloat(props.info[ar1[z]]) / parseFloat(props.axalisabolooMoxmareba[z])) * 100,
-              });
+          props.setnewvalue((values) =>
+            values.map((value, i) =>
+              i === z ? props.axalisabolooMoxmareba[z] : value
+            )
+          );
+        }
 
-          props.axalisabolooMoxmareba[z] = roundNumber(parseFloat(props.axalisabolooMoxmareba[z]) + parseFloat(props.info[ar1[z]]));
-
-          props.setnewvalue(values => values.map((value, i) => i === z ? props.axalisabolooMoxmareba[z] : value));
-         
-      }
-
-      if ( event.target.id === ar1[z] ) {
-
+        if (event.target.id === ar1[z]) {
           props.SetInfo({
             ...props.info,
-            [ar1[z]]: 
-              (parseFloat(props.axalisabolooMoxmareba[z]) * parseFloat(props.infoprecent[ar1[z]])) / 100
-            ,
+            [ar1[z]]:
+              (parseFloat(props.axalisabolooMoxmareba[z]) *
+                parseFloat(props.infoprecent[ar1[z]])) /
+              100,
           });
-          props.axalisabolooMoxmareba[z] = roundNumber(parseFloat(props.axalisabolooMoxmareba[z]) + parseFloat((props.axalisabolooMoxmareba[z]) * parseFloat(props.infoprecent[ar1[z]])) / 100);
+          props.axalisabolooMoxmareba[z] = roundNumber(
+            parseFloat(props.axalisabolooMoxmareba[z]) +
+              parseFloat(
+                props.axalisabolooMoxmareba[z] *
+                  parseFloat(props.infoprecent[ar1[z]])
+              ) /
+                100
+          );
 
-          props.setnewvalue(values => values.map((value, i) => i === z ? props.axalisabolooMoxmareba[z] : value));
-
-          console.log("props1", props.newval)
-
-
-       
+          props.setnewvalue((values) =>
+            values.map((value, i) =>
+              i === z ? props.axalisabolooMoxmareba[z] : value
+            )
+          );
+        }
       }
-      
     }
-
-    
   }
-  
+
   return (
     <div className="LeftInformation">
       <header className="inputHeader">
@@ -130,7 +131,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={!props.infoprecent.a || props.infoprecent.a === 0 ? "" : parseFloat(props.infoprecent.a).toFixed()}
+          value={
+            !props.infoprecent.a || props.infoprecent.a === 0
+              ? ""
+              : parseFloat(props.infoprecent.a).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -139,7 +144,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, a: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={!props.info.a || props.info.a === 0 ? "" : parseFloat(props.info.a).toFixed()}
+          value={
+            !props.info.a || props.info.a === 0
+              ? ""
+              : parseFloat(props.info.a).toFixed()
+          }
         />
       </section>
 
@@ -161,7 +170,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.b === 0 ? "" : props.infoprecent.b}
+          value={
+            !props.infoprecent.b || props.infoprecent.b === 0
+              ? ""
+              : parseFloat(props.infoprecent.b).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -170,7 +183,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, b: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.b === 0 ? "" : props.info.b}
+          value={
+            !props.info.b || props.info.b === 0
+              ? ""
+              : parseFloat(props.info.b).toFixed()
+          }
         />
       </section>
 
@@ -192,7 +209,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.c === 0 ? "" : props.infoprecent.c}
+          value={
+            !props.infoprecent.c || props.infoprecent.c === 0
+              ? ""
+              : parseFloat(props.infoprecent.c).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -201,7 +222,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, c: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.c === 0 ? "" : props.info.c}
+          value={
+            !props.info.c || props.info.c === 0
+              ? ""
+              : parseFloat(props.info.c).toFixed()
+          }
         />
       </section>
 
@@ -223,7 +248,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.d === 0 ? "" : props.infoprecent.d}
+          value={
+            !props.infoprecent.d || props.infoprecent.d === 0
+              ? ""
+              : parseFloat(props.infoprecent.d).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -232,7 +261,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, d: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.d === 0 ? "" : props.info.d}
+          value={
+            !props.info.d || props.info.d === 0
+              ? ""
+              : parseFloat(props.info.d).toFixed()
+          }
         />
       </section>
 
@@ -254,7 +287,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.e === 0 ? "" : props.infoprecent.e}
+          value={
+            !props.infoprecent.e || props.infoprecent.e === 0
+              ? ""
+              : parseFloat(props.infoprecent.e).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -263,7 +300,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, e: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.e === 0 ? "" : props.info.e}
+          value={
+            !props.info.e || props.info.e === 0
+              ? ""
+              : parseFloat(props.info.e).toFixed()
+          }
         />
       </section>
 
@@ -285,7 +326,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.f === 0 ? "" : props.infoprecent.f}
+          value={
+            !props.infoprecent.f || props.infoprecent.f === 0
+              ? ""
+              : parseFloat(props.infoprecent.f).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -294,7 +339,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, f: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.f === 0 ? "" : props.info.f}
+          value={
+            !props.info.f || props.info.f === 0
+              ? ""
+              : parseFloat(props.info.f).toFixed()
+          }
         />
       </section>
 
@@ -316,7 +365,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.g === 0 ? "" : props.infoprecent.g}
+          value={
+            !props.infoprecent.g || props.infoprecent.g === 0
+              ? ""
+              : parseFloat(props.infoprecent.g).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -325,7 +378,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, g: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.g === 0 ? "" : props.info.g}
+          value={
+            !props.info.g || props.info.g === 0
+              ? ""
+              : parseFloat(props.info.g).toFixed()
+          }
         />
       </section>
 
@@ -347,7 +404,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.h === 0 ? "" : props.infoprecent.h}
+          value={
+            !props.infoprecent.h || props.infoprecent.h === 0
+              ? ""
+              : parseFloat(props.infoprecent.h).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -356,7 +417,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, h: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.h === 0 ? "" : props.info.h}
+          value={
+            !props.info.h || props.info.h === 0
+              ? ""
+              : parseFloat(props.info.h).toFixed()
+          }
         />
       </section>
 
@@ -378,7 +443,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.i === 0 ? "" : props.infoprecent.i}
+          value={
+            !props.infoprecent.i || props.infoprecent.i === 0
+              ? ""
+              : parseFloat(props.infoprecent.i).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -387,7 +456,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, i: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.i === 0 ? "" : props.info.i}
+          value={
+            !props.info.i || props.info.i === 0
+              ? ""
+              : parseFloat(props.info.i).toFixed()
+          }
         />
       </section>
 
@@ -409,7 +482,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.j === 0 ? "" : props.infoprecent.j}
+          value={
+            !props.infoprecent.j || props.infoprecent.j === 0
+              ? ""
+              : parseFloat(props.infoprecent.j).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -418,7 +495,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, j: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.j === 0 ? "" : props.info.j}
+          value={
+            !props.info.j || props.info.j === 0
+              ? ""
+              : parseFloat(props.info.j).toFixed()
+          }
         />
       </section>
 
@@ -440,7 +521,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.k === 0 ? "" : props.infoprecent.k}
+          value={
+            !props.infoprecent.k || props.infoprecent.k === 0
+              ? ""
+              : parseFloat(props.infoprecent.k).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -449,7 +534,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, k: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.k === 0 ? "" : props.info.k}
+          value={
+            !props.info.k || props.info.k === 0
+              ? ""
+              : parseFloat(props.info.k).toFixed()
+          }
         />
       </section>
 
@@ -471,7 +560,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.l === 0 ? "" : props.infoprecent.l}
+          value={
+            !props.infoprecent.l || props.infoprecent.l === 0
+              ? ""
+              : parseFloat(props.infoprecent.l).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -480,7 +573,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, l: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.l === 0 ? "" : props.info.l}
+          value={
+            !props.info.l || props.info.l === 0
+              ? ""
+              : parseFloat(props.info.l).toFixed()
+          }
         />
       </section>
 
@@ -502,7 +599,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.m === 0 ? "" : props.infoprecent.m}
+          value={
+            !props.infoprecent.m || props.infoprecent.m === 0
+              ? ""
+              : parseFloat(props.infoprecent.m).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -511,7 +612,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, m: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.m === 0 ? "" : props.info.m}
+          value={
+            !props.info.m || props.info.m === 0
+              ? ""
+              : parseFloat(props.info.m).toFixed()
+          }
         />
       </section>
 
@@ -533,7 +638,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.n === 0 ? "" : props.infoprecent.n}
+          value={
+            !props.infoprecent.n || props.infoprecent.n === 0
+              ? ""
+              : parseFloat(props.infoprecent.n).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -542,7 +651,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, n: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.n === 0 ? "" : props.info.n}
+          value={
+            !props.info.n || props.info.n === 0
+              ? ""
+              : parseFloat(props.info.n).toFixed()
+          }
         />
       </section>
 
@@ -564,7 +677,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.o === 0 ? "" : props.infoprecent.o}
+          value={
+            !props.infoprecent.o || props.infoprecent.o === 0
+              ? ""
+              : parseFloat(props.infoprecent.o).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -573,7 +690,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, o: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.o === 0 ? "" : props.info.o}
+          value={
+            !props.info.o || props.info.o === 0
+              ? ""
+              : parseFloat(props.info.o).toFixed()
+          }
         />
       </section>
 
@@ -595,7 +716,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.p === 0 ? "" : props.infoprecent.p}
+          value={
+            !props.infoprecent.p || props.infoprecent.p === 0
+              ? ""
+              : parseFloat(props.infoprecent.p).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -604,7 +729,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, p: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.p === 0 ? "" : props.info.p}
+          value={
+            !props.info.p || props.info.p === 0
+              ? ""
+              : parseFloat(props.info.p).toFixed()
+          }
         />
       </section>
 
@@ -626,7 +755,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.q === 0 ? "" : props.infoprecent.q}
+          value={
+            !props.infoprecent.q || props.infoprecent.q === 0
+              ? ""
+              : parseFloat(props.infoprecent.q).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -635,7 +768,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, q: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.q === 0 ? "" : props.info.q}
+          value={
+            !props.info.q || props.info.q === 0
+              ? ""
+              : parseFloat(props.info.q).toFixed()
+          }
         />
       </section>
 
@@ -657,7 +794,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.r === 0 ? "" : props.infoprecent.r}
+          value={
+            !props.infoprecent.r || props.infoprecent.r === 0
+              ? ""
+              : parseFloat(props.infoprecent.r).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -666,7 +807,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, r: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.r === 0 ? "" : props.info.r}
+          value={
+            !props.info.r || props.info.r === 0
+              ? ""
+              : parseFloat(props.info.r).toFixed()
+          }
         />
       </section>
 
@@ -688,7 +833,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.s === 0 ? "" : props.infoprecent.s}
+          value={
+            !props.infoprecent.s || props.infoprecent.s === 0
+              ? ""
+              : parseFloat(props.infoprecent.s).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -697,7 +846,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, s: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.s === 0 ? "" : props.info.s}
+          value={
+            !props.info.s || props.info.s === 0
+              ? ""
+              : parseFloat(props.info.s).toFixed()
+          }
         />
       </section>
 
@@ -719,7 +872,11 @@ function InputRender(props) {
           }
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.infoprecent.t === 0 ? "" : props.infoprecent.t}
+          value={
+            !props.infoprecent.t || props.infoprecent.t === 0
+              ? ""
+              : parseFloat(props.infoprecent.t).toFixed()
+          }
         />
         <input
           className="inputClasses"
@@ -728,7 +885,11 @@ function InputRender(props) {
           onChange={(e) => props.SetInfo({ ...props.info, t: e.target.value })}
           onWheel={() => document.activeElement.blur()}
           onBlur={changeInputValue}
-          value={props.info.t === 0 ? "" : props.info.t}
+          value={
+            !props.info.t || props.info.t === 0
+              ? ""
+              : parseFloat(props.info.t).toFixed()
+          }
         />
       </section>
 
