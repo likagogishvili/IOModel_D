@@ -6,6 +6,8 @@ import InputRender from "./InputRender";
 import "./mainPage.css";
 import RightSide from "./RightSide";
 
+import { useEffect } from 'react';
+
 function MainPage(props) {
   const [infoprecent, SetInfoPrecent] = useState({
     a: "",
@@ -52,13 +54,22 @@ function MainPage(props) {
     t: "",
   });
 
-  const [newval, setnewvalue] = useState([""]);
+  const [newval, setnewvalue] = useState([]);
 
   const axalisabolooMoxmareba = [];
 
   props.mimdinareGirebuleba.map((item) =>
-    axalisabolooMoxmareba.push(item.SabolooMoxmareba * 1)
+    axalisabolooMoxmareba.push(Math.round((parseFloat(item.SabolooMoxmareba) + Number.EPSILON) * 10) / 10)
   );
+
+
+  useEffect(() => {
+    if (newval.length === 0) {
+      setnewvalue(old => [...old, ...axalisabolooMoxmareba])
+    }
+  });
+
+  
 
   function multiply(a, b) {
     var aNumRows = a.length,
@@ -77,7 +88,7 @@ function MainPage(props) {
     return m;
   }
 
-  if (newval.length === 1) {
+  if (newval.length === 0) {
     var firstDiagramNewValues = multiply(
       [axalisabolooMoxmareba],
       props.axaliGamoshveba
