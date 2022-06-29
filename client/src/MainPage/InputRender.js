@@ -48,39 +48,39 @@ function InputRender(props) {
     window.location.reload(false);
   }
 
-
-  
   function changeInputValue(event) {
-    if(!event.currentTarget.contains(event.relatedTarget)){
-      for (let z = 0; z < ar1.length; z++) {
-        if (
-          event.target.id === ar2[z]
-        ) {
-          props.SetInfo({
-            ...props.info,
-            [ar1[z]]: Math.round(
-              (Math.round(props.axalisabolooMoxmareba[z]) * props.infoprecent[ar1[z]]) / 100
-            ),
-          });
-        }
-  
-        if (event.target.id === ar1[z]) {
-          props.SetInfoPrecent({
-            ...props.infoprecent,
-            [ar1[z]]: Math.round(
-              (props.info[ar1[z]] / Math.round(props.axalisabolooMoxmareba[z])) * 100
-            ),
-          });
-  
-        }
-        props.axalisabolooMoxmareba[z] =
-          props.axalisabolooMoxmareba[z] +
-          (props.axalisabolooMoxmareba[z] * props.infoprecent[ar1[z]]) / 100;
+    for (let z = 0; z < ar1.length; z++) {
+      if (event.target.id === ar2[z]) {
+        props.SetInfo({
+          ...props.info,
+          [ar1[z]]:
+            Math.round(
+              ((props.axalisabolooMoxmareba[z] * props.infoprecent[ar1[z]]) /
+                100) *
+                100
+            ) / 100,
+        });
       }
+      if (event.target.id === ar1[z]) {
+        props.SetInfoPrecent({
+          ...props.infoprecent,
+          [ar1[z]]:
+            Math.round(
+              (props.info[ar1[z]] / props.axalisabolooMoxmareba[z]) * 100 * 100
+            ) / 100,
+        });
+      }
+      props.axalisabolooMoxmareba[z] =
+        props.axalisabolooMoxmareba[z] +
+        (props.axalisabolooMoxmareba[z] * props.infoprecent[ar1[z]]) / 100;
       props.setnewvalue(props.axalisabolooMoxmareba);
+      console.log(
+        Math.round(
+          props.info[ar1[z]] / Math.round(props.axalisabolooMoxmareba[z])
+        ) * 100
+      );
     }
-    }
-   
+  }
 
   return (
     <div className="LeftInformation">
