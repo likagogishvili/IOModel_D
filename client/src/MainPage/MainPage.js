@@ -6,9 +6,11 @@ import InputRender from "./InputRender";
 import "./mainPage.css";
 import RightSide from "./RightSide";
 
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 function MainPage(props) {
+  const [languageChange, SetLanguageChange] = useState(false);
+
   const [infoprecent, SetInfoPrecent] = useState({
     a: "",
     b: "",
@@ -55,21 +57,21 @@ function MainPage(props) {
   });
 
   const [newval, setnewvalue] = useState([]);
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const axalisabolooMoxmareba = [];
+  
 
   props.mimdinareGirebuleba.map((item) =>
-    axalisabolooMoxmareba.push(Math.round((parseFloat(item.SabolooMoxmareba) + Number.EPSILON) * 10) / 10)
+    axalisabolooMoxmareba.push(
+      Math.round((parseFloat(item.SabolooMoxmareba) + Number.EPSILON) * 10) / 10
+    )
   );
-
 
   useEffect(() => {
     if (newval.length === 0) {
-      setnewvalue(old => [...old, ...axalisabolooMoxmareba])
+      setnewvalue((old) => [...old, ...axalisabolooMoxmareba]);
     }
-  });
-
-  
+  }, [newval.length, axalisabolooMoxmareba]);
 
   function multiply(a, b) {
     var aNumRows = a.length,
@@ -130,7 +132,6 @@ function MainPage(props) {
     (_, colIndex) =>
       props.axaliMtlianiMultiplikatorebi.map((row) => row[colIndex])
   );
-
   //mesame grafikebis shqmna
   // first
   let df1 = [];
@@ -221,7 +222,10 @@ function MainPage(props) {
 
   return (
     <div>
-      <ContentHeader />
+      <ContentHeader
+        languageChange={languageChange}
+        SetLanguageChange={SetLanguageChange}
+      />
 
       <div className="inputCointeinerParent">
         {newval.length === 1 ? (
@@ -235,7 +239,6 @@ function MainPage(props) {
             infoprecent={infoprecent}
             data={axalisabolooMoxmareba}
             old={axalisabolooMoxmareba}
-
           />
         ) : (
           <InputRender
@@ -248,7 +251,6 @@ function MainPage(props) {
             infoprecent={infoprecent}
             data={newval}
             old={axalisabolooMoxmareba}
-
           />
         )}
 

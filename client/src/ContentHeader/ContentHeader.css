@@ -9,8 +9,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-
 }
 .contH > .divHeaderCont {
   display: flex;
@@ -25,7 +23,6 @@
   height: 100%;
   display: flex;
   align-items: center;
-
 }
 
 .divHeaderCont img {
@@ -38,7 +35,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 .imgDiv {
   width: 30%;
@@ -47,14 +43,13 @@
   justify-content: right;
   align-items: center;
   text-align: center;
-
 }
 .imgDiv > img {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 9%;
+  width: 8%;
   height: 25%;
   margin-right: 7%;
 }
@@ -65,7 +60,6 @@
   justify-content: center;
   width: 12%;
   height: 25%;
-  margin-right: 2%;
 }
 .headerContentSmall {
   width: 83%;
@@ -90,7 +84,7 @@
     height: 100%;
     margin: 0%;
   }
-  
+
   .divHeaderCont2 {
     width: 45%;
     text-align: center;
@@ -105,42 +99,51 @@
     width: 20%;
   }
   .imgDiv > a {
+    width: 25%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .divHeaderCont img {
+    max-width: 100%;
+  }
+  .imgDiv > a {
     width: 20%;
   }
 }
 
-
-
-@media (max-width: 575.98px) {
-.divHeaderCont img {
-    max-width: 100%;
-  }
-}
-
-
 @media (min-width: 576px) and (max-width: 767.98px) {
-.divHeaderCont img {
+  .divHeaderCont img {
     max-width: 70%;
   }
+  .imgDiv > a {
+    width: 20%;
+  }
 }
-
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .divHeaderCont img {
     max-width: 70%;
   }
+  .imgDiv > a {
+    width: 20%;
+  }
 }
-
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .divHeaderCont img {
     max-width: 70%;
   }
+  .imgDiv > a {
+    width: 15%;
+  }
 }
-
 
 @media (min-width: 1200px) {
   .divHeaderCont img {
     max-width: 50%;
+  }
+  .imgDiv > a {
+    width: 15%;
   }
 }

@@ -1,12 +1,10 @@
 import "./ContentHeader.css";
-import { useState } from "react";
 import facebook from "./img/facebook.png";
 import twitter from "./img/twitter.png";
 import youtube from "./img/youtube.png";
 import headerImage from "./img/headerBG.png";
 import headerLogo from "./img/headerLogo.png";
-function ContentHeader() {
-  const [languageChange, SetLanguageChange] = useState(false);
+function ContentHeader(props) {
   const imgLink = [
     "http://sna.geostat.ge/img/home/en.png",
     "http://sna.geostat.ge/img/home/ka.png",
@@ -27,7 +25,11 @@ function ContentHeader() {
             <img src={headerLogo} alt="" />
           </a>
           <div className="divHeaderCont2">
-            <p>დარგების ეკონომიკური ანალიზი</p>
+            {!props.languageChange ? (
+              <p>დარგების ეკონომიკური ანალიზი</p>
+            ) : (
+              <p>Economic analysis of Industries</p>
+            )}
           </div>
           <div className="imgDiv">
             <a
@@ -51,13 +53,13 @@ function ContentHeader() {
             >
               <img src={youtube} alt="" width={"100%"} height={"100%"} />
             </a>
-            {!languageChange ? (
+            {!props.languageChange ? (
               <img
                 src={imgLink[0]}
                 alt=""
                 width={"100%"}
                 height={"100%"}
-                onClick={() => SetLanguageChange(!languageChange)}
+                onClick={() => props.SetLanguageChange(!props.languageChange)}
               />
             ) : (
               <img
@@ -65,7 +67,7 @@ function ContentHeader() {
                 alt=""
                 width={"100%"}
                 height={"100%"}
-                onClick={() => SetLanguageChange(!languageChange)}
+                onClick={() => props.SetLanguageChange(!props.languageChange)}
               />
             )}
           </div>
