@@ -219,6 +219,7 @@ function MainPage(props) {
     thirdDiagramValues6.push(dsix2[i] - dsix1[i]);
   }
 
+  console.log(newval)
   return (
     <div>
       <ContentHeader
@@ -227,7 +228,6 @@ function MainPage(props) {
       />
 
       <div className="inputCointeinerParent">
-        {newval.length === 1 ? (
           <InputRender
             axalisabolooMoxmareba={axalisabolooMoxmareba}
             setnewvalue={setnewvalue}
@@ -240,21 +240,6 @@ function MainPage(props) {
             old={axalisabolooMoxmareba}
             languageChange={languageChange}
           />
-        ) : (
-          <InputRender
-            axalisabolooMoxmareba={axalisabolooMoxmareba}
-            setnewvalue={setnewvalue}
-            newval={newval}
-            SetInfo={SetInfo}
-            info={info}
-            SetInfoPrecent={SetInfoPrecent}
-            infoprecent={infoprecent}
-            data={newval}
-            old={axalisabolooMoxmareba}
-            languageChange={languageChange}
-          />
-        )}
-
         <RightSide
           gamoshveba={props.sabolooGamoshveba}
           gamoshvebaAxali={firstDiagramNewValues}

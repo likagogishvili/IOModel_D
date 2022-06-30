@@ -240,7 +240,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.a || props.infoprecent.a === 0
               ? ""
-              : parseFloat(props.infoprecent.a).toFixed()
+              : parseFloat(props.infoprecent.a).toFixed(2)
           }
         />
         <input
@@ -253,7 +253,7 @@ function InputRender(props) {
           value={
             !props.info.a || props.info.a === 0
               ? ""
-              : parseFloat(props.info.a).toFixed()
+              : parseFloat(props.info.a).toFixed(1)
           }
         />
       </section>
