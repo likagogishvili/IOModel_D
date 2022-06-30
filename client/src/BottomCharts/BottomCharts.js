@@ -14,7 +14,7 @@ function BottomCharts(props) {
     <div>
       <div className="chartBottomDark">
         <div className="renderingWithArrow">
-          <p>გამოშვება</p>
+          <p> {!props.languageChange ? "გამოშვება" : "Output"}</p>
           <button onClick={() => SetGamoshvebaRender(!gamoshvebaRender)}>
             {gamoshvebaRender ? (
               <i className="arrow down"></i>
@@ -29,12 +29,14 @@ function BottomCharts(props) {
               <BarChart
                 firstValue={props.gamoshvebaBCfirstValue}
                 secondValue={props.gamoshvebaBCsecondValue}
+                languageChange={props.languageChange}
               />
             </div>
             <div className="BarChartSxvaoba">
               <Sxvaoba
                 firstValue={props.gamoshvebaSxvaobafirstValue}
                 secondValue={props.gamoshvebaSxvaobasecondValue}
+                languageChange={props.languageChange}
               />
             </div>
           </div>
@@ -43,7 +45,11 @@ function BottomCharts(props) {
 
       <div className="chartBottomLight">
         <div className="renderingWithArrow">
-          <p>დამატებითი ღირებულების მულტიპლიკატორი</p>
+          <p>
+            {!props.languageChange
+              ? "დამატებითი ღირებულების მულტიპლიკატორი"
+              : "Gross Value Added"}
+          </p>
           <button onClick={() => SetDamatebitiRender(!damatebitiRender)}>
             {damatebitiRender ? (
               <i className="arrow down"></i>
@@ -58,12 +64,14 @@ function BottomCharts(props) {
               <BarChart
                 firstValue={props.damatebitiBCfirstValue}
                 secondValue={props.damatebitiBCsecondValue}
+                languageChange={props.languageChange}
               />
             </div>
             <div className="BarChartSxvaoba">
               <Sxvaoba
                 firstValue={props.damatebitiSxvaobafirstValue}
                 secondValue={props.damatebitiSxvaobasecondValue}
+                languageChange={props.languageChange}
               />
             </div>
           </div>
@@ -72,7 +80,7 @@ function BottomCharts(props) {
 
       <div className="chartBottomDark">
         <div className="renderingWithArrow">
-          <p>დასაქმება</p>
+          <p>{!props.languageChange ? "დასაქმება" : "Employment"}</p>
           <button onClick={() => SetDasaqmebaRender(!dasaqmebaRender)}>
             {dasaqmebaRender ? (
               <i className="arrow down"></i>
@@ -87,12 +95,14 @@ function BottomCharts(props) {
               <BarChart
                 firstValue={props.dasaqmebaBCfirstValue}
                 secondValue={props.dasaqmebaBCsecondValue}
+                languageChange={props.languageChange}
               />
             </div>
             <div className="BarChartSxvaoba">
               <Sxvaoba
                 firstValue={props.dasaqmebaSxvaobafirstValue}
                 secondValue={props.dasaqmebaSxvaobasecondValue}
+                languageChange={props.languageChange}
               />
             </div>
           </div>
@@ -101,7 +111,7 @@ function BottomCharts(props) {
 
       <div className="chartBottomLight">
         <div className="renderingWithArrow">
-          <p>იმპორტი</p>
+          <p>{!props.languageChange ? "იმპორტი" : "Import"}</p>
           <button onClick={() => SetImportiRender(!importiRender)}>
             {importiRender ? (
               <i className="arrow down"></i>
@@ -116,12 +126,14 @@ function BottomCharts(props) {
               <BarChart
                 firstValue={props.importiBCfirstValue}
                 secondValue={props.importiBCsecondValue}
+                languageChange={props.languageChange}
               />
             </div>
             <div className="BarChartSxvaoba">
               <Sxvaoba
                 firstValue={props.importiSxvaobafirstValue}
                 secondValue={props.importiSxvaobasecondValue}
+                languageChange={props.languageChange}
               />
             </div>
           </div>
@@ -130,7 +142,11 @@ function BottomCharts(props) {
 
       <div className="chartBottomDark">
         <div className="renderingWithArrow">
-          <p>ძირითადი კაპიტალის მთლიანი ფორმირება</p>
+          <p>
+            {!props.languageChange
+              ? "ძირითადი კაპიტალის მთლიანი ფორმირება"
+              : "GFCF"}
+          </p>
           <button onClick={() => SetKapitaliRender(!kapitaliRender)}>
             {kapitaliRender ? (
               <i className="arrow down"></i>
@@ -145,12 +161,14 @@ function BottomCharts(props) {
               <BarChart
                 firstValue={props.kapitaliBCfirstValue}
                 secondValue={props.kapitaliBCsecondValue}
+                languageChange={props.languageChange}
               />
             </div>
             <div className="BarChartSxvaoba">
               <Sxvaoba
                 firstValue={props.kapitaliSxvaobafirstValue}
                 secondValue={props.kapitaliSxvaobasecondValue}
+                languageChange={props.languageChange}
               />
             </div>
           </div>
@@ -159,7 +177,11 @@ function BottomCharts(props) {
 
       <div className="chartBottomLight">
         <div className="renderingWithArrow">
-          <p>შრომის ანაზღაურება</p>
+          <p>
+            {!props.languageChange
+              ? "შრომის ანაზღაურება"
+              : "Compensation of employees"}
+          </p>
           <button onClick={() => SetShromaRender(!shromaRender)}>
             {shromaRender ? (
               <i className="arrow down"></i>
@@ -174,12 +196,14 @@ function BottomCharts(props) {
               <BarChart
                 firstValue={props.shromaBCfirstValue}
                 secondValue={props.shromaBCsecondValue}
+                languageChange={props.languageChange}
               />
             </div>
             <div className="BarChartSxvaoba">
               <Sxvaoba
                 firstValue={props.shromaSxvaobafirstValue}
                 secondValue={props.shromaSxvaobasecondValue}
+                languageChange={props.languageChange}
               />
             </div>
           </div>

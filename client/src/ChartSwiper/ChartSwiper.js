@@ -20,40 +20,77 @@ function ChartSwiper(props) {
       >
         <SwiperSlide>
           <div className="swiperCharts">
-            <p className="rightSideChartsp">გამოშვება, მლნ ლარი</p>
-            <PieChart thirdDiagramValues1={props.thirdDiagramValues1} />
+            <p className="rightSideChartsp">
+              {!props.languageChange
+                ? "გამოშვება, მლნ ლარი"
+                : "Output, Mil. Lari"}
+            </p>
+            <PieChart
+              thirdDiagramValues1={props.thirdDiagramValues1}
+              languageChange={props.languageChange}
+            />
           </div>
         </SwiperSlide>
+        {/* Output	GVA	Employment	Import	GFCF	Compensation of employees */}
         <SwiperSlide>
           <div className="swiperCharts">
-            <p className="rightSideChartsp">დამატებული ღირებულება, მლნ ლარი</p>
-            <PieChart thirdDiagramValues1={props.thirdDiagramValues2} />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiperCharts">
-            <p className="rightSideChartsp">დასაქმება, კაცი</p>
-            <PieChart thirdDiagramValues1={props.thirdDiagramValues3} />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiperCharts">
-            <p className="rightSideChartsp">იმპორტი, მლნ ლარი</p>
-            <PieChart thirdDiagramValues1={props.thirdDiagramValues4} />
+            <p className="rightSideChartsp">
+              {!props.languageChange
+                ? "დამატებული ღირებულება, მლნ ლარი"
+                : "GVA, Mil. Lari"}
+            </p>
+            <PieChart
+              thirdDiagramValues1={props.thirdDiagramValues2}
+              languageChange={props.languageChange}
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiperCharts">
             <p className="rightSideChartsp">
-              ძირითადი კაპიტალის მთლიანი ფორმირება, მლნ ლარი
+              {!props.languageChange ? "დასაქმება, კაცი" : "Employment Person"}
             </p>
-            <PieChart thirdDiagramValues1={props.thirdDiagramValues5} />
+            <PieChart
+              thirdDiagramValues1={props.thirdDiagramValues3}
+              languageChange={props.languageChange}
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiperCharts">
-            <p className="rightSideChartsp">შრომის ანაზღაურება, მლნ ლარი</p>
-            <PieChart thirdDiagramValues1={props.thirdDiagramValues6} />
+            <p className="rightSideChartsp">
+              {!props.languageChange ? "იმპორტი, მლნ ლარი" : "Import Mil. Lari"}
+            </p>
+            <PieChart
+              thirdDiagramValues1={props.thirdDiagramValues4}
+              languageChange={props.languageChange}
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="swiperCharts">
+            <p className="rightSideChartsp">
+              {!props.languageChange
+                ? "ძირითადი კაპიტალის მთლიანი ფორმირება, მლნ ლარი"
+                : "GFCF Mil. Lari"}
+            </p>
+            <PieChart
+              thirdDiagramValues1={props.thirdDiagramValues5}
+              languageChange={props.languageChange}
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="swiperCharts">
+            <p className="rightSideChartsp">
+              {!props.languageChange
+                ? "შრომის ანაზღაურება, მლნ ლარი"
+                : "Compensation of employees. Mil. Lari"}
+            </p>
+            <PieChart
+              thirdDiagramValues1={props.thirdDiagramValues6}
+              languageChange={props.languageChange}
+            />
           </div>
         </SwiperSlide>
       </Swiper>

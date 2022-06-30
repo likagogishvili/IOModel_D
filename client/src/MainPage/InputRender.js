@@ -44,6 +44,54 @@ function InputRender(props) {
     "t1",
   ];
 
+  if (!props.languageChange) {
+    var namesarray = [
+      "სოფლის მეურნეობა",
+      "სამთომოპოვებითი მრეწველობა",
+      "დამამუშავებელი მრეწველობა",
+      "ელექტროენერგია",
+      "წყალმომარაგება და ნარჩენების მართვა",
+      "მშენებლობა",
+      "ვაჭრობა",
+      "ტრანსპორტი",
+      "სასტუმროები და რესტორნები",
+      "ინფორმაცია და კომუნიკაცია",
+      "საფინანსო და სადაზღვევო საქმიანობები",
+      "უძრავი ქონება",
+      "პროფესიული და სამეცნიერო საქმიანობები",
+      "ადმინისტრაციული საქმიანობები",
+      "სახელმწიფო მმართველობა",
+      "განათლება",
+      "ჯანდაცვა და სოციალური მომსახურებები",
+      "ხელოვნება, გართობა და დასვენება",
+      "სხვა სახის მომსახურება",
+      "შინამეურნეობების საქმიანობები",
+    ];
+  } else {
+    namesarray = [
+      "Agriculture",
+      "Mining and quarrying",
+      "Manufacturing",
+      "Electricity, gas",
+      "Water supply; sewerage, waste management",
+      "Construction",
+      "Trade",
+      "Transportation and storage",
+      "Accommodation and food service activities",
+      "Information and communication",
+      "Financial and insurance activities",
+      "Real estate activities",
+      "Professional, scientific and technical activitie",
+      "Administrative and support service activities",
+      "Public administration",
+      "Education",
+      "Human health",
+      "Arts, entertainment and recreation",
+      "Other service activities",
+      "Activities of households as employers",
+    ];
+  }
+
   function ClearData() {
     window.location.reload(false);
   }
@@ -51,7 +99,6 @@ function InputRender(props) {
   function roundNumber(num) {
     return Math.round((parseFloat(num) + Number.EPSILON) * 10) / 10;
   }
-  console.log(props.languageChange)
 
   function changeInputValue(event) {
     for (let z = 0; z < ar1.length; z++) {
@@ -106,18 +153,28 @@ function InputRender(props) {
 
   return (
     <div className="LeftInformation">
-      <header className="inputHeader">
-        <div className="firT">Nace Rev.2</div>
-        <div className="secT">ეკონომიკური საქმიანობის სახეები</div>
-        <div className="thirdT">საბოლოო მოხმარება</div>
-        <div className="last2T">%ცვლილება საბოლოო მოხმარებაში</div>
-        <div className="last2T">ნომინალური ცვლილება საბოლოო მოხმარებაში</div>
-      </header>
+      {!props.languageChange ? (
+        <header className="inputHeader">
+          <div className="firT">Nace Rev.2</div>
+          <div className="secT">ეკონომიკური საქმიანობის სახეები</div>
+          <div className="thirdT">საბოლოო მოხმარება</div>
+          <div className="last2T">%ცვლილება საბოლოო მოხმარებაში</div>
+          <div className="last2T">ნომინალური ცვლილება საბოლოო მოხმარებაში</div>
+        </header>
+      ) : (
+        <header className="inputHeader">
+          <div className="firT">Nace Rev.2</div>
+          <div className="secT">Nace Rev.2 code name</div>
+          <div className="thirdT">Final Demand</div>
+          <div className="last2T">% Change in Final Demand</div>
+          <div className="last2T">Nominal Change in Final Demand</div>
+        </header>
+      )}
 
       <section className="inputFieldWhite">
         <div className="inputAlphabet">A</div>
         <div className="inputP">
-          <p>სოფლის მეურნეობა</p>
+          <p>{namesarray[0]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -156,7 +213,7 @@ function InputRender(props) {
       <section className="inputFieldDark">
         <div className="inputAlphabet">B</div>
         <div className="inputP">
-          <p>სამთომოპოვებითი მრეწველობა</p>
+          <p>{namesarray[1]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -195,7 +252,7 @@ function InputRender(props) {
       <section className="inputFieldWhite">
         <div className="inputAlphabet">C</div>
         <div className="inputP">
-          <p>დამამუშავებელი მრეწველობა</p>
+          <p>{namesarray[2]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -234,7 +291,7 @@ function InputRender(props) {
       <section className="inputFieldDark">
         <div className="inputAlphabet">D</div>
         <div className="inputP">
-          <p>ელექტროენერგია</p>
+          <p>{namesarray[3]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -273,7 +330,7 @@ function InputRender(props) {
       <section className="inputFieldWhite">
         <div className="inputAlphabet">E</div>
         <div className="inputP">
-          <p>წყალმომარაგება და ნარჩენების მართვა</p>
+          <p>{namesarray[4]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -312,7 +369,7 @@ function InputRender(props) {
       <section className="inputFieldDark">
         <div className="inputAlphabet">F</div>
         <div className="inputP">
-          <p>მშენებლობა</p>
+          <p>{namesarray[5]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -351,7 +408,7 @@ function InputRender(props) {
       <section className="inputFieldWhite">
         <div className="inputAlphabet">G</div>
         <div className="inputP">
-          <p>ვაჭრობა</p>
+          <p>{namesarray[6]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -390,7 +447,7 @@ function InputRender(props) {
       <section className="inputFieldDark">
         <div className="inputAlphabet">H</div>
         <div className="inputP">
-          <p>ტრანსპორტი</p>
+          <p>{namesarray[7]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -429,7 +486,7 @@ function InputRender(props) {
       <section className="inputFieldWhite">
         <div className="inputAlphabet">I</div>
         <div className="inputP">
-          <p>სასტუმროები და რესტორნები</p>
+          <p>{namesarray[8]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -468,7 +525,7 @@ function InputRender(props) {
       <section className="inputFieldDark">
         <div className="inputAlphabet">J</div>
         <div className="inputP">
-          <p>ინფორმაცია და კომუნიკაცია</p>
+          <p>{namesarray[9]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -507,7 +564,7 @@ function InputRender(props) {
       <section className="inputFieldWhite">
         <div className="inputAlphabet">K</div>
         <div className="inputP">
-          <p>საფინანსო და სადაზღვევო საქმიანობები</p>
+          <p>{namesarray[10]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -546,7 +603,7 @@ function InputRender(props) {
       <section className="inputFieldDark">
         <div className="inputAlphabet">L</div>
         <div className="inputP">
-          <p>უძრავი ქონება</p>
+          <p>{namesarray[11]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -585,7 +642,7 @@ function InputRender(props) {
       <section className="inputFieldWhite">
         <div className="inputAlphabet">M</div>
         <div className="inputP">
-          <p>პროფესიული და სამეცნიერო საქმიანობები</p>
+          <p>{namesarray[12]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -624,7 +681,7 @@ function InputRender(props) {
       <section className="inputFieldDark">
         <div className="inputAlphabet">N</div>
         <div className="inputP">
-          <p>ადმინისტრაციული საქმიანობები</p>
+          <p>{namesarray[13]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -663,7 +720,7 @@ function InputRender(props) {
       <section className="inputFieldWhite">
         <div className="inputAlphabet">O</div>
         <div className="inputP">
-          <p>სახელმწიფო მმართველობა და სოციალური უსაფრთხოება</p>
+          <p>{namesarray[14]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -702,7 +759,7 @@ function InputRender(props) {
       <section className="inputFieldDark">
         <div className="inputAlphabet">P</div>
         <div className="inputP">
-          <p>განათლება</p>
+          <p>{namesarray[15]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -741,7 +798,7 @@ function InputRender(props) {
       <section className="inputFieldWhite">
         <div className="inputAlphabet">Q</div>
         <div className="inputP">
-          <p>ჯანდაცვა და სოციალური მომსახურებები</p>
+          <p>{namesarray[16]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -780,7 +837,7 @@ function InputRender(props) {
       <section className="inputFieldDark">
         <div className="inputAlphabet">R</div>
         <div className="inputP">
-          <p>ხელოვნება, გართობა და დასვენება</p>
+          <p>{namesarray[17]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -819,7 +876,7 @@ function InputRender(props) {
       <section className="inputFieldWhite">
         <div className="inputAlphabet">S</div>
         <div className="inputP">
-          <p>სხვა სახის მომსახურება</p>
+          <p>{namesarray[18]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -858,7 +915,7 @@ function InputRender(props) {
       <section className="inputFieldDark">
         <div className="inputAlphabet">T</div>
         <div className="inputP">
-          <p>შინამეურნეობების საქმიანობები</p>
+          <p>{namesarray[19]}</p>
           <div className="inputSymbol">i</div>
         </div>
         <div className="sabolooMoxmareba">
@@ -894,7 +951,9 @@ function InputRender(props) {
         />
       </section>
 
-      <button onBlur={ClearData}>გასუფთავება</button>
+      <button onBlur={ClearData}>
+        {!props.languageChange ? "გასუფთავება" : "Clear"}
+      </button>
     </div>
   );
 }

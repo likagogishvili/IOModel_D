@@ -25,28 +25,54 @@ function Sxvaoba(props) {
     "S",
     "T",
   ];
-  const namesarray = [
-    "სოფლის მეურნეობა",
-    "სამთომოპოვებითი მრეწველობა",
-    "დამამუშავებელი მრეწველობა",
-    "ელექტროენერგია",
-    "წყალმომარაგება და ნარჩენების მართვა",
-    "მშენებლობა",
-    "ვაჭრობა",
-    "ტრანსპორტი",
-    "სასტუმროები და რესტორნები",
-    "ინფორმაცია და კომუნიკაცია",
-    "საფინანსო და სადაზღვევო საქმიანობები",
-    "უძრავი ქონება",
-    "პროფესიული და სამეცნიერო საქმიანობები",
-    "ადმინისტრაციული საქმიანობები",
-    "სახელმწიფო მმართველობა",
-    "განათლება",
-    "ჯანდაცვა და სოციალური მომსახურებები",
-    "ხელოვნება, გართობა და დასვენება",
-    "სხვა სახის მომსახურება",
-    "შინამეურნეობების საქმიანობები",
-  ];
+  if (!props.languageChange) {
+    var namesarray = [
+      "სოფლის მეურნეობა",
+      "სამთომოპოვებითი მრეწველობა",
+      "დამამუშავებელი მრეწველობა",
+      "ელექტროენერგია",
+      "წყალმომარაგება და ნარჩენების მართვა",
+      "მშენებლობა",
+      "ვაჭრობა",
+      "ტრანსპორტი",
+      "სასტუმროები და რესტორნები",
+      "ინფორმაცია და კომუნიკაცია",
+      "საფინანსო და სადაზღვევო საქმიანობები",
+      "უძრავი ქონება",
+      "პროფესიული და სამეცნიერო საქმიანობები",
+      "ადმინისტრაციული საქმიანობები",
+      "სახელმწიფო მმართველობა",
+      "განათლება",
+      "ჯანდაცვა და სოციალური მომსახურებები",
+      "ხელოვნება, გართობა და დასვენება",
+      "სხვა სახის მომსახურება",
+      "შინამეურნეობების საქმიანობები",
+    ];
+  } else {
+    namesarray = [
+      "Agriculture",
+      "Mining and quarrying",
+      "Manufacturing",
+      "Electricity, gas",
+      "Water supply; sewerage, waste management",
+      "Construction",
+      "Trade",
+      "Transportation and storage",
+      "Accommodation and food service activities",
+      "Information and communication",
+      "Financial and insurance activities",
+      "Real estate activities",
+      "Professional, scientific and technical activitie",
+      "Administrative and support service activities",
+      "Public administration",
+      "Education",
+      "Human health",
+      "Arts, entertainment and recreation",
+      "Other service activities",
+      "Activities of households as employers",
+    ];
+  }
+
   let sxvaoba = [];
   for (let i = 0; i < props.secondValue.length; i++) {
     sxvaoba.push(props.secondValue[i] - props.firstValue[i]);
@@ -66,7 +92,7 @@ function Sxvaoba(props) {
           labels: ekonomikuriMomsaxurebisSaxeebi,
           datasets: [
             {
-              label: "სხვაობა",
+              label: !props.languageChange ? "სხვაობა": 'Difference',
               data: sxvaoba,
               backgroundColor: ["#5a80b8"],
             },

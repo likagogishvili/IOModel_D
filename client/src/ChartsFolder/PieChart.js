@@ -3,28 +3,53 @@ import Chart from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 
 function PieChart(props) {
-  const namesarray = [
-    "სოფლის მეურნეობა",
-    "სამთომოპოვებითი მრეწველობა",
-    "დამამუშავებელი მრეწველობა",
-    "ელექტროენერგია",
-    "წყალმომარაგება და ნარჩენების მართვა",
-    "მშენებლობა",
-    "ვაჭრობა",
-    "ტრანსპორტი",
-    "სასტუმროები და რესტორნები",
-    "ინფორმაცია და კომუნიკაცია",
-    "საფინანსო და სადაზღვევო საქმიანობები",
-    "უძრავი ქონება",
-    "პროფესიული და სამეცნიერო საქმიანობები",
-    "ადმინისტრაციული საქმიანობები",
-    "სახელმწიფო მმართველობა",
-    "განათლება",
-    "ჯანდაცვა და სოციალური მომსახურებები",
-    "ხელოვნება, გართობა და დასვენება",
-    "სხვა სახის მომსახურება",
-    "შინამეურნეობების საქმიანობები",
-  ];
+  if (!props.languageChange) {
+    var namesarray = [
+      "სოფლის მეურნეობა",
+      "სამთომოპოვებითი მრეწველობა",
+      "დამამუშავებელი მრეწველობა",
+      "ელექტროენერგია",
+      "წყალმომარაგება და ნარჩენების მართვა",
+      "მშენებლობა",
+      "ვაჭრობა",
+      "ტრანსპორტი",
+      "სასტუმროები და რესტორნები",
+      "ინფორმაცია და კომუნიკაცია",
+      "საფინანსო და სადაზღვევო საქმიანობები",
+      "უძრავი ქონება",
+      "პროფესიული და სამეცნიერო საქმიანობები",
+      "ადმინისტრაციული საქმიანობები",
+      "სახელმწიფო მმართველობა",
+      "განათლება",
+      "ჯანდაცვა და სოციალური მომსახურებები",
+      "ხელოვნება, გართობა და დასვენება",
+      "სხვა სახის მომსახურება",
+      "შინამეურნეობების საქმიანობები",
+    ];
+  } else {
+    namesarray = [
+      "Agriculture",
+      "Mining and quarrying",
+      "Manufacturing",
+      "Electricity, gas",
+      "Water supply; sewerage, waste management",
+      "Construction",
+      "Trade",
+      "Transportation and storage",
+      "Accommodation and food service activities",
+      "Information and communication",
+      "Financial and insurance activities",
+      "Real estate activities",
+      "Professional, scientific and technical activitie",
+      "Administrative and support service activities",
+      "Public administration",
+      "Education",
+      "Human health",
+      "Arts, entertainment and recreation",
+      "Other service activities",
+      "Activities of households as employers",
+    ];
+  }
   const ekonomikuriMomsaxurebisSaxeebi = [
     "A",
     "B",
@@ -54,7 +79,9 @@ function PieChart(props) {
           labels: ekonomikuriMomsaxurebisSaxeebi,
           datasets: [
             {
-              label: "გავლენა მთლიან ეკონომიკაზე",
+              label: !props.languageChange
+                ? "გავლენა მთლიან ეკონომიკაზე"
+                : "Effect of product demand change on total Economy",
               data: props.thirdDiagramValues1,
               backgroundColor: ["#597FB6"],
             },

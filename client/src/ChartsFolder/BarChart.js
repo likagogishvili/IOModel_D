@@ -25,28 +25,54 @@ function BarChart(props) {
     "S",
     "T",
   ];
-  const namesarray = [
-    "სოფლის მეურნეობა",
-    "სამთომოპოვებითი მრეწველობა",
-    "დამამუშავებელი მრეწველობა",
-    "ელექტროენერგია",
-    "წყალმომარაგება და ნარჩენების მართვა",
-    "მშენებლობა",
-    "ვაჭრობა",
-    "ტრანსპორტი",
-    "სასტუმროები და რესტორნები",
-    "ინფორმაცია და კომუნიკაცია",
-    "საფინანსო და სადაზღვევო საქმიანობები",
-    "უძრავი ქონება",
-    "პროფესიული და სამეცნიერო საქმიანობები",
-    "ადმინისტრაციული საქმიანობები",
-    "სახელმწიფო მმართველობა",
-    "განათლება",
-    "ჯანდაცვა და სოციალური მომსახურებები",
-    "ხელოვნება, გართობა და დასვენება",
-    "სხვა სახის მომსახურება",
-    "შინამეურნეობების საქმიანობები",
-  ];
+
+  if (!props.languageChange) {
+    var namesarray = [
+      "სოფლის მეურნეობა",
+      "სამთომოპოვებითი მრეწველობა",
+      "დამამუშავებელი მრეწველობა",
+      "ელექტროენერგია",
+      "წყალმომარაგება და ნარჩენების მართვა",
+      "მშენებლობა",
+      "ვაჭრობა",
+      "ტრანსპორტი",
+      "სასტუმროები და რესტორნები",
+      "ინფორმაცია და კომუნიკაცია",
+      "საფინანსო და სადაზღვევო საქმიანობები",
+      "უძრავი ქონება",
+      "პროფესიული და სამეცნიერო საქმიანობები",
+      "ადმინისტრაციული საქმიანობები",
+      "სახელმწიფო მმართველობა",
+      "განათლება",
+      "ჯანდაცვა და სოციალური მომსახურებები",
+      "ხელოვნება, გართობა და დასვენება",
+      "სხვა სახის მომსახურება",
+      "შინამეურნეობების საქმიანობები",
+    ];
+  } else {
+    namesarray = [
+      "Agriculture",
+      "Mining and quarrying",
+      "Manufacturing",
+      "Electricity, gas",
+      "Water supply; sewerage, waste management",
+      "Construction",
+      "Trade",
+      "Transportation and storage",
+      "Accommodation and food service activities",
+      "Information and communication",
+      "Financial and insurance activities",
+      "Real estate activities",
+      "Professional, scientific and technical activitie",
+      "Administrative and support service activities",
+      "Public administration",
+      "Education",
+      "Human health",
+      "Arts, entertainment and recreation",
+      "Other service activities",
+      "Activities of households as employers",
+    ];
+  }
   return (
     <div>
       <Bar
@@ -54,14 +80,14 @@ function BarChart(props) {
           labels: ekonomikuriMomsaxurebisSaxeebi,
           datasets: [
             {
-              label: "მიმდინარე",
+              label: !props.languageChange ? "მიმდინარე" : "Current",
 
               data: props.firstValue,
 
               backgroundColor: ["#5a80b8"],
             },
             {
-              label: "ახალი",
+              label: !props.languageChange ? "ახალი" : "New",
               data: props.secondValue,
               backgroundColor: ["#B25751"],
             },
@@ -100,7 +126,6 @@ function BarChart(props) {
             tooltip: {
               callbacks: {
                 title: function (context) {
-                  console.log(context);
                   return (context[0].label = namesarray[context[0].dataIndex]);
                 },
               },

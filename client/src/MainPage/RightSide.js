@@ -64,16 +64,29 @@ function RightSide(props) {
   return (
     <div className="RightInformation">
       <div className="inputHeader1">
-      <div className="rightHeader">
-        <div className="rightHeaderChild1"></div>
-        <div className="rightHeaderChild2">მთლიანი მიმდინარე ღირებულება</div>
-        <div className="rightHeaderChild2">მთლიანი ახალი ღირებულება</div>
-        <div className="rightHeaderChild2">ცვლილება</div>
-      </div>
+        {!props.languageChange ? (
+          <div className="rightHeader">
+            <div className="rightHeaderChild1"></div>
+            <div className="rightHeaderChild2">
+              მთლიანი მიმდინარე ღირებულება
+            </div>
+            <div className="rightHeaderChild2">მთლიანი ახალი ღირებულება</div>
+            <div className="rightHeaderChild2">ცვლილება</div>
+          </div>
+        ) : (
+          <div className="rightHeader">
+            <div className="rightHeaderChild1"></div>
+            <div className="rightHeaderChild2">Total Current values</div>
+            <div className="rightHeaderChild2">Total New values</div>
+            <div className="rightHeaderChild2">Change</div>
+          </div>
+        )}
       </div>
       <div>
         <section className="RightContent">
-          <div className="RightContentChild1">გამოშვება</div>
+          <div className="RightContentChild1">
+            {!props.languageChange ? "გამოშვება" : "Output"}
+          </div>
           <div className="RightContentChild2">
             {(Math.round(gamoshvebaDzveliSum * 10) / 10).toString()}
           </div>
@@ -86,7 +99,9 @@ function RightSide(props) {
         </section>
 
         <section className="RightContent">
-          <div className="RightContentChild1">დამატებული ღირებულება</div>
+          <div className="RightContentChild1">
+            {!props.languageChange ? "დამატებული ღირებულება" : "GVA"}
+          </div>
           <div className="RightContentChild2">
             {(Math.round(damatebitiDzveliSum * 10) / 10).toString()}
           </div>
@@ -99,7 +114,9 @@ function RightSide(props) {
         </section>
 
         <section className="RightContent">
-          <div className="RightContentChild1">დასაქმება</div>
+          <div className="RightContentChild1">
+            {!props.languageChange ? "დასაქმება" : "Employment"}
+          </div>
           <div className="RightContentChild2">
             {(Math.round(dasaqmebaSum * 10) / 10).toString()}
           </div>
@@ -112,7 +129,9 @@ function RightSide(props) {
         </section>
 
         <section className="RightContent">
-          <div className="RightContentChild1">იმპორტი</div>
+          <div className="RightContentChild1">
+            {!props.languageChange ? "იმპორტი" : "Import"}
+          </div>
           <div className="RightContentChild2">
             {(Math.round(importiSum * 10) / 10).toString()}
           </div>
@@ -126,7 +145,9 @@ function RightSide(props) {
 
         <section className="RightContent">
           <div className="RightContentChild1">
-            ძირითადი კაპიტალის მთლიანი ფორმირება
+            {!props.languageChange
+              ? "ძირითადი კაპიტალის მთლიანი ფორმირება"
+              : "GFCF"}
           </div>
           <div className="RightContentChild2">
             {(Math.round(kapitaliSum * 10) / 10).toString()}
@@ -140,7 +161,11 @@ function RightSide(props) {
         </section>
 
         <section className="RightContent">
-          <div className="RightContentChild1">შრომის ანაზღაურება</div>
+          <div className="RightContentChild1">
+            {!props.languageChange
+              ? "შრომის ანაზღაურება"
+              : "Compensation of employees"}
+          </div>
           <div className="RightContentChild2">
             {(Math.round(shromaSum * 10) / 10).toString()}
           </div>
@@ -161,6 +186,7 @@ function RightSide(props) {
           thirdDiagramValues4={props.thirdDiagramValues4}
           thirdDiagramValues5={props.thirdDiagramValues5}
           thirdDiagramValues6={props.thirdDiagramValues6}
+          languageChange={props.languageChange}
         />
       </div>
     </div>
