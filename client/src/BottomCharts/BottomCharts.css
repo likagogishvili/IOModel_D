@@ -14,7 +14,6 @@
   border: 1px solid black;
   font-family: "Ninomtavruli";
   margin: auto;
-
 }
 .arrow {
   border: solid black;
@@ -39,7 +38,7 @@
   justify-content: space-between;
   padding: 1%;
 }
-.renderingWithArrow >p{
+.renderingWithArrow > p {
   width: 100%;
   text-align: center;
   font-size: 1.3rem;
@@ -48,16 +47,13 @@
   background-color: none;
   border: none;
   font-family: "Ninomtavruli";
-
 }
 
 @media only screen and (max-width: 600px) {
   .chartBottomDark {
     width: 100%;
-    
   }
   .chartBottomLight {
     width: 100%;
   }
-  
 }

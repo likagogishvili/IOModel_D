@@ -44,29 +44,29 @@ function Data() {
 
   for (let i = 0; i < gamoshvebisMult.length; i++) {
     axaliGamoshveba[i].push(
-      gamoshvebisMult[i].Soflis*1,
-      gamoshvebisMult[i].Samto*1,
-      gamoshvebisMult[i].Damamushavebeli*1,
-      gamoshvebisMult[i].Eleqtroenergiis*1,
-      gamoshvebisMult[i].Wyalbobarageba*1,
-      gamoshvebisMult[i].Mshenebloba*1,
-      gamoshvebisMult[i].Sabitumo*1,
-      gamoshvebisMult[i].Transporti*1,
-      gamoshvebisMult[i].Gantavsebis*1,
-      gamoshvebisMult[i].Informacia*1,
-      gamoshvebisMult[i].Safinanso*1,
-      gamoshvebisMult[i].UdzraviQoneba*1,
-      gamoshvebisMult[i].Profesiuli*1,
-      gamoshvebisMult[i].Administraciuli*1,
-      gamoshvebisMult[i].Saxelmwifo*1,
-      gamoshvebisMult[i].Ganatleba*1,
-      gamoshvebisMult[i].Jandacva*1,
-      gamoshvebisMult[i].Xelovneba*1,
-      gamoshvebisMult[i].Sxva*1,
-      gamoshvebisMult[i].Shinameurneoba*1
+      gamoshvebisMult[i].Soflis * 1,
+      gamoshvebisMult[i].Samto * 1,
+      gamoshvebisMult[i].Damamushavebeli * 1,
+      gamoshvebisMult[i].Eleqtroenergiis * 1,
+      gamoshvebisMult[i].Wyalbobarageba * 1,
+      gamoshvebisMult[i].Mshenebloba * 1,
+      gamoshvebisMult[i].Sabitumo * 1,
+      gamoshvebisMult[i].Transporti * 1,
+      gamoshvebisMult[i].Gantavsebis * 1,
+      gamoshvebisMult[i].Informacia * 1,
+      gamoshvebisMult[i].Safinanso * 1,
+      gamoshvebisMult[i].UdzraviQoneba * 1,
+      gamoshvebisMult[i].Profesiuli * 1,
+      gamoshvebisMult[i].Administraciuli * 1,
+      gamoshvebisMult[i].Saxelmwifo * 1,
+      gamoshvebisMult[i].Ganatleba * 1,
+      gamoshvebisMult[i].Jandacva * 1,
+      gamoshvebisMult[i].Xelovneba * 1,
+      gamoshvebisMult[i].Sxva * 1,
+      gamoshvebisMult[i].Shinameurneoba * 1
     );
   }
-  
+
   // console.log(axaliGamoshveba)
   //dzveli gamoshveba
   const sabolooGamoshveba = [];
@@ -340,46 +340,34 @@ function Data() {
     dzveliShroma.push(item.ShromisAnazgaureba * 1)
   );
 
-
-
   ///mtliani multiplikatorebis matricis sheqmna
 
-
-  const axaliMtlianiMultiplikatorebi = [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-  ];
-
+  const axaliMtlianiMultiplikatorebi = [[], [], [], [], [], []];
 
   for (let i = 0; i < mtlianiMultipikatorebi.length; i++) {
     axaliMtlianiMultiplikatorebi[i].push(
-    mtlianiMultipikatorebi[i].Soflis *1,
-    mtlianiMultipikatorebi[i].Samto*1,
-    mtlianiMultipikatorebi[i].Damamushavebeli*1,
-    mtlianiMultipikatorebi[i].Eleqtroenergiis*1,
-    mtlianiMultipikatorebi[i].Wyalbobarageba*1,
-    mtlianiMultipikatorebi[i].Mshenebloba*1,
-    mtlianiMultipikatorebi[i].Sabitumo*1,
-    mtlianiMultipikatorebi[i].Transporti*1,
-    mtlianiMultipikatorebi[i].Gantavsebis*1,
-    mtlianiMultipikatorebi[i].Informacia*1,
-    mtlianiMultipikatorebi[i].Safinanso*1,
-    mtlianiMultipikatorebi[i].UdzraviQoneba*1,
-    mtlianiMultipikatorebi[i].Profesiuli*1,
-    mtlianiMultipikatorebi[i].Administraciuli*1,
-    mtlianiMultipikatorebi[i].Saxelmwifo*1,
-    mtlianiMultipikatorebi[i].Ganatleba*1,
-    mtlianiMultipikatorebi[i].Jandacva*1,
-    mtlianiMultipikatorebi[i].Xelovneba*1,
-    mtlianiMultipikatorebi[i].Sxva*1,
-    mtlianiMultipikatorebi[i].Shinameurneoba*1
+      mtlianiMultipikatorebi[i].Soflis * 1,
+      mtlianiMultipikatorebi[i].Samto * 1,
+      mtlianiMultipikatorebi[i].Damamushavebeli * 1,
+      mtlianiMultipikatorebi[i].Eleqtroenergiis * 1,
+      mtlianiMultipikatorebi[i].Wyalbobarageba * 1,
+      mtlianiMultipikatorebi[i].Mshenebloba * 1,
+      mtlianiMultipikatorebi[i].Sabitumo * 1,
+      mtlianiMultipikatorebi[i].Transporti * 1,
+      mtlianiMultipikatorebi[i].Gantavsebis * 1,
+      mtlianiMultipikatorebi[i].Informacia * 1,
+      mtlianiMultipikatorebi[i].Safinanso * 1,
+      mtlianiMultipikatorebi[i].UdzraviQoneba * 1,
+      mtlianiMultipikatorebi[i].Profesiuli * 1,
+      mtlianiMultipikatorebi[i].Administraciuli * 1,
+      mtlianiMultipikatorebi[i].Saxelmwifo * 1,
+      mtlianiMultipikatorebi[i].Ganatleba * 1,
+      mtlianiMultipikatorebi[i].Jandacva * 1,
+      mtlianiMultipikatorebi[i].Xelovneba * 1,
+      mtlianiMultipikatorebi[i].Sxva * 1,
+      mtlianiMultipikatorebi[i].Shinameurneoba * 1
     );
   }
-
 
   useEffect(() => {
     Axios.get("http://localhost:4000/GamoshvebisMult").then((response) => {

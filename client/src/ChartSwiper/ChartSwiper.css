@@ -19,8 +19,7 @@
   color: #173795;
 }
 @media only screen and (max-width: 900px) {
-
-.swiperCharts {
-  width: 80%;
-}
+  .swiperCharts {
+    width: 80%;
+  }
 }

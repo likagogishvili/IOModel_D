@@ -92,7 +92,7 @@ function Sxvaoba(props) {
           labels: ekonomikuriMomsaxurebisSaxeebi,
           datasets: [
             {
-              label: !props.languageChange ? "სხვაობა": 'Difference',
+              label: !props.languageChange ? "სხვაობა" : "Difference",
               data: sxvaoba,
               backgroundColor: ["#5a80b8"],
             },
