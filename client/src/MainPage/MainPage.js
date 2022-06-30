@@ -59,7 +59,6 @@ function MainPage(props) {
   const [newval, setnewvalue] = useState([]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const axalisabolooMoxmareba = [];
-  
 
   props.mimdinareGirebuleba.map((item) =>
     axalisabolooMoxmareba.push(
@@ -239,6 +238,7 @@ function MainPage(props) {
             infoprecent={infoprecent}
             data={axalisabolooMoxmareba}
             old={axalisabolooMoxmareba}
+            languageChange={languageChange}
           />
         ) : (
           <InputRender
@@ -251,6 +251,7 @@ function MainPage(props) {
             infoprecent={infoprecent}
             data={newval}
             old={axalisabolooMoxmareba}
+            languageChange={languageChange}
           />
         )}
 
@@ -273,6 +274,7 @@ function MainPage(props) {
           thirdDiagramValues4={thirdDiagramValues4}
           thirdDiagramValues5={thirdDiagramValues5}
           thirdDiagramValues6={thirdDiagramValues6}
+          languageChange={languageChange}
         />
       </div>
 
@@ -301,6 +303,7 @@ function MainPage(props) {
         shromaBCsecondValue={sixthDiagramValue}
         shromaSxvaobafirstValue={props.dzveliShroma}
         shromaSxvaobasecondValue={sixthDiagramValue}
+        languageChange={languageChange}
       />
     </div>
   );

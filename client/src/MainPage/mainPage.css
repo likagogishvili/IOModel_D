@@ -31,11 +31,9 @@
   color: white;
   align-items: center;
   font-family: "Ninomtavruli";
-
 }
 .firT {
-
-  background-color: #397CB9;
+  background-color: #397cb9;
   width: 7%;
   height: 60%;
   border-radius: 50%;
@@ -47,7 +45,7 @@
   font-family: "Ninomtavruli";
 }
 .secT {
-  background-color: #397DB9;
+  background-color: #397db9;
   width: 40%;
   height: 80%;
   border-radius: 25px;
@@ -60,7 +58,7 @@
   font-family: "Ninomtavruli";
 }
 .thirdT {
-  background-color: #397DB9;
+  background-color: #397db9;
   width: 12%;
   height: 80%;
   border-radius: 25px;
@@ -74,7 +72,7 @@
   font-family: "Ninomtavruli";
 }
 .last2T {
-  background-color: #397DB9;
+  background-color: #397db9;
   width: 20%;
   height: 80%;
   border-radius: 25px;
@@ -97,7 +95,6 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
 
 /* input lines */
 .inputFieldWhite {
@@ -191,7 +188,7 @@ input[type="number"] {
 .LeftInformation > button {
   width: 30%;
   height: 50px;
-  background-color: #397DB9;
+  background-color: #397db9;
   border-radius: 20px;
   color: white;
   border: none;
@@ -260,4 +257,56 @@ input[type="number"] {
   }
 
   /* Chrome, Safari, Edge, Opera */
+}
+
+@media (max-width: 1000px) {
+  .inputFieldWhite {
+    font-size: 0.9rem;
+  }
+  .firT {
+    height: 80%;
+    font-size: 0.9rem;
+  }
+  .inputFieldDark {
+    font-size: 0.9rem;
+  }
+  .secT {
+    font-size: 0.9rem;
+  }
+  .thirdT {
+    font-size: 0.9rem;
+  }
+  .inputP > p {
+    font-size: 0.9rem;
+  }
+
+  .last2T {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .inputFieldWhite {
+    font-size: 0.6rem;
+  }
+  .firT {
+    height: 50%;
+    font-size: 0.6rem;
+  }
+  .inputFieldDark {
+    font-size: 0.6rem;
+  }
+  .secT {
+    font-size: 0.6rem;
+  }
+  .thirdT {
+    font-size: 0.6rem;
+  }
+  .inputP > p {
+    font-size: 0.6rem;
+  }
+
+  .last2T {
+    font-size: 0.6rem;
+  }
 }

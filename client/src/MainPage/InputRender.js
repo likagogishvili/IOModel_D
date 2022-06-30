@@ -51,6 +51,7 @@ function InputRender(props) {
   function roundNumber(num) {
     return Math.round((parseFloat(num) + Number.EPSILON) * 10) / 10;
   }
+  console.log(props.languageChange)
 
   function changeInputValue(event) {
     for (let z = 0; z < ar1.length; z++) {
