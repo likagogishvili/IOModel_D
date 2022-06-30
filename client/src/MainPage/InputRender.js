@@ -240,7 +240,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.a || props.infoprecent.a === 0
               ? ""
-              : parseFloat(props.infoprecent.a).toFixed(2)
+              : parseFloat(props.infoprecent.a).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -253,7 +253,7 @@ function InputRender(props) {
           value={
             !props.info.a || props.info.a === 0
               ? ""
-              : parseFloat(props.info.a).toFixed(1)
+              : parseFloat(props.info.a).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -285,7 +285,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.b || props.infoprecent.b === 0
               ? ""
-              : parseFloat(props.infoprecent.b).toFixed()
+              : parseFloat(props.infoprecent.b).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -298,7 +298,7 @@ function InputRender(props) {
           value={
             !props.info.b || props.info.b === 0
               ? ""
-              : parseFloat(props.info.b).toFixed()
+              : parseFloat(props.info.b).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -330,7 +330,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.c || props.infoprecent.c === 0
               ? ""
-              : parseFloat(props.infoprecent.c).toFixed()
+              : parseFloat(props.infoprecent.c).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -343,7 +343,7 @@ function InputRender(props) {
           value={
             !props.info.c || props.info.c === 0
               ? ""
-              : parseFloat(props.info.c).toFixed()
+              : parseFloat(props.info.c).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -375,7 +375,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.d || props.infoprecent.d === 0
               ? ""
-              : parseFloat(props.infoprecent.d).toFixed()
+              : parseFloat(props.infoprecent.d).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -388,7 +388,7 @@ function InputRender(props) {
           value={
             !props.info.d || props.info.d === 0
               ? ""
-              : parseFloat(props.info.d).toFixed()
+              : parseFloat(props.info.d).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -420,7 +420,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.e || props.infoprecent.e === 0
               ? ""
-              : parseFloat(props.infoprecent.e).toFixed()
+              : parseFloat(props.infoprecent.e).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -433,7 +433,7 @@ function InputRender(props) {
           value={
             !props.info.e || props.info.e === 0
               ? ""
-              : parseFloat(props.info.e).toFixed()
+              : parseFloat(props.info.e).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -465,7 +465,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.f || props.infoprecent.f === 0
               ? ""
-              : parseFloat(props.infoprecent.f).toFixed()
+              : parseFloat(props.infoprecent.f).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -478,7 +478,7 @@ function InputRender(props) {
           value={
             !props.info.f || props.info.f === 0
               ? ""
-              : parseFloat(props.info.f).toFixed()
+              : parseFloat(props.info.f).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -510,7 +510,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.g || props.infoprecent.g === 0
               ? ""
-              : parseFloat(props.infoprecent.g).toFixed()
+              : parseFloat(props.infoprecent.g).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -523,7 +523,7 @@ function InputRender(props) {
           value={
             !props.info.g || props.info.g === 0
               ? ""
-              : parseFloat(props.info.g).toFixed()
+              : parseFloat(props.info.g).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -555,7 +555,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.h || props.infoprecent.h === 0
               ? ""
-              : parseFloat(props.infoprecent.h).toFixed()
+              : parseFloat(props.infoprecent.h).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -568,7 +568,7 @@ function InputRender(props) {
           value={
             !props.info.h || props.info.h === 0
               ? ""
-              : parseFloat(props.info.h).toFixed()
+              : parseFloat(props.info.h).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -600,7 +600,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.i || props.infoprecent.i === 0
               ? ""
-              : parseFloat(props.infoprecent.i).toFixed()
+              : parseFloat(props.infoprecent.i).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -613,7 +613,7 @@ function InputRender(props) {
           value={
             !props.info.i || props.info.i === 0
               ? ""
-              : parseFloat(props.info.i).toFixed()
+              : parseFloat(props.info.i).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -645,7 +645,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.j || props.infoprecent.j === 0
               ? ""
-              : parseFloat(props.infoprecent.j).toFixed()
+              : parseFloat(props.infoprecent.j).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -658,7 +658,7 @@ function InputRender(props) {
           value={
             !props.info.j || props.info.j === 0
               ? ""
-              : parseFloat(props.info.j).toFixed()
+              : parseFloat(props.info.j).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -690,7 +690,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.k || props.infoprecent.k === 0
               ? ""
-              : parseFloat(props.infoprecent.k).toFixed()
+              : parseFloat(props.infoprecent.k).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -703,7 +703,7 @@ function InputRender(props) {
           value={
             !props.info.k || props.info.k === 0
               ? ""
-              : parseFloat(props.info.k).toFixed()
+              : parseFloat(props.info.k).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -735,7 +735,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.l || props.infoprecent.l === 0
               ? ""
-              : parseFloat(props.infoprecent.l).toFixed()
+              : parseFloat(props.infoprecent.l).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -748,7 +748,7 @@ function InputRender(props) {
           value={
             !props.info.l || props.info.l === 0
               ? ""
-              : parseFloat(props.info.l).toFixed()
+              : parseFloat(props.info.l).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -780,7 +780,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.m || props.infoprecent.m === 0
               ? ""
-              : parseFloat(props.infoprecent.m).toFixed()
+              : parseFloat(props.infoprecent.m).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -793,7 +793,7 @@ function InputRender(props) {
           value={
             !props.info.m || props.info.m === 0
               ? ""
-              : parseFloat(props.info.m).toFixed()
+              : parseFloat(props.info.m).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -825,7 +825,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.n || props.infoprecent.n === 0
               ? ""
-              : parseFloat(props.infoprecent.n).toFixed()
+              : parseFloat(props.infoprecent.n).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -838,7 +838,7 @@ function InputRender(props) {
           value={
             !props.info.n || props.info.n === 0
               ? ""
-              : parseFloat(props.info.n).toFixed()
+              : parseFloat(props.info.n).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -870,7 +870,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.o || props.infoprecent.o === 0
               ? ""
-              : parseFloat(props.infoprecent.o).toFixed()
+              : parseFloat(props.infoprecent.o).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -883,7 +883,7 @@ function InputRender(props) {
           value={
             !props.info.o || props.info.o === 0
               ? ""
-              : parseFloat(props.info.o).toFixed()
+              : parseFloat(props.info.o).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -915,7 +915,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.p || props.infoprecent.p === 0
               ? ""
-              : parseFloat(props.infoprecent.p).toFixed()
+              : parseFloat(props.infoprecent.p).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -928,7 +928,7 @@ function InputRender(props) {
           value={
             !props.info.p || props.info.p === 0
               ? ""
-              : parseFloat(props.info.p).toFixed()
+              : parseFloat(props.info.p).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -960,7 +960,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.q || props.infoprecent.q === 0
               ? ""
-              : parseFloat(props.infoprecent.q).toFixed()
+              : parseFloat(props.infoprecent.q).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -973,7 +973,7 @@ function InputRender(props) {
           value={
             !props.info.q || props.info.q === 0
               ? ""
-              : parseFloat(props.info.q).toFixed()
+              : parseFloat(props.info.q).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -1005,7 +1005,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.r || props.infoprecent.r === 0
               ? ""
-              : parseFloat(props.infoprecent.r).toFixed()
+              : parseFloat(props.infoprecent.r).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -1018,7 +1018,7 @@ function InputRender(props) {
           value={
             !props.info.r || props.info.r === 0
               ? ""
-              : parseFloat(props.info.r).toFixed()
+              : parseFloat(props.info.r).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -1050,7 +1050,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.s || props.infoprecent.s === 0
               ? ""
-              : parseFloat(props.infoprecent.s).toFixed()
+              : parseFloat(props.infoprecent.s).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -1063,7 +1063,7 @@ function InputRender(props) {
           value={
             !props.info.s || props.info.s === 0
               ? ""
-              : parseFloat(props.info.s).toFixed()
+              : parseFloat(props.info.s).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
@@ -1095,7 +1095,7 @@ function InputRender(props) {
           value={
             !props.infoprecent.t || props.infoprecent.t === 0
               ? ""
-              : parseFloat(props.infoprecent.t).toFixed()
+              : parseFloat(props.infoprecent.t).toFixed(2).replace(/\.00$/, "")
           }
         />
         <input
@@ -1108,7 +1108,7 @@ function InputRender(props) {
           value={
             !props.info.t || props.info.t === 0
               ? ""
-              : parseFloat(props.info.t).toFixed()
+              : parseFloat(props.info.t).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>
