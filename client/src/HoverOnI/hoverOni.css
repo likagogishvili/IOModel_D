@@ -1,0 +1,22 @@
+.onSymbolHover {
+  position: absolute;
+  background-color: #215986;
+  min-width: 5%;
+  height: 35px;
+  left: 29.3%;
+  padding-left: 1%;
+  padding-right: 1%;
+  top: 229px;
+  display: flex;
+  align-items: center;
+  font-family: "Noto Sans Georgian", sans-serif;
+  color: white;
+  opacity: 0.9;
+  border-radius: 10px;
+  font-size: 0.7rem;
+}
+@media (max-width: 900px) {
+  .onSymbolHover {
+    display: none;
+  }
+}

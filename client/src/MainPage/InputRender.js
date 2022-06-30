@@ -1,3 +1,5 @@
+import HoverOni from "../HoverOnI/HoverOni";
+import { useState } from "react";
 function InputRender(props) {
   var ar1 = [
     "a",
@@ -60,7 +62,7 @@ function InputRender(props) {
       "უძრავი ქონება",
       "პროფესიული და სამეცნიერო საქმიანობები",
       "ადმინისტრაციული საქმიანობები",
-      "სახელმწიფო მმართველობა",
+      "სახელმწიფო მმართველობა და სოციალური უსაფრთხოება",
       "განათლება",
       "ჯანდაცვა და სოციალური მომსახურებები",
       "ხელოვნება, გართობა და დასვენება",
@@ -72,23 +74,23 @@ function InputRender(props) {
       "Agriculture",
       "Mining and quarrying",
       "Manufacturing",
-      "Electricity, gas",
-      "Water supply; sewerage, waste management",
+      "Electricity",
+      "Water supply; sewerage",
       "Construction",
       "Trade",
-      "Transportation and storage",
-      "Accommodation and food service activities",
+      "Transport",
+      "Hotels and restaurants",
       "Information and communication",
       "Financial and insurance activities",
       "Real estate activities",
       "Professional, scientific and technical activitie",
-      "Administrative and support service activities",
+      "Administrative activities",
       "Public administration",
       "Education",
-      "Human health",
+      "Human health activities",
       "Arts, entertainment and recreation",
       "Other service activities",
-      "Activities of households as employers",
+      "Activities of households",
     ];
   }
 
@@ -151,8 +153,54 @@ function InputRender(props) {
     }
   }
 
+  //symbolHoverElements
+  const [symbol1, setSymbol1] = useState(false);
+  const [symbol2, setSymbol2] = useState(false);
+  const [symbol3, setSymbol3] = useState(false);
+  const [symbol4, setSymbol4] = useState(false);
+  const [symbol5, setSymbol5] = useState(false);
+  const [symbol6, setSymbol6] = useState(false);
+  const [symbol7, setSymbol7] = useState(false);
+  const [symbol8, setSymbol8] = useState(false);
+  const [symbol9, setSymbol9] = useState(false);
+  const [symbol10, setSymbol10] = useState(false);
+  const [symbol11, setSymbol11] = useState(false);
+  const [symbol12, setSymbol12] = useState(false);
+  const [symbol13, setSymbol13] = useState(false);
+  const [symbol14, setSymbol14] = useState(false);
+  const [symbol15, setSymbol15] = useState(false);
+  const [symbol16, setSymbol16] = useState(false);
+  const [symbol17, setSymbol17] = useState(false);
+  const [symbol18, setSymbol18] = useState(false);
+  const [symbol19, setSymbol19] = useState(false);
+  const [symbol20, setSymbol20] = useState(false);
+
+  console.log(symbol1);
   return (
     <div className="LeftInformation">
+      <HoverOni
+        languageChange={props.languageChange}
+        symbol1={symbol1}
+        symbol2={symbol2}
+        symbol3={symbol3}
+        symbol4={symbol4}
+        symbol5={symbol5}
+        symbol6={symbol6}
+        symbol7={symbol7}
+        symbol8={symbol8}
+        symbol9={symbol9}
+        symbol10={symbol10}
+        symbol11={symbol11}
+        symbol12={symbol12}
+        symbol13={symbol13}
+        symbol14={symbol14}
+        symbol15={symbol15}
+        symbol16={symbol16}
+        symbol17={symbol17}
+        symbol18={symbol18}
+        symbol19={symbol19}
+        symbol20={symbol20}
+      />
       {!props.languageChange ? (
         <header className="inputHeader">
           <div className="firT">Nace Rev.2</div>
@@ -170,12 +218,18 @@ function InputRender(props) {
           <div className="last2T">Nominal Change in Final Demand</div>
         </header>
       )}
-
       <section className="inputFieldWhite">
         <div className="inputAlphabet">A</div>
+
         <div className="inputP">
           <p>{namesarray[0]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol1(true)}
+            onMouseLeave={() => setSymbol1(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[0] * 10) / 10).toString()}
@@ -214,7 +268,13 @@ function InputRender(props) {
         <div className="inputAlphabet">B</div>
         <div className="inputP">
           <p>{namesarray[1]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol2(true)}
+            onMouseLeave={() => setSymbol2(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[1] * 10) / 10).toString()}
@@ -253,7 +313,13 @@ function InputRender(props) {
         <div className="inputAlphabet">C</div>
         <div className="inputP">
           <p>{namesarray[2]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol3(true)}
+            onMouseLeave={() => setSymbol3(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[2] * 10) / 10).toString()}
@@ -292,7 +358,13 @@ function InputRender(props) {
         <div className="inputAlphabet">D</div>
         <div className="inputP">
           <p>{namesarray[3]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol4(true)}
+            onMouseLeave={() => setSymbol4(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[3] * 10) / 10).toString()}
@@ -331,7 +403,13 @@ function InputRender(props) {
         <div className="inputAlphabet">E</div>
         <div className="inputP">
           <p>{namesarray[4]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol5(true)}
+            onMouseLeave={() => setSymbol5(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[4] * 10) / 10).toString()}
@@ -370,7 +448,13 @@ function InputRender(props) {
         <div className="inputAlphabet">F</div>
         <div className="inputP">
           <p>{namesarray[5]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol6(true)}
+            onMouseLeave={() => setSymbol6(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[5] * 10) / 10).toString()}
@@ -409,7 +493,13 @@ function InputRender(props) {
         <div className="inputAlphabet">G</div>
         <div className="inputP">
           <p>{namesarray[6]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol7(true)}
+            onMouseLeave={() => setSymbol7(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[6] * 10) / 10).toString()}
@@ -448,7 +538,13 @@ function InputRender(props) {
         <div className="inputAlphabet">H</div>
         <div className="inputP">
           <p>{namesarray[7]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol8(true)}
+            onMouseLeave={() => setSymbol8(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[7] * 10) / 10).toString()}
@@ -487,7 +583,13 @@ function InputRender(props) {
         <div className="inputAlphabet">I</div>
         <div className="inputP">
           <p>{namesarray[8]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol9(true)}
+            onMouseLeave={() => setSymbol9(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[8] * 10) / 10).toString()}
@@ -526,7 +628,13 @@ function InputRender(props) {
         <div className="inputAlphabet">J</div>
         <div className="inputP">
           <p>{namesarray[9]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol10(true)}
+            onMouseLeave={() => setSymbol10(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[9] * 10) / 10).toString()}
@@ -565,7 +673,13 @@ function InputRender(props) {
         <div className="inputAlphabet">K</div>
         <div className="inputP">
           <p>{namesarray[10]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol11(true)}
+            onMouseLeave={() => setSymbol11(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[10] * 10) / 10).toString()}
@@ -604,7 +718,13 @@ function InputRender(props) {
         <div className="inputAlphabet">L</div>
         <div className="inputP">
           <p>{namesarray[11]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol12(true)}
+            onMouseLeave={() => setSymbol12(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[11] * 10) / 10).toString()}
@@ -643,7 +763,13 @@ function InputRender(props) {
         <div className="inputAlphabet">M</div>
         <div className="inputP">
           <p>{namesarray[12]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol13(true)}
+            onMouseLeave={() => setSymbol13(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[12] * 10) / 10).toString()}
@@ -682,7 +808,13 @@ function InputRender(props) {
         <div className="inputAlphabet">N</div>
         <div className="inputP">
           <p>{namesarray[13]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol14(true)}
+            onMouseLeave={() => setSymbol14(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[13] * 10) / 10).toString()}
@@ -721,7 +853,13 @@ function InputRender(props) {
         <div className="inputAlphabet">O</div>
         <div className="inputP">
           <p>{namesarray[14]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol15(true)}
+            onMouseLeave={() => setSymbol15(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[14] * 10) / 10).toString()}
@@ -760,7 +898,13 @@ function InputRender(props) {
         <div className="inputAlphabet">P</div>
         <div className="inputP">
           <p>{namesarray[15]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol16(true)}
+            onMouseLeave={() => setSymbol16(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[15] * 10) / 10).toString()}
@@ -799,7 +943,13 @@ function InputRender(props) {
         <div className="inputAlphabet">Q</div>
         <div className="inputP">
           <p>{namesarray[16]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol17(true)}
+            onMouseLeave={() => setSymbol17(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[16] * 10) / 10).toString()}
@@ -838,7 +988,13 @@ function InputRender(props) {
         <div className="inputAlphabet">R</div>
         <div className="inputP">
           <p>{namesarray[17]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol18(true)}
+            onMouseLeave={() => setSymbol18(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[17] * 10) / 10).toString()}
@@ -877,7 +1033,13 @@ function InputRender(props) {
         <div className="inputAlphabet">S</div>
         <div className="inputP">
           <p>{namesarray[18]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol19(true)}
+            onMouseLeave={() => setSymbol19(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[18] * 10) / 10).toString()}
@@ -916,7 +1078,13 @@ function InputRender(props) {
         <div className="inputAlphabet">T</div>
         <div className="inputP">
           <p>{namesarray[19]}</p>
-          <div className="inputSymbol">i</div>
+          <div
+            className="inputSymbol"
+            onMouseEnter={() => setSymbol20(true)}
+            onMouseLeave={() => setSymbol20(false)}
+          >
+            i
+          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[19] * 10) / 10).toString()}

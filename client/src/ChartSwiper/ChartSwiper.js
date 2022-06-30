@@ -31,7 +31,6 @@ function ChartSwiper(props) {
             />
           </div>
         </SwiperSlide>
-        {/* Output	GVA	Employment	Import	GFCF	Compensation of employees */}
         <SwiperSlide>
           <div className="swiperCharts">
             <p className="rightSideChartsp">
