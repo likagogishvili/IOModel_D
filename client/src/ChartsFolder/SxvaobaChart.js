@@ -79,8 +79,8 @@ function Sxvaoba(props) {
   }
   for (let i = 0; i < sxvaoba.length; i++) {
     if (
-      Math.round(sxvaoba[i] * 100) / 100 === 0 ||
-      Math.round(sxvaoba[i] * 100) / 100 === -0
+      Math.round(sxvaoba[i])=== 0 ||
+      Math.round(sxvaoba[i])=== -0
     ) {
       sxvaoba[i] = 0;
     }
@@ -130,7 +130,6 @@ function Sxvaoba(props) {
             tooltip: {
               callbacks: {
                 title: function (context) {
-                  console.log(context);
                   return (context[0].label = namesarray[context[0].dataIndex]);
                 },
               },

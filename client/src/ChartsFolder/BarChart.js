@@ -81,9 +81,7 @@ function BarChart(props) {
           datasets: [
             {
               label: !props.languageChange ? "მიმდინარე" : "Current",
-
               data: props.firstValue,
-
               backgroundColor: ["#5a80b8"],
             },
             {

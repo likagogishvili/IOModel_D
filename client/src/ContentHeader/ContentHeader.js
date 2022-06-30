@@ -55,7 +55,7 @@ function ContentHeader(props) {
             </a>
             {!props.languageChange ? (
               <img
-                src={imgLink[0]}
+                src={'http://juniors.geostat.ge/assets/img/icons/us.svg'}
                 alt=""
                 width={"100%"}
                 height={"100%"}
@@ -63,7 +63,7 @@ function ContentHeader(props) {
               />
             ) : (
               <img
-                src={imgLink[1]}
+                src={'http://juniors.geostat.ge/assets/img/icons/ge.svg'}
                 alt=""
                 width={"100%"}
                 height={"100%"}

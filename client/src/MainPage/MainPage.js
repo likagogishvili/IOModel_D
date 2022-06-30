@@ -219,7 +219,6 @@ function MainPage(props) {
     thirdDiagramValues6.push(dsix2[i] - dsix1[i]);
   }
 
-  console.log(newval)
   return (
     <div>
       <ContentHeader

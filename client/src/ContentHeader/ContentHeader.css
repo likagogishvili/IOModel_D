@@ -52,6 +52,7 @@
   width: 8%;
   height: 25%;
   margin-right: 7%;
+  cursor: pointer;
 }
 .imgDiv > a {
   position: relative;
@@ -60,6 +61,7 @@
   justify-content: center;
   width: 12%;
   height: 25%;
+  cursor: pointer;
 }
 .headerContentSmall {
   width: 83%;
