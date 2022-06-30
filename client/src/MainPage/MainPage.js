@@ -9,7 +9,18 @@ import RightSide from "./RightSide";
 import { useEffect } from "react";
 
 function MainPage(props) {
+
   const [languageChange, SetLanguageChange] = useState(false);
+// dons't refresh
+  useEffect(() => {
+    SetLanguageChange(
+      JSON.parse(window.sessionStorage.getItem("languageChange"))
+    );
+  }, []);
+
+  useEffect(() => {
+    window.sessionStorage.setItem("languageChange", languageChange);
+  }, [languageChange]);
 
   const [infoprecent, SetInfoPrecent] = useState({
     a: "",
@@ -227,18 +238,18 @@ function MainPage(props) {
       />
 
       <div className="inputCointeinerParent">
-          <InputRender
-            axalisabolooMoxmareba={axalisabolooMoxmareba}
-            setnewvalue={setnewvalue}
-            newval={newval}
-            SetInfo={SetInfo}
-            info={info}
-            SetInfoPrecent={SetInfoPrecent}
-            infoprecent={infoprecent}
-            data={axalisabolooMoxmareba}
-            old={axalisabolooMoxmareba}
-            languageChange={languageChange}
-          />
+        <InputRender
+          axalisabolooMoxmareba={axalisabolooMoxmareba}
+          setnewvalue={setnewvalue}
+          newval={newval}
+          SetInfo={SetInfo}
+          info={info}
+          SetInfoPrecent={SetInfoPrecent}
+          infoprecent={infoprecent}
+          data={axalisabolooMoxmareba}
+          old={axalisabolooMoxmareba}
+          languageChange={languageChange}
+        />
         <RightSide
           gamoshveba={props.sabolooGamoshveba}
           gamoshvebaAxali={firstDiagramNewValues}

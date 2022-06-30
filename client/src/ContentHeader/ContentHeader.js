@@ -5,10 +5,6 @@ import youtube from "./img/youtube.png";
 import headerImage from "./img/headerBG.png";
 import headerLogo from "./img/headerLogo.png";
 function ContentHeader(props) {
-  const imgLink = [
-    "http://sna.geostat.ge/img/home/en.png",
-    "http://sna.geostat.ge/img/home/ka.png",
-  ];
   return (
     <header
       className="contH"
