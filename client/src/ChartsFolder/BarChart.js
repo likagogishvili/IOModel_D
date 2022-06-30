@@ -25,6 +25,12 @@ function BarChart(props) {
     "S",
     "T",
   ];
+  let firstValue = props.firstValue.map(function (each_element) {
+    return Number(each_element.toFixed(1));
+  });
+  let secondValue = props.secondValue.map(function (each_element) {
+    return Number(each_element.toFixed(1));
+  });
 
   if (!props.languageChange) {
     var namesarray = [
@@ -81,12 +87,12 @@ function BarChart(props) {
           datasets: [
             {
               label: !props.languageChange ? "მიმდინარე" : "Current",
-              data: props.firstValue,
+              data: firstValue,
               backgroundColor: ["#5a80b8"],
             },
             {
               label: !props.languageChange ? "ახალი" : "New",
-              data: props.secondValue,
+              data: secondValue,
               backgroundColor: ["#B25751"],
             },
           ],
