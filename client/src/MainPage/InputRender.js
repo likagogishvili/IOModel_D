@@ -93,11 +93,6 @@ function InputRender(props) {
       "Activities of households",
     ];
   }
-
-  function ClearData() {
-    window.location.reload(false);
-  }
-
   function roundNumber(num) {
     return Math.round((parseFloat(num) + Number.EPSILON) * 10) / 10;
   }
@@ -175,7 +170,6 @@ function InputRender(props) {
   const [symbol19, setSymbol19] = useState(false);
   const [symbol20, setSymbol20] = useState(false);
 
-  console.log(symbol1);
   return (
     <div className="LeftInformation">
       <HoverOni
@@ -1119,7 +1113,7 @@ function InputRender(props) {
         />
       </section>
 
-      <button onBlur={ClearData}>
+      <button onClick={() => window.location.reload()}>
         {!props.languageChange ? "გასუფთავება" : "Clear"}
       </button>
     </div>
