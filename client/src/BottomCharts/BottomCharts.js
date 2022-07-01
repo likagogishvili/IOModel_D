@@ -73,7 +73,7 @@ function BottomCharts(props) {
           </div>
           </div>
         )}
-      {/* <button className="downloadBTN" onClick={a =>convertChartDataToCSV(a, props.firstValue)}>გადმოწერა </button> */}
+      <button className="downloadBTN" onClick={a =>convertChartDataToCSV(a, props.firstValue)}>გადმოწერა </button>
       </div>
 
       <div className="chartBottomLight">

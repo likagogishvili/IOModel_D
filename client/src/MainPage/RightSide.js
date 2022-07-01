@@ -81,6 +81,23 @@ function RightSide(props) {
         )}
       </div>
       <div>
+
+
+        <section className="RightContent">
+          <div className="RightContentChild1">
+            {!props.languageChange ? "მთლიანი შიდა პროდუქტი" : "Value added, mil Gel"}
+          </div>
+          <div className="RightContentChild2">
+            {(Math.round(damatebitiDzveliSum * 10) / 10).toString()}
+          </div>
+          <div className="RightContentChild3">
+            {(Math.round(damatebitiAxaliSum * 10) / 10).toString()}
+          </div>
+          <div className="RightContentChild3">
+            {Math.round(damatebitiPerc * 10) / 10} %
+          </div>
+        </section>
+
         <section className="RightContent">
           <div className="RightContentChild1">
             {!props.languageChange ? "გამოშვება, მლნ ლარი" : "Output, mil Gel"}
@@ -98,22 +115,7 @@ function RightSide(props) {
 
         <section className="RightContent">
           <div className="RightContentChild1">
-            {!props.languageChange ? "დამატებული ღირებულება, მლნ ლარი" : "Value added, mil Gel"}
-          </div>
-          <div className="RightContentChild2">
-            {(Math.round(damatebitiDzveliSum * 10) / 10).toString()}
-          </div>
-          <div className="RightContentChild3">
-            {(Math.round(damatebitiAxaliSum * 10) / 10).toString()}
-          </div>
-          <div className="RightContentChild3">
-            {Math.round(damatebitiPerc * 10) / 10} %
-          </div>
-        </section>
-
-        <section className="RightContent">
-          <div className="RightContentChild1">
-            {!props.languageChange ? "დასაქმება, კაცი" : "Employment, person"}
+            {!props.languageChange ? "დასაქმება, ათასი კაცი" : "Employment, person"}
           </div>
           <div className="RightContentChild2">
             {(Math.round(dasaqmebaSum * 10) / 10).toString()}
@@ -125,6 +127,7 @@ function RightSide(props) {
             {Math.round(dasaqmebaPerc * 10) / 10} %
           </div>
         </section>
+
 
         <section className="RightContent">
           <div className="RightContentChild1">
@@ -144,7 +147,7 @@ function RightSide(props) {
         <section className="RightContent">
           <div className="RightContentChild1">
             {!props.languageChange
-              ? "ძირითადი კაპიტალის მთლიანი ფორმირება, მლნ ლარი"
+              ? "ძირითადი კაპიტალის ფორმირება, მლნ ლარი"
               : "Gross capital formation, mil Gel"}
           </div>
           <div className="RightContentChild2">
