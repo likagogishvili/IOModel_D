@@ -10,12 +10,39 @@ function BottomCharts(props) {
   const [kapitaliRender, SetKapitaliRender] = useState(true);
   const [shromaRender, SetShromaRender] = useState(true);
 
+  function convertChartDataToCSV(args) {  
+    var result, ctr, keys, columnDelimiter, lineDelimiter, data;
+  
+    data = args.data || null;
+    if (data == null || !data.length) {
+      return null;
+    }
+  
+    columnDelimiter = args.columnDelimiter || ',';
+    lineDelimiter = args.lineDelimiter || '\n';
+  
+    keys = Object.keys(data[0]);
+  
+    result = '';
+    result += keys.join(columnDelimiter);
+    result += lineDelimiter;
+  
+    data.forEach(function(item) {
+      ctr = 0;
+      keys.forEach(function(key) {
+        if (ctr > 0) result += columnDelimiter;
+        result += item[key];
+        ctr++;
+      });
+      result += lineDelimiter;
+    });
+    return result;
+  }
   return (
     <div>
       <div className="chartBottomDark">
         <div className="renderingWithArrow">
           <p>
-            {" "}
             {!props.languageChange ? "გამოშვება, მლნ ლარი" : "Output, mil Gel"}
           </p>
           <button onClick={() => SetGamoshvebaRender(!gamoshvebaRender)}>
@@ -27,6 +54,7 @@ function BottomCharts(props) {
           </button>
         </div>
         {gamoshvebaRender && (
+          <div>
           <div className="chartGraphs">
             <div className="BarChartAll">
               <BarChart
@@ -43,7 +71,9 @@ function BottomCharts(props) {
               />
             </div>
           </div>
+          </div>
         )}
+      {/* <button className="downloadBTN" onClick={a =>convertChartDataToCSV(a, props.firstValue)}>გადმოწერა </button> */}
       </div>
 
       <div className="chartBottomLight">

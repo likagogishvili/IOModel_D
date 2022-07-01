@@ -3,28 +3,53 @@ import Chart from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 
 function BarChart(props) {
-  const ekonomikuriMomsaxurebisSaxeebi = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-  ];
+  if (!props.languageChange) {
+    var ekonomikuriMomsaxurebisSaxeebi = [
+      "A სოფლის მეურნეობა",
+      "B სამთომოპოვებითი მრეწველობა",
+      "C დამამუშავებელი მრეწველობა",
+      "D ელექტროენერგია",
+      "E წყალმომარაგება და ნარჩენების მართვა",
+      "F მშენებლობა",
+      "G ვაჭრობა",
+      "H ტრანსპორტი",
+      "I სასტუმროები და რესტორნები",
+      "J ინფორმაცია და კომუნიკაცია",
+      "K საფინანსო და სადაზღვევო საქმიანობები",
+      "L უძრავი ქონება",
+      "M პროფესიული და სამეცნიერო საქმიანობები",
+      "N ადმინისტრაციული საქმიანობები",
+      "O სახელმწიფო მმართველობა",
+      "P განათლება",
+      "Q ჯანდაცვა და სოციალური მომსახურებები",
+      "R ხელოვნება, გართობა და დასვენება",
+      "S სხვა სახის მომსახურება",
+      "T შინამეურნეობების საქმიანობები",
+    ];
+  } else {
+    ekonomikuriMomsaxurebisSaxeebi = [
+      "A Agriculture",
+      "B Mining and quarrying",
+      "C Manufacturing",
+      "D Electricity",
+      "E Water supply; sewerage",
+      "F Construction",
+      "G Trade",
+      "H Transport",
+      "I Hotels and restaurants",
+      "J Information and communication",
+      "K Financial and insurance activities",
+      "L Real estate activities",
+      "M Professional, scientific and technical activitie",
+      "N Administrative activities",
+      "O Public administration",
+      "P Education",
+      "Q Human health activities",
+      "R Arts, entertainment and recreation",
+      "S Other service activities",
+      "T Activities of households",
+    ];
+  }
   let firstValue = props.firstValue.map(function (each_element) {
     return Number(each_element.toFixed(1));
   });
@@ -48,7 +73,7 @@ function BarChart(props) {
       "უძრავი ქონება",
       "პროფესიული და სამეცნიერო საქმიანობები",
       "ადმინისტრაციული საქმიანობები",
-      "სახელმწიფო მმართველობა",
+      "სახელმწიფო მმართველობა და სოციალური უსაფრთხოება",
       "განათლება",
       "ჯანდაცვა და სოციალური მომსახურებები",
       "ხელოვნება, გართობა და დასვენება",
@@ -60,25 +85,26 @@ function BarChart(props) {
       "Agriculture",
       "Mining and quarrying",
       "Manufacturing",
-      "Electricity, gas",
-      "Water supply; sewerage, waste management",
+      "Electricity",
+      "Water supply; sewerage",
       "Construction",
       "Trade",
-      "Transportation and storage",
-      "Accommodation and food service activities",
+      "Transport",
+      "Hotels and restaurants",
       "Information and communication",
       "Financial and insurance activities",
       "Real estate activities",
       "Professional, scientific and technical activitie",
-      "Administrative and support service activities",
+      "Administrative activities",
       "Public administration",
       "Education",
-      "Human health",
+      "Human health activities",
       "Arts, entertainment and recreation",
       "Other service activities",
-      "Activities of households as employers",
+      "Activities of households",
     ];
   }
+
   return (
     <div>
       <Bar
@@ -91,7 +117,7 @@ function BarChart(props) {
               backgroundColor: ["#5a80b8"],
             },
             {
-              label: !props.languageChange ? "განახლებული" : "Updated",
+              label: !props.languageChange ? "ახალი" : "New",
               data: secondValue,
               backgroundColor: ["#B25751"],
             },

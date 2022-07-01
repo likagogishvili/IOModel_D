@@ -99,49 +99,47 @@ function InputRender(props) {
 
   function changeInputValue(event) {
     for (let z = 0; z < ar1.length; z++) {
-      if (event.target.value) {
-        if (event.target.id === ar2[z]) {
-          props.SetInfoPrecent({
-            ...props.infoprecent,
-            [ar1[z]]:
-              (parseFloat(props.info[ar1[z]]) /
-                parseFloat(props.axalisabolooMoxmareba[z])) *
-              100,
-          });
-          props.axalisabolooMoxmareba[z] = roundNumber(
-            parseFloat(props.axalisabolooMoxmareba[z]) +
-              parseFloat(props.info[ar1[z]])
-          );
+      if (event.target.id === ar2[z]) {
+        props.SetInfoPrecent({
+          ...props.infoprecent,
+          [ar1[z]]:
+            (parseFloat(props.info[ar1[z]]) /
+              parseFloat(props.axalisabolooMoxmareba[z])) *
+            100,
+        });
+        props.axalisabolooMoxmareba[z] = roundNumber(
+          parseFloat(props.axalisabolooMoxmareba[z]) +
+            parseFloat(props.info[ar1[z]])
+        );
 
-          props.setnewvalue((values) =>
-            values.map((value, i) =>
-              i === z ? props.axalisabolooMoxmareba[z] : value
-            )
-          );
-        }
-        if (event.target.id === ar1[z]) {
-          props.SetInfo({
-            ...props.info,
-            [ar1[z]]:
-              (parseFloat(props.axalisabolooMoxmareba[z]) *
-                parseFloat(props.infoprecent[ar1[z]])) /
-              100,
-          });
-          props.axalisabolooMoxmareba[z] = roundNumber(
-            parseFloat(props.axalisabolooMoxmareba[z]) +
-              parseFloat(
-                props.axalisabolooMoxmareba[z] *
-                  parseFloat(props.infoprecent[ar1[z]])
-              ) /
-                100
-          );
+        props.setnewvalue((values) =>
+          values.map((value, i) =>
+            i === z ? props.axalisabolooMoxmareba[z] : value
+          )
+        );
+      }
+      if (event.target.id === ar1[z]) {
+        props.SetInfo({
+          ...props.info,
+          [ar1[z]]:
+            (parseFloat(props.axalisabolooMoxmareba[z]) *
+              parseFloat(props.infoprecent[ar1[z]])) /
+            100,
+        });
+        props.axalisabolooMoxmareba[z] = roundNumber(
+          parseFloat(props.axalisabolooMoxmareba[z]) +
+            parseFloat(
+              props.axalisabolooMoxmareba[z] *
+                parseFloat(props.infoprecent[ar1[z]])
+            ) /
+              100
+        );
 
-          props.setnewvalue((values) =>
-            values.map((value, i) =>
-              i === z ? props.axalisabolooMoxmareba[z] : value
-            )
-          );
-        }
+        props.setnewvalue((values) =>
+          values.map((value, i) =>
+            i === z ? props.axalisabolooMoxmareba[z] : value
+          )
+        );
       }
     }
   }

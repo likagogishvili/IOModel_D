@@ -21,7 +21,8 @@
   display: inline-block;
   padding: 3px;
 }
-
+.downloadP {
+}
 .right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
@@ -43,12 +44,41 @@
   text-align: center;
   font-size: 1.3rem;
 }
+.downloadP {
+  width: 15%;
+  font-size: 1rem;
+  font-family: "Ninomtavruli";
+  padding-left: 5%;
+}
 .renderingWithArrow > button {
   background-color: none;
   border: none;
   font-family: "Ninomtavruli";
 }
-
+.downloadButton {
+  height: 30px;
+  width: 10%;
+  height: 50px;
+  background-color: #397db9;
+  border-radius: 20px;
+  color: white;
+  border: none;
+  margin-bottom: 0.5%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.downloadBTN {
+  width: 20%;
+  margin-left: 80%;
+  margin-bottom: 2%;
+  border: none;
+  background-color: transparent;
+}
+.btnsDownload {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 @media only screen and (max-width: 600px) {
   .chartBottomDark {
     width: 100%;
