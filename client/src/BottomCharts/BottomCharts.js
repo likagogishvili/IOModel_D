@@ -14,7 +14,10 @@ function BottomCharts(props) {
     <div>
       <div className="chartBottomDark">
         <div className="renderingWithArrow">
-          <p> {!props.languageChange ? "გამოშვება, მლნ ლარი" : "Output, mil Gel"}</p>
+          <p>
+            {" "}
+            {!props.languageChange ? "გამოშვება, მლნ ლარი" : "Output, mil Gel"}
+          </p>
           <button onClick={() => SetGamoshvebaRender(!gamoshvebaRender)}>
             {gamoshvebaRender ? (
               <i className="arrow down"></i>
@@ -80,7 +83,9 @@ function BottomCharts(props) {
 
       <div className="chartBottomDark">
         <div className="renderingWithArrow">
-          <p>{!props.languageChange ? "დასაქმება, კაცი" : "Employment, person"}</p>
+          <p>
+            {!props.languageChange ? "დასაქმება, კაცი" : "Employment, person"}
+          </p>
           <button onClick={() => SetDasaqmebaRender(!dasaqmebaRender)}>
             {dasaqmebaRender ? (
               <i className="arrow down"></i>
@@ -111,7 +116,9 @@ function BottomCharts(props) {
 
       <div className="chartBottomLight">
         <div className="renderingWithArrow">
-          <p>{!props.languageChange ? "იმპორტი, მლნ ლარი" : "Import, mil Gel"}</p>
+          <p>
+            {!props.languageChange ? "იმპორტი, მლნ ლარი" : "Import, mil Gel"}
+          </p>
           <button onClick={() => SetImportiRender(!importiRender)}>
             {importiRender ? (
               <i className="arrow down"></i>

@@ -73,7 +73,7 @@ function MainPage(props) {
 
   props.mimdinareGirebuleba.map((item) =>
     axalisabolooMoxmareba.push(
-      Math.round((parseFloat(item.SabolooMoxmareba) + Number.EPSILON) * 10) / 10
+      parseFloat(item.SabolooMoxmareba)
     )
   );
 
@@ -82,7 +82,7 @@ function MainPage(props) {
       setnewvalue((old) => [...old, ...axalisabolooMoxmareba]);
     }
   }, [newval.length, axalisabolooMoxmareba]);
-
+console.log(newval)
   function multiply(a, b) {
     var aNumRows = a.length,
       aNumCols = a[0].length,
@@ -272,6 +272,7 @@ function MainPage(props) {
           thirdDiagramValues5={thirdDiagramValues5}
           thirdDiagramValues6={thirdDiagramValues6}
           languageChange={languageChange}
+
         />
       </div>
 
