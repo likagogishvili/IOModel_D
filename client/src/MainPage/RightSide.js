@@ -67,7 +67,7 @@ function RightSide(props) {
         {!props.languageChange ? (
           <div className="rightHeader">
             <div className="rightHeaderChild1"></div>
-            <div className="rightHeaderChild2"></div>
+            <div className="rightHeaderChild2">მიმდინარე მაჩვენებელი</div>
             <div className="rightHeaderChild2">განახლებული მაჩვენებელი</div>
             <div className="rightHeaderChild2">პროცენტული ცვლილება</div>
           </div>
@@ -98,7 +98,7 @@ function RightSide(props) {
 
         <section className="RightContent">
           <div className="RightContentChild1">
-            {!props.languageChange ? "დამატებული დამატებული ღირებულება, მლნ ლარი" : "Value added, mil Gel"}
+            {!props.languageChange ? "დამატებული ღირებულება, მლნ ლარი" : "Value added, mil Gel"}
           </div>
           <div className="RightContentChild2">
             {(Math.round(damatebitiDzveliSum * 10) / 10).toString()}
@@ -162,7 +162,7 @@ function RightSide(props) {
           <div className="RightContentChild1">
             {!props.languageChange
               ? "შრომის ანაზღაურება, მლნ ლარი"
-              : "Compensation of employees, mil Gel"}
+              : "Compensation of employees, mil Gel;"}
           </div>
           <div className="RightContentChild2">
             {(Math.round(shromaSum * 10) / 10).toString()}

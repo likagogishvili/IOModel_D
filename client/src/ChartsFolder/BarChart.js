@@ -91,7 +91,7 @@ function BarChart(props) {
               backgroundColor: ["#5a80b8"],
             },
             {
-              label: !props.languageChange ? "განახლებული" : "Updated ",
+              label: !props.languageChange ? "განახლებული" : "Updated",
               data: secondValue,
               backgroundColor: ["#B25751"],
             },

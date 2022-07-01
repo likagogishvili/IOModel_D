@@ -9,9 +9,8 @@ import RightSide from "./RightSide";
 import { useEffect } from "react";
 
 function MainPage(props) {
-
   const [languageChange, SetLanguageChange] = useState(false);
-// dons't refresh
+  // dons't refresh
   useEffect(() => {
     SetLanguageChange(
       JSON.parse(window.sessionStorage.getItem("languageChange"))
@@ -72,9 +71,7 @@ function MainPage(props) {
   const axalisabolooMoxmareba = [];
 
   props.mimdinareGirebuleba.map((item) =>
-    axalisabolooMoxmareba.push(
-      parseFloat(item.SabolooMoxmareba)
-    )
+    axalisabolooMoxmareba.push(parseFloat(item.SabolooMoxmareba))
   );
 
   useEffect(() => {
@@ -82,7 +79,7 @@ function MainPage(props) {
       setnewvalue((old) => [...old, ...axalisabolooMoxmareba]);
     }
   }, [newval.length, axalisabolooMoxmareba]);
-console.log(newval)
+  console.log(newval);
   function multiply(a, b) {
     var aNumRows = a.length,
       aNumCols = a[0].length,
@@ -230,8 +227,6 @@ console.log(newval)
     thirdDiagramValues6.push(dsix2[i] - dsix1[i]);
   }
 
-  console.log(thirdDiagramValue)
-
   return (
     <div>
       <ContentHeader
@@ -272,7 +267,6 @@ console.log(newval)
           thirdDiagramValues5={thirdDiagramValues5}
           thirdDiagramValues6={thirdDiagramValues6}
           languageChange={languageChange}
-
         />
       </div>
 

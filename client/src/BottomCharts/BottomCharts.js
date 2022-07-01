@@ -186,7 +186,7 @@ function BottomCharts(props) {
         <div className="renderingWithArrow">
           <p>
             {!props.languageChange
-              ? "შრომის ანაზღაურება, მლნ"
+              ? "შრომის ანაზღაურება, მლნ ლარი"
               : "Compensation of employees, mil Gel"}
           </p>
           <button onClick={() => SetShromaRender(!shromaRender)}>

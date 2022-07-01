@@ -145,8 +145,6 @@ function InputRender(props) {
       }
     }
   }
-  console.log(props.axalisabolooMoxmareba)
-
 
   //symbolHoverElements
   const [symbol1, setSymbol1] = useState(false);
