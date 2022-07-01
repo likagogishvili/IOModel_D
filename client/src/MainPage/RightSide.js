@@ -67,25 +67,23 @@ function RightSide(props) {
         {!props.languageChange ? (
           <div className="rightHeader">
             <div className="rightHeaderChild1"></div>
-            <div className="rightHeaderChild2">
-              მთლიანი მიმდინარე ღირებულება
-            </div>
-            <div className="rightHeaderChild2">მთლიანი ახალი ღირებულება</div>
-            <div className="rightHeaderChild2">ცვლილება</div>
+            <div className="rightHeaderChild2"></div>
+            <div className="rightHeaderChild2">განახლებული მაჩვენებელი</div>
+            <div className="rightHeaderChild2">პროცენტული ცვლილება</div>
           </div>
         ) : (
           <div className="rightHeader">
             <div className="rightHeaderChild1"></div>
-            <div className="rightHeaderChild2">Total Current values</div>
-            <div className="rightHeaderChild2">Total New values</div>
-            <div className="rightHeaderChild2">Change</div>
+            <div className="rightHeaderChild2">Current value</div>
+            <div className="rightHeaderChild2">Updated Value</div>
+            <div className="rightHeaderChild2">Percentage Change</div>
           </div>
         )}
       </div>
       <div>
         <section className="RightContent">
           <div className="RightContentChild1">
-            {!props.languageChange ? "გამოშვება" : "Output"}
+            {!props.languageChange ? "გამოშვება, მლნ ლარი" : "Output, mil Gel"}
           </div>
           <div className="RightContentChild2">
             {(Math.round(gamoshvebaDzveliSum * 10) / 10).toString()}
@@ -100,7 +98,7 @@ function RightSide(props) {
 
         <section className="RightContent">
           <div className="RightContentChild1">
-            {!props.languageChange ? "დამატებული ღირებულება" : "GVA"}
+            {!props.languageChange ? "დამატებული დამატებული ღირებულება, მლნ ლარი" : "Value added, mil Gel"}
           </div>
           <div className="RightContentChild2">
             {(Math.round(damatebitiDzveliSum * 10) / 10).toString()}
@@ -115,7 +113,7 @@ function RightSide(props) {
 
         <section className="RightContent">
           <div className="RightContentChild1">
-            {!props.languageChange ? "დასაქმება" : "Employment"}
+            {!props.languageChange ? "დასაქმება, კაცი" : "Employment, person"}
           </div>
           <div className="RightContentChild2">
             {(Math.round(dasaqmebaSum * 10) / 10).toString()}
@@ -130,7 +128,7 @@ function RightSide(props) {
 
         <section className="RightContent">
           <div className="RightContentChild1">
-            {!props.languageChange ? "იმპორტი" : "Import"}
+            {!props.languageChange ? "იმპორტი, მლნ ლარი" : "Import, mil Gel"}
           </div>
           <div className="RightContentChild2">
             {(Math.round(importiSum * 10) / 10).toString()}
@@ -146,8 +144,8 @@ function RightSide(props) {
         <section className="RightContent">
           <div className="RightContentChild1">
             {!props.languageChange
-              ? "ძირითადი კაპიტალის მთლიანი ფორმირება"
-              : "GFCF"}
+              ? "ძირითადი კაპიტალის მთლიანი ფორმირება, მლნ ლარი"
+              : "Gross capital formation, mil Gel"}
           </div>
           <div className="RightContentChild2">
             {(Math.round(kapitaliSum * 10) / 10).toString()}
@@ -163,8 +161,8 @@ function RightSide(props) {
         <section className="RightContent">
           <div className="RightContentChild1">
             {!props.languageChange
-              ? "შრომის ანაზღაურება"
-              : "Compensation of employees"}
+              ? "შრომის ანაზღაურება, მლნ ლარი"
+              : "Compensation of employees, mil Gel"}
           </div>
           <div className="RightContentChild2">
             {(Math.round(shromaSum * 10) / 10).toString()}

@@ -14,7 +14,7 @@ function BottomCharts(props) {
     <div>
       <div className="chartBottomDark">
         <div className="renderingWithArrow">
-          <p> {!props.languageChange ? "გამოშვება" : "Output"}</p>
+          <p> {!props.languageChange ? "გამოშვება, მლნ ლარი" : "Output, mil Gel"}</p>
           <button onClick={() => SetGamoshvebaRender(!gamoshvebaRender)}>
             {gamoshvebaRender ? (
               <i className="arrow down"></i>
@@ -47,8 +47,8 @@ function BottomCharts(props) {
         <div className="renderingWithArrow">
           <p>
             {!props.languageChange
-              ? "დამატებითი ღირებულების მულტიპლიკატორი"
-              : "Gross Value Added"}
+              ? "დამატებული ღირებულება, მლნ ლარი"
+              : "Value added, mil Gel"}
           </p>
           <button onClick={() => SetDamatebitiRender(!damatebitiRender)}>
             {damatebitiRender ? (
@@ -80,7 +80,7 @@ function BottomCharts(props) {
 
       <div className="chartBottomDark">
         <div className="renderingWithArrow">
-          <p>{!props.languageChange ? "დასაქმება" : "Employment"}</p>
+          <p>{!props.languageChange ? "დასაქმება, კაცი" : "Employment, person"}</p>
           <button onClick={() => SetDasaqmebaRender(!dasaqmebaRender)}>
             {dasaqmebaRender ? (
               <i className="arrow down"></i>
@@ -111,7 +111,7 @@ function BottomCharts(props) {
 
       <div className="chartBottomLight">
         <div className="renderingWithArrow">
-          <p>{!props.languageChange ? "იმპორტი" : "Import"}</p>
+          <p>{!props.languageChange ? "იმპორტი, მლნ ლარი" : "Import, mil Gel"}</p>
           <button onClick={() => SetImportiRender(!importiRender)}>
             {importiRender ? (
               <i className="arrow down"></i>
@@ -144,8 +144,8 @@ function BottomCharts(props) {
         <div className="renderingWithArrow">
           <p>
             {!props.languageChange
-              ? "ძირითადი კაპიტალის მთლიანი ფორმირება"
-              : "GFCF"}
+              ? "ძირითადი კაპიტალის მთლიანი ფორმირება, მლნ ლარი"
+              : "Gross capital formation, mil Gel"}
           </p>
           <button onClick={() => SetKapitaliRender(!kapitaliRender)}>
             {kapitaliRender ? (
@@ -179,8 +179,8 @@ function BottomCharts(props) {
         <div className="renderingWithArrow">
           <p>
             {!props.languageChange
-              ? "შრომის ანაზღაურება"
-              : "Compensation of employees"}
+              ? "შრომის ანაზღაურება, მლნ"
+              : "Compensation of employees, mil Gel"}
           </p>
           <button onClick={() => SetShromaRender(!shromaRender)}>
             {shromaRender ? (

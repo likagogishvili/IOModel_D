@@ -3,6 +3,12 @@ import Chart from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 
 function Sxvaoba(props) {
+  let firstValue = props.firstValue.map(function (each_element) {
+    return Number(each_element.toFixed(2));
+  });
+  let secondValue = props.secondValue.map(function (each_element) {
+    return Number(each_element.toFixed(2));
+  });
   const ekonomikuriMomsaxurebisSaxeebi = [
     "A",
     "B",
@@ -74,8 +80,8 @@ function Sxvaoba(props) {
   }
 
   let sxvaoba = [];
-  for (let i = 0; i < props.secondValue.length; i++) {
-    sxvaoba.push(props.secondValue[i] - props.firstValue[i]);
+  for (let i = 0; i < firstValue.length; i++) {
+    sxvaoba.push(secondValue[i] - firstValue[i]);
   }
   for (let i = 0; i < sxvaoba.length; i++) {
     if (
@@ -92,7 +98,7 @@ function Sxvaoba(props) {
           labels: ekonomikuriMomsaxurebisSaxeebi,
           datasets: [
             {
-              label: !props.languageChange ? "სხვაობა" : "Difference",
+              label: !props.languageChange ? "ნომინალური ცვლილება" : "Difference",
               data: sxvaoba,
               backgroundColor: ["#5a80b8"],
             },

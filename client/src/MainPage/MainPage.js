@@ -179,7 +179,7 @@ function MainPage(props) {
   let thirdDiagramValues3 = [];
 
   for (let i = 0; i < transposedOSArray.length; i++) {
-    if (newval.length !== 1) {
+    if (newval.length !== 0) {
       dt1.push(transposedOSArray[i][2] * axalisabolooMoxmareba[i]);
       dt2.push(transposedOSArray[i][2] * newval[i]);
     }
@@ -193,7 +193,7 @@ function MainPage(props) {
   let dfo2 = [];
   let thirdDiagramValues4 = [];
   for (let i = 0; i < transposedOSArray.length; i++) {
-    if (newval.length !== 1) {
+    if (newval.length !== 0) {
       dfo1.push(transposedOSArray[i][3] * axalisabolooMoxmareba[i]);
       dfo2.push(transposedOSArray[i][3] * newval[i]);
     }
@@ -207,7 +207,7 @@ function MainPage(props) {
   let dfif2 = [];
   let thirdDiagramValues5 = [];
   for (let i = 0; i < transposedOSArray.length; i++) {
-    if (newval.length !== 1) {
+    if (newval.length !== 0) {
       dfif1.push(transposedOSArray[i][4] * axalisabolooMoxmareba[i]);
       dfif2.push(transposedOSArray[i][4] * newval[i]);
     }
@@ -221,7 +221,7 @@ function MainPage(props) {
   let dsix2 = [];
   let thirdDiagramValues6 = [];
   for (let i = 0; i < transposedOSArray.length; i++) {
-    if (newval.length !== 1) {
+    if (newval.length !== 0) {
       dsix1.push(transposedOSArray[i][5] * axalisabolooMoxmareba[i]);
       dsix2.push(transposedOSArray[i][5] * newval[i]);
     }
@@ -229,6 +229,8 @@ function MainPage(props) {
   for (let i = 0; i < dsix1.length; i++) {
     thirdDiagramValues6.push(dsix2[i] - dsix1[i]);
   }
+
+  console.log(thirdDiagramValue)
 
   return (
     <div>

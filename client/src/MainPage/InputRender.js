@@ -108,7 +108,6 @@ function InputRender(props) {
                 parseFloat(props.axalisabolooMoxmareba[z])) *
               100,
           });
-
           props.axalisabolooMoxmareba[z] = roundNumber(
             parseFloat(props.axalisabolooMoxmareba[z]) +
               parseFloat(props.info[ar1[z]])
@@ -120,7 +119,6 @@ function InputRender(props) {
             )
           );
         }
-
         if (event.target.id === ar1[z]) {
           props.SetInfo({
             ...props.info,
@@ -147,6 +145,8 @@ function InputRender(props) {
       }
     }
   }
+  console.log(props.axalisabolooMoxmareba)
+
 
   //symbolHoverElements
   const [symbol1, setSymbol1] = useState(false);
@@ -199,16 +199,16 @@ function InputRender(props) {
         <header className="inputHeader">
           <div className="firT">Nace Rev.2</div>
           <div className="secT">ეკონომიკური საქმიანობის სახეები</div>
-          <div className="thirdT">საბოლოო მოხმარება</div>
-          <div className="last2T">%ცვლილება საბოლოო მოხმარებაში</div>
+          <div className="thirdT">საბოლოო მოხმარება, მლნ ლარი</div>
+          <div className="last2T">ცვლილება საბოლოო მოხმარებაში, %</div>
           <div className="last2T">ნომინალური ცვლილება საბოლოო მოხმარებაში</div>
         </header>
       ) : (
         <header className="inputHeader">
           <div className="firT">Nace Rev.2</div>
           <div className="secT">Nace Rev.2 code name</div>
-          <div className="thirdT">Final Demand</div>
-          <div className="last2T">% Change in Final Demand</div>
+          <div className="thirdT">Final consumption, mil Gel</div>
+          <div className="last2T">Percentage Change in Final Demand</div>
           <div className="last2T">Nominal Change in Final Demand</div>
         </header>
       )}
