@@ -2,6 +2,9 @@ import { useState } from "react";
 import BarChart from "../ChartsFolder/BarChart";
 import Sxvaoba from "../ChartsFolder/SxvaobaChart";
 import "./BottomCharts.css";
+import * as XLSX from "xlsx";
+
+
 function BottomCharts(props) {
   const [gamoshvebaRender, SetGamoshvebaRender] = useState(true);
   const [damatebitiRender, SetDamatebitiRender] = useState(true);
@@ -10,34 +13,35 @@ function BottomCharts(props) {
   const [kapitaliRender, SetKapitaliRender] = useState(true);
   const [shromaRender, SetShromaRender] = useState(true);
 
-  function convertChartDataToCSV(args) {
-    var result, ctr, keys, columnDelimiter, lineDelimiter, data;
+// let firstDownload = [
+//     ['mimdinare', 'axali'],
+//     [props.damatebitiBCfirstValue[0], props.damatebitiBCsecondValue[0]],
+//     [props.damatebitiBCfirstValue[1], props.damatebitiBCsecondValue[1]],
+//     [props.damatebitiBCfirstValue[2], props.damatebitiBCsecondValue[2]],
+//     [props.damatebitiBCfirstValue[2], props.damatebitiBCsecondValue[2]],
+//     [props.damatebitiBCfirstValue[2], props.damatebitiBCsecondValue[2]],    
+// ];
 
-    data = args.data || null;
-    if (data == null || !data.length) {
-      return null;
-    }
-
-    columnDelimiter = args.columnDelimiter || ",";
-    lineDelimiter = args.lineDelimiter || "\n";
-
-    keys = Object.keys(data[0]);
-
-    result = "";
-    result += keys.join(columnDelimiter);
-    result += lineDelimiter;
-
-    data.forEach(function (item) {
-      ctr = 0;
-      keys.forEach(function (key) {
-        if (ctr > 0) result += columnDelimiter;
-        result += item[key];
-        ctr++;
-      });
-      result += lineDelimiter;
-    });
-    return result;
+function createArray(arr1,arr2){
+  let newArr = [['mimdinare', 'axali']]
+  for (let i = 0; i < arr1.length; i++) {
+    newArr.push([[arr1[i]], [arr2[i]]])    
   }
+  return newArr
+}
+
+let firstExcelValues = createArray(props.damatebitiBCfirstValue, props.damatebitiBCsecondValue)
+
+
+  function exportData(arr) {
+    var wb = XLSX.utils.book_new(),
+      ws = XLSX.utils.aoa_to_sheet(arr);
+
+    XLSX.utils.book_append_sheet(wb, ws, "mySheet1");
+
+    XLSX.writeFile(wb, "excample.xlsx");
+  }
+
   return (
     <div>
       <div className="chartBottomLight">
@@ -73,6 +77,9 @@ function BottomCharts(props) {
             </div>
           </div>
         )}
+        <button className="downloadBTN" onClick={exportData}>
+          გადმოწერა
+        </button>
       </div>
       <div className="chartBottomDark">
         <div className="renderingWithArrow">
@@ -107,7 +114,9 @@ function BottomCharts(props) {
             </div>
           </div>
         )}
-        {/* <button className="downloadBTN" onClick={a =>convertChartDataToCSV(a, props.firstValue)}>გადმოწერა </button> */}
+        <button className="downloadBTN" onClick={exportData}>
+          გადმოწერა
+        </button>
       </div>
 
       <div className="chartBottomDark">

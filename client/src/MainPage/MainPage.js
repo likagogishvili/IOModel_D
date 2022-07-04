@@ -5,7 +5,6 @@ import ContentHeader from "../ContentHeader/ContentHeader";
 import InputRender from "./InputRender";
 import "./mainPage.css";
 import RightSide from "./RightSide";
-
 import { useEffect } from "react";
 
 function MainPage(props) {
@@ -79,7 +78,6 @@ function MainPage(props) {
       setnewvalue((old) => [...old, ...axalisabolooMoxmareba]);
     }
   }, [newval.length, axalisabolooMoxmareba]);
-  console.log(newval);
   function multiply(a, b) {
     var aNumRows = a.length,
       aNumCols = a[0].length,

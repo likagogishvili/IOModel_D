@@ -4,6 +4,8 @@ import SwiperCore, { Navigation, Pagination } from "swiper";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import "./ChartSwiper.css";
+import portal1 from "./img/portali-1.jpg"
+
 SwiperCore.use([Navigation, Pagination]);
 
 function ChartSwiper(props) {
@@ -17,8 +19,9 @@ function ChartSwiper(props) {
         pagination
         spaceBetween={50}
         slidesPerView={1}
+        // style={{ backgroundImage: `url(${portal1})`, width:'100%', height:'100%' }}
       >
-        <SwiperSlide>
+        <SwiperSlide  >
           <div className="swiperCharts">
             <p className="rightSideChartsp">
               {!props.languageChange
