@@ -77,9 +77,9 @@ let firstExcelValues = createArray(props.damatebitiBCfirstValue, props.damatebit
             </div>
           </div>
         )}
-        <button className="downloadBTN" onClick={exportData}>
+        {/* <button className="downloadBTN" onClick={exportData}>
           გადმოწერა
-        </button>
+        </button> */}
       </div>
       <div className="chartBottomDark">
         <div className="renderingWithArrow">
@@ -114,9 +114,9 @@ let firstExcelValues = createArray(props.damatebitiBCfirstValue, props.damatebit
             </div>
           </div>
         )}
-        <button className="downloadBTN" onClick={exportData}>
+        {/* <button className="downloadBTN" onClick={exportData}>
           გადმოწერა
-        </button>
+        </button> */}
       </div>
 
       <div className="chartBottomDark">

@@ -14,8 +14,6 @@ import portali5 from "./img/portali-5.jpg";
 SwiperCore.use([Navigation, Pagination]);
 
 function ChartSwiper(props) {
-  var a = 0;
-
   return (
     <div>
       <Swiper
@@ -26,7 +24,7 @@ function ChartSwiper(props) {
         pagination
         spaceBetween={50}
         slidesPerView={1}
-        onSlideChange={() => a++}
+        // style={{ background: '#397DB9' }}
       >
         <SwiperSlide>
           <div
@@ -62,9 +60,9 @@ function ChartSwiper(props) {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="swiperCharts"
+          <div
+            className="swiperCharts"
             style={{ backgroundImage: `url(${portali2})` }}
-          
           >
             <p className="rightSideChartsp">
               {!props.languageChange
@@ -78,9 +76,9 @@ function ChartSwiper(props) {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="swiperCharts"
+          <div
+            className="swiperCharts"
             style={{ backgroundImage: `url(${portali3})` }}
-          
           >
             <p className="rightSideChartsp">
               {!props.languageChange ? "იმპორტი, მლნ ლარი" : "Import Mil. Lari"}
@@ -92,9 +90,9 @@ function ChartSwiper(props) {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="swiperCharts"
+          <div
+            className="swiperCharts"
             style={{ backgroundImage: `url(${portali4})` }}
-          
           >
             <p className="rightSideChartsp">
               {!props.languageChange
@@ -108,9 +106,9 @@ function ChartSwiper(props) {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="swiperCharts"
+          <div
+            className="swiperCharts"
             style={{ backgroundImage: `url(${portali5})` }}
-          
           >
             <p className="rightSideChartsp">
               {!props.languageChange
