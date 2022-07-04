@@ -22,20 +22,7 @@ function ChartSwiper(props) {
           <div className="swiperCharts">
             <p className="rightSideChartsp">
               {!props.languageChange
-                ? "გამოშვება, მლნ ლარი"
-                : "Output, Mil. Lari"}
-            </p>
-            <PieChart
-              thirdDiagramValues1={props.thirdDiagramValues1}
-              languageChange={props.languageChange}
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiperCharts">
-            <p className="rightSideChartsp">
-              {!props.languageChange
-                ? "დამატებული ღირებულება, მლნ ლარი"
+                ? "მთლიანი შიდა პროდუქტი, მლნ ლარი"
                 : "GVA, Mil. Lari"}
             </p>
             <PieChart
@@ -47,7 +34,21 @@ function ChartSwiper(props) {
         <SwiperSlide>
           <div className="swiperCharts">
             <p className="rightSideChartsp">
-              {!props.languageChange ? "დასაქმება, კაცი" : "Employment Person"}
+              {!props.languageChange
+                ? "გამოშვება, მლნ ლარი"
+                : "Output, Mil. Lari"}
+            </p>
+            <PieChart
+              thirdDiagramValues1={props.thirdDiagramValues1}
+              languageChange={props.languageChange}
+            />
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="swiperCharts">
+            <p className="rightSideChartsp">
+              {!props.languageChange ? "დასაქმება, ათასი კაცი" : "Employment Person"}
             </p>
             <PieChart
               thirdDiagramValues1={props.thirdDiagramValues3}

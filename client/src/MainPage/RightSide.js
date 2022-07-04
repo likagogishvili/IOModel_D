@@ -85,7 +85,7 @@ function RightSide(props) {
 
         <section className="RightContent">
           <div className="RightContentChild1">
-            {!props.languageChange ? "მთლიანი შიდა პროდუქტი" : "Value added, mil Gel"}
+            {!props.languageChange ? "მთლიანი შიდა პროდუქტი, მლნ ლარი" : "Value added, mil Gel"}
           </div>
           <div className="RightContentChild2">
             {(Math.round(damatebitiDzveliSum * 10) / 10).toString()}

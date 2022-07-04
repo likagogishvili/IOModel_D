@@ -10,26 +10,26 @@ function BottomCharts(props) {
   const [kapitaliRender, SetKapitaliRender] = useState(true);
   const [shromaRender, SetShromaRender] = useState(true);
 
-  function convertChartDataToCSV(args) {  
+  function convertChartDataToCSV(args) {
     var result, ctr, keys, columnDelimiter, lineDelimiter, data;
-  
+
     data = args.data || null;
     if (data == null || !data.length) {
       return null;
     }
-  
-    columnDelimiter = args.columnDelimiter || ',';
-    lineDelimiter = args.lineDelimiter || '\n';
-  
+
+    columnDelimiter = args.columnDelimiter || ",";
+    lineDelimiter = args.lineDelimiter || "\n";
+
     keys = Object.keys(data[0]);
-  
-    result = '';
+
+    result = "";
     result += keys.join(columnDelimiter);
     result += lineDelimiter;
-  
-    data.forEach(function(item) {
+
+    data.forEach(function (item) {
       ctr = 0;
-      keys.forEach(function(key) {
+      keys.forEach(function (key) {
         if (ctr > 0) result += columnDelimiter;
         result += item[key];
         ctr++;
@@ -40,47 +40,11 @@ function BottomCharts(props) {
   }
   return (
     <div>
-      <div className="chartBottomDark">
-        <div className="renderingWithArrow">
-          <p>
-            {!props.languageChange ? "გამოშვება, მლნ ლარი" : "Output, mil Gel"}
-          </p>
-          <button onClick={() => SetGamoshvebaRender(!gamoshvebaRender)}>
-            {gamoshvebaRender ? (
-              <i className="arrow down"></i>
-            ) : (
-              <i className="arrow right"></i>
-            )}
-          </button>
-        </div>
-        {gamoshvebaRender && (
-          <div>
-          <div className="chartGraphs">
-            <div className="BarChartAll">
-              <BarChart
-                firstValue={props.gamoshvebaBCfirstValue}
-                secondValue={props.gamoshvebaBCsecondValue}
-                languageChange={props.languageChange}
-              />
-            </div>
-            <div className="BarChartSxvaoba">
-              <Sxvaoba
-                firstValue={props.gamoshvebaSxvaobafirstValue}
-                secondValue={props.gamoshvebaSxvaobasecondValue}
-                languageChange={props.languageChange}
-              />
-            </div>
-          </div>
-          </div>
-        )}
-      <button className="downloadBTN" onClick={a =>convertChartDataToCSV(a, props.firstValue)}>გადმოწერა </button>
-      </div>
-
       <div className="chartBottomLight">
         <div className="renderingWithArrow">
           <p>
             {!props.languageChange
-              ? "დამატებული ღირებულება, მლნ ლარი"
+              ? "მთლიანი შიდა პროდუქტი, მლნ ლარი"
               : "Value added, mil Gel"}
           </p>
           <button onClick={() => SetDamatebitiRender(!damatebitiRender)}>
@@ -110,11 +74,48 @@ function BottomCharts(props) {
           </div>
         )}
       </div>
+      <div className="chartBottomDark">
+        <div className="renderingWithArrow">
+          <p>
+            {!props.languageChange ? "გამოშვება, მლნ ლარი" : "Output, mil Gel"}
+          </p>
+          <button onClick={() => SetGamoshvebaRender(!gamoshvebaRender)}>
+            {gamoshvebaRender ? (
+              <i className="arrow down"></i>
+            ) : (
+              <i className="arrow right"></i>
+            )}
+          </button>
+        </div>
+        {gamoshvebaRender && (
+          <div>
+            <div className="chartGraphs">
+              <div className="BarChartAll">
+                <BarChart
+                  firstValue={props.gamoshvebaBCfirstValue}
+                  secondValue={props.gamoshvebaBCsecondValue}
+                  languageChange={props.languageChange}
+                />
+              </div>
+              <div className="BarChartSxvaoba">
+                <Sxvaoba
+                  firstValue={props.gamoshvebaSxvaobafirstValue}
+                  secondValue={props.gamoshvebaSxvaobasecondValue}
+                  languageChange={props.languageChange}
+                />
+              </div>
+            </div>
+          </div>
+        )}
+        {/* <button className="downloadBTN" onClick={a =>convertChartDataToCSV(a, props.firstValue)}>გადმოწერა </button> */}
+      </div>
 
       <div className="chartBottomDark">
         <div className="renderingWithArrow">
           <p>
-            {!props.languageChange ? "დასაქმება, კაცი" : "Employment, person"}
+            {!props.languageChange
+              ? "დასაქმება, ათასი კაცი"
+              : "Employment, person"}
           </p>
           <button onClick={() => SetDasaqmebaRender(!dasaqmebaRender)}>
             {dasaqmebaRender ? (
