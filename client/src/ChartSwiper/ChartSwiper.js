@@ -4,11 +4,18 @@ import SwiperCore, { Navigation, Pagination } from "swiper";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import "./ChartSwiper.css";
-import portal1 from "./img/portali-1.jpg"
+import portali from "./img/portali.jpg";
+import portali1 from "./img/portali-1.jpg";
+import portali2 from "./img/portali-2.jpg";
+import portali3 from "./img/portali-3.jpg";
+import portali4 from "./img/portali-4.jpg";
+import portali5 from "./img/portali-5.jpg";
 
 SwiperCore.use([Navigation, Pagination]);
 
 function ChartSwiper(props) {
+  var a = 0;
+
   return (
     <div>
       <Swiper
@@ -19,10 +26,13 @@ function ChartSwiper(props) {
         pagination
         spaceBetween={50}
         slidesPerView={1}
-        // style={{ backgroundImage: `url(${portal1})`, width:'100%', height:'100%' }}
+        onSlideChange={() => a++}
       >
-        <SwiperSlide  >
-          <div className="swiperCharts">
+        <SwiperSlide>
+          <div
+            className="swiperCharts"
+            style={{ backgroundImage: `url(${portali1})` }}
+          >
             <p className="rightSideChartsp">
               {!props.languageChange
                 ? "მთლიანი შიდა პროდუქტი, მლნ ლარი"
@@ -35,7 +45,10 @@ function ChartSwiper(props) {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="swiperCharts">
+          <div
+            className="swiperCharts"
+            style={{ backgroundImage: `url(${portali})` }}
+          >
             <p className="rightSideChartsp">
               {!props.languageChange
                 ? "გამოშვება, მლნ ლარი"
@@ -49,9 +62,14 @@ function ChartSwiper(props) {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="swiperCharts">
+          <div className="swiperCharts"
+            style={{ backgroundImage: `url(${portali2})` }}
+          
+          >
             <p className="rightSideChartsp">
-              {!props.languageChange ? "დასაქმება, ათასი კაცი" : "Employment Person"}
+              {!props.languageChange
+                ? "დასაქმება, ათასი კაცი"
+                : "Employment Person"}
             </p>
             <PieChart
               thirdDiagramValues1={props.thirdDiagramValues3}
@@ -60,7 +78,10 @@ function ChartSwiper(props) {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="swiperCharts">
+          <div className="swiperCharts"
+            style={{ backgroundImage: `url(${portali3})` }}
+          
+          >
             <p className="rightSideChartsp">
               {!props.languageChange ? "იმპორტი, მლნ ლარი" : "Import Mil. Lari"}
             </p>
@@ -71,7 +92,10 @@ function ChartSwiper(props) {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="swiperCharts">
+          <div className="swiperCharts"
+            style={{ backgroundImage: `url(${portali4})` }}
+          
+          >
             <p className="rightSideChartsp">
               {!props.languageChange
                 ? "ძირითადი კაპიტალის მთლიანი ფორმირება, მლნ ლარი"
@@ -84,7 +108,10 @@ function ChartSwiper(props) {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="swiperCharts">
+          <div className="swiperCharts"
+            style={{ backgroundImage: `url(${portali5})` }}
+          
+          >
             <p className="rightSideChartsp">
               {!props.languageChange
                 ? "შრომის ანაზღაურება, მლნ ლარი"
