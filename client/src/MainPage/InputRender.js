@@ -94,7 +94,7 @@ function InputRender(props) {
     ];
   }
   function roundNumber(num) {
-    return Math.round((parseFloat(num) + Number.EPSILON) * 10) / 10;
+    return parseFloat(num);
   }
 
   function changeInputValue(event) {

@@ -13,7 +13,11 @@ function BottomCharts(props) {
   const [shromaRender, SetShromaRender] = useState(true);
 
   function createArray(arr1, arr2) {
-    let newArr = [["მიმდინარე", "ახალი", "ნომინალური ცვლილება"]];
+    if (!props.languageChange) {
+      var newArr = [["მიმდინარე", "ახალი", "ნომინალური ცვლილება"]];
+    } else {
+      newArr = [["Current", "New", "Difference"]];
+    }
     for (let i = 0; i < arr1.length; i++) {
       newArr.push([
         Math.round([arr1[i]] * 100) / 100,
@@ -52,7 +56,7 @@ function BottomCharts(props) {
     var wb = XLSX.utils.book_new(),
       ws = XLSX.utils.aoa_to_sheet(arr);
     XLSX.utils.book_append_sheet(wb, ws, "mySheet1");
-    XLSX.writeFile(wb, "excample.xlsx");
+    XLSX.writeFile(wb, "data.xls");
   }
 
   function downloadFirst() {

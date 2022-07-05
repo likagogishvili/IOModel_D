@@ -24,8 +24,9 @@ function ChartSwiper(props) {
         pagination
         spaceBetween={50}
         slidesPerView={1}
+        style={{ padding: "0px" }}
       >
-        <SwiperSlide>
+        <SwiperSlide style={{ padding: "0px" }}>
           <div
             className="swiperCharts"
             style={{ backgroundImage: `url(${portali1})` }}

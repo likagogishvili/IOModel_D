@@ -132,6 +132,8 @@ function MainPage(props) {
     sixthDiagramValue = multiply([newval], props.axaliShroma)[0];
   }
 
+  console.log("newval", newval);
+  console.log("axalisaboloomoxmareba", axalisabolooMoxmareba);
   //transforming array
   const transposedOSArray = props.axaliMtlianiMultiplikatorebi[0].map(
     (_, colIndex) =>

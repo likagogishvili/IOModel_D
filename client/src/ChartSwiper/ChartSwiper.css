@@ -1,11 +1,13 @@
-.rightSideChartsp {
-  text-align: center;
-  display: flex;
-}
 .swiperCharts {
-  width: 90%;
-  height: 800px;
+  width: 100%;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: aqua;
+}
+.swiper-wrapper {
+  padding: 0;
+  margin: 0;
 }
 .rightSideChartsp {
   text-align: center;
