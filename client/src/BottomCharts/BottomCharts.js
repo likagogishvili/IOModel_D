@@ -141,7 +141,7 @@ function BottomCharts(props) {
       fifthExcelValue,
 
       !props.languageChange
-        ? "ძირითადი კაპიტალის მთლიანი ფორმირება, მლნ ლარი"
+        ? "ძირითადი კაპიტალის ფორმირება, მლნ ლარი"
         : "Gross capital formation, mil Gel.xls"
     );
   }
@@ -314,7 +314,7 @@ function BottomCharts(props) {
         <div className="renderingWithArrow">
           <p>
             {!props.languageChange
-              ? "ძირითადი კაპიტალის მთლიანი ფორმირება, მლნ ლარი"
+              ? "ძირითადი კაპიტალის ფორმირება, მლნ ლარი"
               : "Gross capital formation, mil Gel"}
           </p>
           <button onClick={() => SetKapitaliRender(!kapitaliRender)}>

@@ -232,34 +232,51 @@ function InputRender(props) {
           <div className="firT">Nace Rev.2</div>
           <div className="secT">ეკონომიკური საქმიანობის სახეები</div>
           <div className="thirdT">საბოლოო მოხმარება, მლნ ლარი</div>
-          <div className="last2T">ცვლილება საბოლოო მოხმარებაში, %</div>
           <div className="last2T">ნომინალური ცვლილება საბოლოო მოხმარებაში</div>
+          <div className="last2T">ცვლილება საბოლოო მოხმარებაში, %</div>
         </header>
       ) : (
         <header className="inputHeader">
           <div className="firT">Nace Rev.2</div>
           <div className="secT">Nace Rev.2 code name</div>
           <div className="thirdT">Final consumption, mil Gel</div>
-          <div className="last2T">Percentage Change in Final Demand</div>
           <div className="last2T">Nominal Change in Final Demand</div>
+          <div className="last2T">Percentage Change in Final Demand</div>
         </header>
       )}
       <section className="inputFieldWhite">
-        <div className="inputAlphabet">A</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol1(true)}
+          onMouseLeave={() => setSymbol1(false)}
+        >
+          A
+        </div>
 
         <div className="inputP">
-          <p>{namesarray[0]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol1(true)}
             onMouseLeave={() => setSymbol1(false)}
           >
-            i
-          </div>
+            {namesarray[0]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[0] * 10) / 10).toString()}
         </div>
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="a1"
+          onChange={(e) => props.SetInfo({ ...props.info, a: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.a || props.info.a === 0
+              ? ""
+              : parseFloat(props.info.a).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -275,36 +292,40 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.a).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="a1"
-          onChange={(e) => props.SetInfo({ ...props.info, a: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.a || props.info.a === 0
-              ? ""
-              : parseFloat(props.info.a).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldDark">
-        <div className="inputAlphabet">B</div>
-        <div className="inputP">
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol2(true)}
+          onMouseLeave={() => setSymbol2(false)}
+        >
+          B
+        </div>
+        <div
+          className="inputP"
+          onMouseEnter={() => setSymbol2(true)}
+          onMouseLeave={() => setSymbol2(false)}
+        >
           <p>{namesarray[1]}</p>
-          <div
-            className="inputSymbol"
-            onMouseEnter={() => setSymbol2(true)}
-            onMouseLeave={() => setSymbol2(false)}
-          >
-            i
-          </div>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[1] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="b1"
+          onChange={(e) => props.SetInfo({ ...props.info, b: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.b || props.info.b === 0
+              ? ""
+              : parseFloat(props.info.b).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -320,36 +341,42 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.b).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="b1"
-          onChange={(e) => props.SetInfo({ ...props.info, b: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.b || props.info.b === 0
-              ? ""
-              : parseFloat(props.info.b).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldWhite">
-        <div className="inputAlphabet">C</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol3(true)}
+          onMouseLeave={() => setSymbol3(false)}
+        >
+          C
+        </div>
         <div className="inputP">
-          <p>{namesarray[2]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol3(true)}
             onMouseLeave={() => setSymbol3(false)}
           >
-            i
-          </div>
+            {namesarray[2]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[2] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="c1"
+          onChange={(e) => props.SetInfo({ ...props.info, c: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.c || props.info.c === 0
+              ? ""
+              : parseFloat(props.info.c).toFixed(1).replace(/\.0$/, "")
+          }
+        />
+
         <input
           className="inputClasses"
           type={"number"}
@@ -365,36 +392,41 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.c).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="c1"
-          onChange={(e) => props.SetInfo({ ...props.info, c: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.c || props.info.c === 0
-              ? ""
-              : parseFloat(props.info.c).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldDark">
-        <div className="inputAlphabet">D</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol4(true)}
+          onMouseLeave={() => setSymbol4(false)}
+        >
+          D
+        </div>
         <div className="inputP">
-          <p>{namesarray[3]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol4(true)}
             onMouseLeave={() => setSymbol4(false)}
           >
-            i
-          </div>
+            {namesarray[3]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[3] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="d1"
+          onChange={(e) => props.SetInfo({ ...props.info, d: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.d || props.info.d === 0
+              ? ""
+              : parseFloat(props.info.d).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -410,36 +442,41 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.d).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="d1"
-          onChange={(e) => props.SetInfo({ ...props.info, d: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.d || props.info.d === 0
-              ? ""
-              : parseFloat(props.info.d).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldWhite">
-        <div className="inputAlphabet">E</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol5(true)}
+          onMouseLeave={() => setSymbol5(false)}
+        >
+          E
+        </div>
         <div className="inputP">
-          <p>{namesarray[4]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol5(true)}
             onMouseLeave={() => setSymbol5(false)}
           >
-            i
-          </div>
+            {namesarray[4]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[4] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="e1"
+          onChange={(e) => props.SetInfo({ ...props.info, e: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.e || props.info.e === 0
+              ? ""
+              : parseFloat(props.info.e).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -455,36 +492,42 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.e).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="e1"
-          onChange={(e) => props.SetInfo({ ...props.info, e: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.e || props.info.e === 0
-              ? ""
-              : parseFloat(props.info.e).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldDark">
-        <div className="inputAlphabet">F</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol6(true)}
+          onMouseLeave={() => setSymbol6(false)}
+        >
+          F
+        </div>
         <div className="inputP">
-          <p>{namesarray[5]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol6(true)}
             onMouseLeave={() => setSymbol6(false)}
           >
-            i
-          </div>
+            {namesarray[5]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[5] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="f1"
+          onChange={(e) => props.SetInfo({ ...props.info, f: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.f || props.info.f === 0
+              ? ""
+              : parseFloat(props.info.f).toFixed(1).replace(/\.0$/, "")
+          }
+        />
+
         <input
           className="inputClasses"
           type={"number"}
@@ -500,36 +543,39 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.f).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="f1"
-          onChange={(e) => props.SetInfo({ ...props.info, f: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.f || props.info.f === 0
-              ? ""
-              : parseFloat(props.info.f).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldWhite">
         <div className="inputAlphabet">G</div>
-        <div className="inputP">
-          <p>{namesarray[6]}</p>
-          <div
-            className="inputSymbol"
+        <div
+          className="inputP"
+          onMouseEnter={() => setSymbol7(true)}
+          onMouseLeave={() => setSymbol7(false)}
+        >
+          <p
             onMouseEnter={() => setSymbol7(true)}
             onMouseLeave={() => setSymbol7(false)}
           >
-            i
-          </div>
+            {namesarray[6]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[6] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="g1"
+          onChange={(e) => props.SetInfo({ ...props.info, g: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.g || props.info.g === 0
+              ? ""
+              : parseFloat(props.info.g).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -545,36 +591,41 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.g).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="g1"
-          onChange={(e) => props.SetInfo({ ...props.info, g: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.g || props.info.g === 0
-              ? ""
-              : parseFloat(props.info.g).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldDark">
-        <div className="inputAlphabet">H</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol8(true)}
+          onMouseLeave={() => setSymbol8(false)}
+        >
+          H
+        </div>
         <div className="inputP">
-          <p>{namesarray[7]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol8(true)}
             onMouseLeave={() => setSymbol8(false)}
           >
-            i
-          </div>
+            {namesarray[7]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[7] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="h1"
+          onChange={(e) => props.SetInfo({ ...props.info, h: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.h || props.info.h === 0
+              ? ""
+              : parseFloat(props.info.h).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -590,36 +641,41 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.h).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="h1"
-          onChange={(e) => props.SetInfo({ ...props.info, h: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.h || props.info.h === 0
-              ? ""
-              : parseFloat(props.info.h).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldWhite">
-        <div className="inputAlphabet">I</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol9(true)}
+          onMouseLeave={() => setSymbol9(false)}
+        >
+          I
+        </div>
         <div className="inputP">
-          <p>{namesarray[8]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol9(true)}
             onMouseLeave={() => setSymbol9(false)}
           >
-            i
-          </div>
+            {namesarray[8]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[8] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="i1"
+          onChange={(e) => props.SetInfo({ ...props.info, i: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.i || props.info.i === 0
+              ? ""
+              : parseFloat(props.info.i).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -635,36 +691,41 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.i).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="i1"
-          onChange={(e) => props.SetInfo({ ...props.info, i: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.i || props.info.i === 0
-              ? ""
-              : parseFloat(props.info.i).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldDark">
-        <div className="inputAlphabet">J</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol10(true)}
+          onMouseLeave={() => setSymbol10(false)}
+        >
+          J
+        </div>
         <div className="inputP">
-          <p>{namesarray[9]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol10(true)}
             onMouseLeave={() => setSymbol10(false)}
           >
-            i
-          </div>
+            {namesarray[9]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[9] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="j1"
+          onChange={(e) => props.SetInfo({ ...props.info, j: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.j || props.info.j === 0
+              ? ""
+              : parseFloat(props.info.j).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -680,36 +741,41 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.j).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="j1"
-          onChange={(e) => props.SetInfo({ ...props.info, j: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.j || props.info.j === 0
-              ? ""
-              : parseFloat(props.info.j).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldWhite">
-        <div className="inputAlphabet">K</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol11(true)}
+          onMouseLeave={() => setSymbol11(false)}
+        >
+          K
+        </div>
         <div className="inputP">
-          <p>{namesarray[10]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol11(true)}
             onMouseLeave={() => setSymbol11(false)}
           >
-            i
-          </div>
+            {namesarray[10]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[10] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="k1"
+          onChange={(e) => props.SetInfo({ ...props.info, k: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.k || props.info.k === 0
+              ? ""
+              : parseFloat(props.info.k).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -725,36 +791,41 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.k).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="k1"
-          onChange={(e) => props.SetInfo({ ...props.info, k: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.k || props.info.k === 0
-              ? ""
-              : parseFloat(props.info.k).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldDark">
-        <div className="inputAlphabet">L</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol12(true)}
+          onMouseLeave={() => setSymbol12(false)}
+        >
+          L
+        </div>
         <div className="inputP">
-          <p>{namesarray[11]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol12(true)}
             onMouseLeave={() => setSymbol12(false)}
           >
-            i
-          </div>
+            {namesarray[11]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[11] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="l1"
+          onChange={(e) => props.SetInfo({ ...props.info, l: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.l || props.info.l === 0
+              ? ""
+              : parseFloat(props.info.l).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -770,36 +841,41 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.l).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="l1"
-          onChange={(e) => props.SetInfo({ ...props.info, l: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.l || props.info.l === 0
-              ? ""
-              : parseFloat(props.info.l).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldWhite">
-        <div className="inputAlphabet">M</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol13(true)}
+          onMouseLeave={() => setSymbol13(false)}
+        >
+          M
+        </div>
         <div className="inputP">
-          <p>{namesarray[12]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol13(true)}
             onMouseLeave={() => setSymbol13(false)}
           >
-            i
-          </div>
+            {namesarray[12]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[12] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="m1"
+          onChange={(e) => props.SetInfo({ ...props.info, m: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.m || props.info.m === 0
+              ? ""
+              : parseFloat(props.info.m).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -815,36 +891,41 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.m).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="m1"
-          onChange={(e) => props.SetInfo({ ...props.info, m: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.m || props.info.m === 0
-              ? ""
-              : parseFloat(props.info.m).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldDark">
-        <div className="inputAlphabet">N</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol14(true)}
+          onMouseLeave={() => setSymbol14(false)}
+        >
+          N
+        </div>
         <div className="inputP">
-          <p>{namesarray[13]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol14(true)}
             onMouseLeave={() => setSymbol14(false)}
           >
-            i
-          </div>
+            {namesarray[13]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[13] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="n1"
+          onChange={(e) => props.SetInfo({ ...props.info, n: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.n || props.info.n === 0
+              ? ""
+              : parseFloat(props.info.n).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -860,36 +941,41 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.n).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="n1"
-          onChange={(e) => props.SetInfo({ ...props.info, n: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.n || props.info.n === 0
-              ? ""
-              : parseFloat(props.info.n).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldWhite">
-        <div className="inputAlphabet">O</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol15(true)}
+          onMouseLeave={() => setSymbol15(false)}
+        >
+          O
+        </div>
         <div className="inputP">
-          <p>{namesarray[14]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol15(true)}
             onMouseLeave={() => setSymbol15(false)}
           >
-            i
-          </div>
+            {namesarray[14]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[14] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="o1"
+          onChange={(e) => props.SetInfo({ ...props.info, o: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.o || props.info.o === 0
+              ? ""
+              : parseFloat(props.info.o).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -905,36 +991,41 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.o).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="o1"
-          onChange={(e) => props.SetInfo({ ...props.info, o: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.o || props.info.o === 0
-              ? ""
-              : parseFloat(props.info.o).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldDark">
-        <div className="inputAlphabet">P</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol16(true)}
+          onMouseLeave={() => setSymbol16(false)}
+        >
+          P
+        </div>
         <div className="inputP">
-          <p>{namesarray[15]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol16(true)}
             onMouseLeave={() => setSymbol16(false)}
           >
-            i
-          </div>
+            {namesarray[15]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[15] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="p1"
+          onChange={(e) => props.SetInfo({ ...props.info, p: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.p || props.info.p === 0
+              ? ""
+              : parseFloat(props.info.p).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -950,36 +1041,41 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.p).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="p1"
-          onChange={(e) => props.SetInfo({ ...props.info, p: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.p || props.info.p === 0
-              ? ""
-              : parseFloat(props.info.p).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldWhite">
-        <div className="inputAlphabet">Q</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol17(true)}
+          onMouseLeave={() => setSymbol17(false)}
+        >
+          Q
+        </div>
         <div className="inputP">
-          <p>{namesarray[16]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol17(true)}
             onMouseLeave={() => setSymbol17(false)}
           >
-            i
-          </div>
+            {namesarray[16]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[16] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="q1"
+          onChange={(e) => props.SetInfo({ ...props.info, q: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.q || props.info.q === 0
+              ? ""
+              : parseFloat(props.info.q).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -995,36 +1091,41 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.q).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="q1"
-          onChange={(e) => props.SetInfo({ ...props.info, q: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.q || props.info.q === 0
-              ? ""
-              : parseFloat(props.info.q).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldDark">
-        <div className="inputAlphabet">R</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol18(true)}
+          onMouseLeave={() => setSymbol18(false)}
+        >
+          R
+        </div>
         <div className="inputP">
-          <p>{namesarray[17]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol18(true)}
             onMouseLeave={() => setSymbol18(false)}
           >
-            i
-          </div>
+            {namesarray[17]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[17] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="r1"
+          onChange={(e) => props.SetInfo({ ...props.info, r: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.r || props.info.r === 0
+              ? ""
+              : parseFloat(props.info.r).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -1040,36 +1141,41 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.r).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="r1"
-          onChange={(e) => props.SetInfo({ ...props.info, r: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.r || props.info.r === 0
-              ? ""
-              : parseFloat(props.info.r).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldWhite">
-        <div className="inputAlphabet">S</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol19(true)}
+          onMouseLeave={() => setSymbol19(false)}
+        >
+          S
+        </div>
         <div className="inputP">
-          <p>{namesarray[18]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol19(true)}
             onMouseLeave={() => setSymbol19(false)}
           >
-            i
-          </div>
+            {namesarray[18]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[18] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="s1"
+          onChange={(e) => props.SetInfo({ ...props.info, s: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.s || props.info.s === 0
+              ? ""
+              : parseFloat(props.info.s).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -1085,36 +1191,41 @@ function InputRender(props) {
               : parseFloat(props.infoprecent.s).toFixed(2).replace(/\.00$/, "")
           }
         />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="s1"
-          onChange={(e) => props.SetInfo({ ...props.info, s: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.s || props.info.s === 0
-              ? ""
-              : parseFloat(props.info.s).toFixed(1).replace(/\.0$/, "")
-          }
-        />
       </section>
 
       <section className="inputFieldDark">
-        <div className="inputAlphabet">T</div>
+        <div
+          className="inputAlphabet"
+          onMouseEnter={() => setSymbol20(true)}
+          onMouseLeave={() => setSymbol20(false)}
+        >
+          T
+        </div>
         <div className="inputP">
-          <p>{namesarray[19]}</p>
-          <div
-            className="inputSymbol"
+          <p
             onMouseEnter={() => setSymbol20(true)}
             onMouseLeave={() => setSymbol20(false)}
           >
-            i
-          </div>
+            {namesarray[19]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[19] * 10) / 10).toString()}
         </div>
+
+        <input
+          className="inputClasses"
+          type={"number"}
+          id="t1"
+          onChange={(e) => props.SetInfo({ ...props.info, t: e.target.value })}
+          onWheel={() => document.activeElement.blur()}
+          onBlur={changeInputValue}
+          value={
+            !props.info.t || props.info.t === 0
+              ? ""
+              : parseFloat(props.info.t).toFixed(1).replace(/\.0$/, "")
+          }
+        />
         <input
           className="inputClasses"
           type={"number"}
@@ -1128,19 +1239,6 @@ function InputRender(props) {
             !props.infoprecent.t || props.infoprecent.t === 0
               ? ""
               : parseFloat(props.infoprecent.t).toFixed(2).replace(/\.00$/, "")
-          }
-        />
-        <input
-          className="inputClasses"
-          type={"number"}
-          id="t1"
-          onChange={(e) => props.SetInfo({ ...props.info, t: e.target.value })}
-          onWheel={() => document.activeElement.blur()}
-          onBlur={changeInputValue}
-          value={
-            !props.info.t || props.info.t === 0
-              ? ""
-              : parseFloat(props.info.t).toFixed(1).replace(/\.0$/, "")
           }
         />
       </section>

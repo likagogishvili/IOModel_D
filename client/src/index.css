@@ -46,6 +46,7 @@ rect,
 .inputSymbol,
 .swiper-button-next,
 .swiper-button-prev,
+.Info,
 tspan {
   cursor: url("assets/cursors/cursorPointer.cur"), auto !important;
 }

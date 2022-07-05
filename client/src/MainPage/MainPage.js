@@ -224,13 +224,12 @@ function MainPage(props) {
   for (let i = 0; i < dsix1.length; i++) {
     thirdDiagramValues6.push(dsix2[i] - dsix1[i]);
   }
-
   return (
     <div>
       {!languageChange ? (
-        <title>დარგების ეკონომიკური ანალიზი</title>
+        <title>ეკონომიკური ანალიზის პორტალი</title>
       ) : (
-        <title>Economic analysis of Industries</title>
+        <title>Economic Analysis Portal</title>
       )}
 
       <ContentHeader

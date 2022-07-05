@@ -96,7 +96,7 @@ function ChartSwiper(props) {
           >
             <p className="rightSideChartsp">
               {!props.languageChange
-                ? "ძირითადი კაპიტალის მთლიანი ფორმირება, მლნ ლარი"
+                ? "ძირითადი კაპიტალის ფორმირება, მლნ ლარი"
                 : "GFCF Mil. Lari"}
             </p>
             <PieChart

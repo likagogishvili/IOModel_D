@@ -64,6 +64,51 @@
   height: 25%;
   cursor: pointer;
 }
+.Info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16%;
+  height: 25%;
+  cursor: pointer;
+}
+
+.InfoWindow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: auto;
+  top: 17%;
+  backdrop-filter: blur(50px);
+  background-color: #397db9;
+  font-family: "Ninomtavruli";
+  color: #ffff;
+  text-align: left;
+  z-index: 10;
+}
+.InfoWindow h2{
+  text-align: center;
+}
+.InfoWindow > h3,p {
+  text-align: left;
+  padding-left: 3%;
+
+}
+.InfoWindow > ul{
+  padding-left: 6%;
+}
+.closeBTN {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  margin-right: 1%;
+  margin-top: 1%;
+}
+
 .imgDiv > :nth-child(2) :hover {
   background-color: #4867aa;
 }
@@ -102,7 +147,7 @@
     text-align: center;
   }
   .imgDiv {
-    width: 20%;
+    width: 30%;
   }
   .headerContentSmall {
     width: 100%;
@@ -110,7 +155,8 @@
   .imgDiv > img {
     width: 20%;
   }
-  .imgDiv > a {
+  .imgDiv > a,
+  .Info {
     width: 25%;
   }
 }
@@ -119,7 +165,8 @@
   .divHeaderCont img {
     max-width: 100%;
   }
-  .imgDiv > a {
+  .imgDiv > a,
+  .Info {
     width: 20%;
   }
   .contH > .divHeaderCont {
@@ -134,7 +181,8 @@
   .divHeaderCont img {
     max-width: 70%;
   }
-  .imgDiv > a {
+  .imgDiv > a,
+  .Info {
     width: 20%;
   }
   .contH > .divHeaderCont {
@@ -149,7 +197,8 @@
   .divHeaderCont img {
     max-width: 70%;
   }
-  .imgDiv > a {
+  .imgDiv > a,
+  .Info {
     width: 20%;
   }
   .contH > .divHeaderCont {
@@ -164,7 +213,8 @@
   .divHeaderCont img {
     max-width: 70%;
   }
-  .imgDiv > a {
+  .imgDiv > a,
+  .Info {
     width: 15%;
   }
   .contH > .divHeaderCont {
@@ -179,7 +229,8 @@
   .divHeaderCont img {
     max-width: 50%;
   }
-  .imgDiv > a {
+  .imgDiv > a,
+  .Info {
     width: 15%;
   }
   .contH > .divHeaderCont {
