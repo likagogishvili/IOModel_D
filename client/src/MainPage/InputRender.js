@@ -155,9 +155,6 @@ function InputRender(props) {
             ...props.info,
             [ar1[z]]: 0,
           });
-
-          // props.axalisabolooMoxmareba[z] = props.axalisabolooMoxmareba[z]
-
           props.setnewvalue((values) =>
             values.map((value, i) =>
               i === z ? props.axalisabolooMoxmareba[z] : value

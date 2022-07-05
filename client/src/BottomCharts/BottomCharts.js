@@ -14,12 +14,63 @@ function BottomCharts(props) {
 
   function createArray(arr1, arr2) {
     if (!props.languageChange) {
-      var newArr = [["მიმდინარე", "ახალი", "ნომინალური ცვლილება"]];
+      var namesarray = [
+        "სოფლის მეურნეობა",
+        "სამთომოპოვებითი მრეწველობა",
+        "დამამუშავებელი მრეწველობა",
+        "ელექტროენერგია",
+        "წყალმომარაგება და ნარჩენების მართვა",
+        "მშენებლობა",
+        "ვაჭრობა",
+        "ტრანსპორტი",
+        "სასტუმროები და რესტორნები",
+        "ინფორმაცია და კომუნიკაცია",
+        "საფინანსო და სადაზღვევო საქმიანობები",
+        "უძრავი ქონება",
+        "პროფესიული და სამეცნიერო საქმიანობები",
+        "ადმინისტრაციული საქმიანობები",
+        "სახელმწიფო მმართველობა",
+        "განათლება",
+        "ჯანდაცვა და სოციალური მომსახურებები",
+        "ხელოვნება, გართობა და დასვენება",
+        "სხვა სახის მომსახურება",
+        "შინამეურნეობების საქმიანობები",
+      ];
     } else {
-      newArr = [["Current", "New", "Difference"]];
+      namesarray = [
+        "Agriculture",
+        "Mining and quarrying",
+        "Manufacturing",
+        "Electricity, gas",
+        "Water supply; sewerage, waste management",
+        "Construction",
+        "Trade",
+        "Transportation and storage",
+        "Accommodation and food service activities",
+        "Information and communication",
+        "Financial and insurance activities",
+        "Real estate activities",
+        "Professional, scientific and technical activitie",
+        "Administrative and support service activities",
+        "Public administration",
+        "Education",
+        "Human health",
+        "Arts, entertainment and recreation",
+        "Other service activities",
+        "Activities of households as employers",
+      ];
+    }
+
+    if (!props.languageChange) {
+      var newArr = [
+        ["დასახელება", "მიმდინარე", "ახალი", "ნომინალური ცვლილება"],
+      ];
+    } else {
+      newArr = [["Name", "Current", "New", "Difference"]];
     }
     for (let i = 0; i < arr1.length; i++) {
       newArr.push([
+        namesarray[i],
         Math.round([arr1[i]] * 100) / 100,
         Math.round([arr2[i]] * 100) / 100,
         Math.round([arr2[i] - arr1[i]]),
@@ -52,30 +103,55 @@ function BottomCharts(props) {
     props.shromaBCsecondValue
   );
 
-  function exportData(arr) {
+  function exportData(arr, nameOfChart) {
     var wb = XLSX.utils.book_new(),
       ws = XLSX.utils.aoa_to_sheet(arr);
     XLSX.utils.book_append_sheet(wb, ws, "mySheet1");
-    XLSX.writeFile(wb, "data.xls");
+    XLSX.writeFile(wb, nameOfChart);
   }
 
   function downloadFirst() {
-    exportData(firstExcelValues);
+    exportData(
+      firstExcelValues,
+      !props.languageChange
+        ? "მთლიანი შიდა პროდუქტი, მლნ ლარი.xls"
+        : "Value added, mil Gel.xls"
+    );
   }
   function downloadSecond() {
-    exportData(secondExcelValues);
+    exportData(
+      secondExcelValues,
+      !props.languageChange ? "გამოშვება, მლნ ლარი.xls" : "Output, mil Gel.xls"
+    );
   }
   function downloadThird() {
-    exportData(thirdExcelValues);
+    exportData(
+      thirdExcelValues,
+      !props.languageChange ? "დასაქმება, ათასი კაცი" : "Employment, person.xls"
+    );
   }
   function downloadFourth() {
-    exportData(fourthExcelValue);
+    exportData(
+      fourthExcelValue,
+      !props.languageChange ? "იმპორტი, მლნ ლარი" : "Import, mil Gel.xls"
+    );
   }
   function downloadFifth() {
-    exportData(fifthExcelValue);
+    exportData(
+      fifthExcelValue,
+
+      !props.languageChange
+        ? "ძირითადი კაპიტალის მთლიანი ფორმირება, მლნ ლარი"
+        : "Gross capital formation, mil Gel.xls"
+    );
   }
   function downloadSix() {
-    exportData(sixExcelValue);
+    exportData(
+      sixExcelValue,
+      !props.languageChange
+        ? "შრომის ანაზღაურება, მლნ ლარი"
+        : "Compensation of employees, mil Gel.xls"
+    );
   }
   return (
     <div>
