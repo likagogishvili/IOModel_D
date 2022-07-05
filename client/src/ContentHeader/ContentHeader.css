@@ -17,7 +17,6 @@
   justify-content: space-between;
   align-items: center;
   color: white;
-  font-size: 2rem;
 }
 .divHeaderCont1 {
   width: 30%;
@@ -146,6 +145,7 @@ p {
   .divHeaderCont2 {
     width: 45%;
     text-align: center;
+    font-size: 1rem;
   }
   .imgDiv {
     width: 30%;
