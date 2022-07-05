@@ -5,6 +5,7 @@
 .swiperCharts {
   width: 90%;
   height: 800px;
+  background-repeat: no-repeat;
 }
 .rightSideChartsp {
   text-align: center;

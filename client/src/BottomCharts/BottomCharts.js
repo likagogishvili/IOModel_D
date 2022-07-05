@@ -4,7 +4,6 @@ import Sxvaoba from "../ChartsFolder/SxvaobaChart";
 import "./BottomCharts.css";
 import * as XLSX from "xlsx";
 
-
 function BottomCharts(props) {
   const [gamoshvebaRender, SetGamoshvebaRender] = useState(true);
   const [damatebitiRender, SetDamatebitiRender] = useState(true);
@@ -13,38 +12,70 @@ function BottomCharts(props) {
   const [kapitaliRender, SetKapitaliRender] = useState(true);
   const [shromaRender, SetShromaRender] = useState(true);
 
-// let firstDownload = [
-//     ['mimdinare', 'axali'],
-//     [props.damatebitiBCfirstValue[0], props.damatebitiBCsecondValue[0]],
-//     [props.damatebitiBCfirstValue[1], props.damatebitiBCsecondValue[1]],
-//     [props.damatebitiBCfirstValue[2], props.damatebitiBCsecondValue[2]],
-//     [props.damatebitiBCfirstValue[2], props.damatebitiBCsecondValue[2]],
-//     [props.damatebitiBCfirstValue[2], props.damatebitiBCsecondValue[2]],    
-// ];
-
-function createArray(arr1,arr2){
-  let newArr = [['mimdinare', 'axali']]
-  for (let i = 0; i < arr1.length; i++) {
-    newArr.push([[arr1[i]], [arr2[i]]])    
+  function createArray(arr1, arr2) {
+    let newArr = [["მიმდინარე", "ახალი", "ნომინალური ცვლილება"]];
+    for (let i = 0; i < arr1.length; i++) {
+      newArr.push([
+        Math.round([arr1[i]] * 100) / 100,
+        Math.round([arr2[i]] * 100) / 100,
+        Math.round([arr2[i] - arr1[i]]),
+      ]);
+    }
+    return newArr;
   }
-  return newArr
-}
-
-let firstExcelValues = createArray(props.damatebitiBCfirstValue, props.damatebitiBCsecondValue)
-
+  let firstExcelValues = createArray(
+    props.damatebitiBCfirstValue,
+    props.damatebitiBCsecondValue
+  );
+  let secondExcelValues = createArray(
+    props.gamoshvebaBCfirstValue,
+    props.gamoshvebaBCsecondValue
+  );
+  let thirdExcelValues = createArray(
+    props.dasaqmebaSxvaobafirstValue,
+    props.dasaqmebaSxvaobasecondValue
+  );
+  let fourthExcelValue = createArray(
+    props.importiSxvaobafirstValue,
+    props.importiSxvaobasecondValue
+  );
+  let fifthExcelValue = createArray(
+    props.kapitaliSxvaobafirstValue,
+    props.kapitaliSxvaobasecondValue
+  );
+  let sixExcelValue = createArray(
+    props.shromaBCfirstValue,
+    props.shromaBCsecondValue
+  );
 
   function exportData(arr) {
     var wb = XLSX.utils.book_new(),
       ws = XLSX.utils.aoa_to_sheet(arr);
-
     XLSX.utils.book_append_sheet(wb, ws, "mySheet1");
-
     XLSX.writeFile(wb, "excample.xlsx");
   }
 
+  function downloadFirst() {
+    exportData(firstExcelValues);
+  }
+  function downloadSecond() {
+    exportData(secondExcelValues);
+  }
+  function downloadThird() {
+    exportData(thirdExcelValues);
+  }
+  function downloadFourth() {
+    exportData(fourthExcelValue);
+  }
+  function downloadFifth() {
+    exportData(fifthExcelValue);
+  }
+  function downloadSix() {
+    exportData(sixExcelValue);
+  }
   return (
     <div>
-      <div className="chartBottomLight">
+      <div className="chartBottomDark">
         <div className="renderingWithArrow">
           <p>
             {!props.languageChange
@@ -60,28 +91,30 @@ let firstExcelValues = createArray(props.damatebitiBCfirstValue, props.damatebit
           </button>
         </div>
         {damatebitiRender && (
-          <div className="chartGraphs">
-            <div className="BarChartAll">
-              <BarChart
-                firstValue={props.damatebitiBCfirstValue}
-                secondValue={props.damatebitiBCsecondValue}
-                languageChange={props.languageChange}
-              />
+          <div>
+            <div className="chartGraphs">
+              <div className="BarChartAll">
+                <BarChart
+                  firstValue={props.damatebitiBCfirstValue}
+                  secondValue={props.damatebitiBCsecondValue}
+                  languageChange={props.languageChange}
+                />
+              </div>
+              <div className="BarChartSxvaoba">
+                <Sxvaoba
+                  firstValue={props.damatebitiSxvaobafirstValue}
+                  secondValue={props.damatebitiSxvaobasecondValue}
+                  languageChange={props.languageChange}
+                />
+              </div>
             </div>
-            <div className="BarChartSxvaoba">
-              <Sxvaoba
-                firstValue={props.damatebitiSxvaobafirstValue}
-                secondValue={props.damatebitiSxvaobasecondValue}
-                languageChange={props.languageChange}
-              />
-            </div>
+            <button className="downloadBTN" onClick={downloadFirst}>
+              {!props.languageChange ? "გადმოწერა" : "Download"}
+            </button>
           </div>
         )}
-        {/* <button className="downloadBTN" onClick={exportData}>
-          გადმოწერა
-        </button> */}
       </div>
-      <div className="chartBottomDark">
+      <div className="chartBottomLight">
         <div className="renderingWithArrow">
           <p>
             {!props.languageChange ? "გამოშვება, მლნ ლარი" : "Output, mil Gel"}
@@ -112,11 +145,11 @@ let firstExcelValues = createArray(props.damatebitiBCfirstValue, props.damatebit
                 />
               </div>
             </div>
+            <button className="downloadBTN" onClick={downloadSecond}>
+              {!props.languageChange ? "გადმოწერა" : "Download"}
+            </button>
           </div>
         )}
-        {/* <button className="downloadBTN" onClick={exportData}>
-          გადმოწერა
-        </button> */}
       </div>
 
       <div className="chartBottomDark">
@@ -135,21 +168,26 @@ let firstExcelValues = createArray(props.damatebitiBCfirstValue, props.damatebit
           </button>
         </div>
         {dasaqmebaRender && (
-          <div className="chartGraphs">
-            <div className="BarChartAll">
-              <BarChart
-                firstValue={props.dasaqmebaBCfirstValue}
-                secondValue={props.dasaqmebaBCsecondValue}
-                languageChange={props.languageChange}
-              />
+          <div>
+            <div className="chartGraphs">
+              <div className="BarChartAll">
+                <BarChart
+                  firstValue={props.dasaqmebaBCfirstValue}
+                  secondValue={props.dasaqmebaBCsecondValue}
+                  languageChange={props.languageChange}
+                />
+              </div>
+              <div className="BarChartSxvaoba">
+                <Sxvaoba
+                  firstValue={props.dasaqmebaSxvaobafirstValue}
+                  secondValue={props.dasaqmebaSxvaobasecondValue}
+                  languageChange={props.languageChange}
+                />
+              </div>
             </div>
-            <div className="BarChartSxvaoba">
-              <Sxvaoba
-                firstValue={props.dasaqmebaSxvaobafirstValue}
-                secondValue={props.dasaqmebaSxvaobasecondValue}
-                languageChange={props.languageChange}
-              />
-            </div>
+            <button className="downloadBTN" onClick={downloadThird}>
+              {!props.languageChange ? "გადმოწერა" : "Download"}
+            </button>
           </div>
         )}
       </div>
@@ -168,21 +206,26 @@ let firstExcelValues = createArray(props.damatebitiBCfirstValue, props.damatebit
           </button>
         </div>
         {importiRender && (
-          <div className="chartGraphs">
-            <div className="BarChartAll">
-              <BarChart
-                firstValue={props.importiBCfirstValue}
-                secondValue={props.importiBCsecondValue}
-                languageChange={props.languageChange}
-              />
+          <div>
+            <div className="chartGraphs">
+              <div className="BarChartAll">
+                <BarChart
+                  firstValue={props.importiBCfirstValue}
+                  secondValue={props.importiBCsecondValue}
+                  languageChange={props.languageChange}
+                />
+              </div>
+              <div className="BarChartSxvaoba">
+                <Sxvaoba
+                  firstValue={props.importiSxvaobafirstValue}
+                  secondValue={props.importiSxvaobasecondValue}
+                  languageChange={props.languageChange}
+                />
+              </div>
             </div>
-            <div className="BarChartSxvaoba">
-              <Sxvaoba
-                firstValue={props.importiSxvaobafirstValue}
-                secondValue={props.importiSxvaobasecondValue}
-                languageChange={props.languageChange}
-              />
-            </div>
+            <button className="downloadBTN" onClick={downloadFourth}>
+              {!props.languageChange ? "გადმოწერა" : "Download"}
+            </button>
           </div>
         )}
       </div>
@@ -203,21 +246,26 @@ let firstExcelValues = createArray(props.damatebitiBCfirstValue, props.damatebit
           </button>
         </div>
         {kapitaliRender && (
-          <div className="chartGraphs">
-            <div className="BarChartAll">
-              <BarChart
-                firstValue={props.kapitaliBCfirstValue}
-                secondValue={props.kapitaliBCsecondValue}
-                languageChange={props.languageChange}
-              />
+          <div>
+            <div className="chartGraphs">
+              <div className="BarChartAll">
+                <BarChart
+                  firstValue={props.kapitaliBCfirstValue}
+                  secondValue={props.kapitaliBCsecondValue}
+                  languageChange={props.languageChange}
+                />
+              </div>
+              <div className="BarChartSxvaoba">
+                <Sxvaoba
+                  firstValue={props.kapitaliSxvaobafirstValue}
+                  secondValue={props.kapitaliSxvaobasecondValue}
+                  languageChange={props.languageChange}
+                />
+              </div>
             </div>
-            <div className="BarChartSxvaoba">
-              <Sxvaoba
-                firstValue={props.kapitaliSxvaobafirstValue}
-                secondValue={props.kapitaliSxvaobasecondValue}
-                languageChange={props.languageChange}
-              />
-            </div>
+            <button className="downloadBTN" onClick={downloadFifth}>
+              {!props.languageChange ? "გადმოწერა" : "Download"}
+            </button>
           </div>
         )}
       </div>
@@ -238,21 +286,26 @@ let firstExcelValues = createArray(props.damatebitiBCfirstValue, props.damatebit
           </button>
         </div>
         {shromaRender && (
-          <div className="chartGraphs">
-            <div className="BarChartAll">
-              <BarChart
-                firstValue={props.shromaBCfirstValue}
-                secondValue={props.shromaBCsecondValue}
-                languageChange={props.languageChange}
-              />
+          <div>
+            <div className="chartGraphs">
+              <div className="BarChartAll">
+                <BarChart
+                  firstValue={props.shromaBCfirstValue}
+                  secondValue={props.shromaBCsecondValue}
+                  languageChange={props.languageChange}
+                />
+              </div>
+              <div className="BarChartSxvaoba">
+                <Sxvaoba
+                  firstValue={props.shromaSxvaobafirstValue}
+                  secondValue={props.shromaSxvaobasecondValue}
+                  languageChange={props.languageChange}
+                />
+              </div>
             </div>
-            <div className="BarChartSxvaoba">
-              <Sxvaoba
-                firstValue={props.shromaSxvaobafirstValue}
-                secondValue={props.shromaSxvaobasecondValue}
-                languageChange={props.languageChange}
-              />
-            </div>
+            <button className="downloadBTN" onClick={downloadSix}>
+              {!props.languageChange ? "გადმოწერა" : "Download"}
+            </button>
           </div>
         )}
       </div>

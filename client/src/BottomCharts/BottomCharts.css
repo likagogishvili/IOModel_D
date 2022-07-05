@@ -21,8 +21,7 @@
   display: inline-block;
   padding: 3px;
 }
-.downloadP {
-}
+
 .right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
@@ -66,6 +65,7 @@
   margin-bottom: 0.5%;
   margin-left: 2%;
   margin-right: 2%;
+  font-family: "Ninomtavruli";
 }
 .downloadBTN {
   width: 20%;
@@ -73,11 +73,13 @@
   margin-bottom: 2%;
   border: none;
   background-color: transparent;
+  font-family: "Ninomtavruli";
 }
 .btnsDownload {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  font-family: "Ninomtavruli";
 }
 @media only screen and (max-width: 600px) {
   .chartBottomDark {
@@ -85,5 +87,11 @@
   }
   .chartBottomLight {
     width: 100%;
+  }
+  .downloadBTN {
+    width: 20%;
+    margin-left: 70%;
+    margin-bottom: 2%;
+    font-family: "Ninomtavruli";
   }
 }

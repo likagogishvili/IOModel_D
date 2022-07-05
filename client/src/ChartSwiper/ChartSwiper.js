@@ -24,7 +24,6 @@ function ChartSwiper(props) {
         pagination
         spaceBetween={50}
         slidesPerView={1}
-        // style={{ background: '#397DB9' }}
       >
         <SwiperSlide>
           <div
