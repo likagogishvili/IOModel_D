@@ -6,24 +6,25 @@ import InputRender from "./InputRender";
 import "./mainPage.css";
 import RightSide from "./RightSide";
 import { useEffect } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function MainPage(props) {
   let navigate = useNavigate();
-  let location = useLocation();
+  // let location = useLocation();
   let params = useParams();
 
   const [languageChange, SetLanguageChange] = useState(false);
   // dons't refresh
   useEffect(() => {
-    if(params.lang){
-
-      window.sessionStorage.setItem("languageChange" , params.lang === "en" ? true : false)
+    if (params.lang) {
+      window.sessionStorage.setItem(
+        "languageChange",
+        params.lang === "en" ? true : false
+      );
       SetLanguageChange(
         JSON.parse(window.sessionStorage.getItem("languageChange"))
       );
     }
-
   }, []);
 
   useEffect(() => {
@@ -77,8 +78,8 @@ function MainPage(props) {
   });
 
   //language in routing
-  function LanguageChangeRender(e=null) {
-    let currentLang = params.lang === "ka" ? "en" : "ka"
+  function LanguageChangeRender(e = null) {
+    let currentLang = params.lang === "en" ? "ka" : "en";
     SetLanguageChange(!languageChange);
     return navigate(`/${currentLang}`, { replace: true });
   }
