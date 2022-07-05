@@ -19,7 +19,6 @@ body {
   font-weight: bold;
 }
 
-
 ::selection {
   background: #c6deef;
 }
@@ -30,5 +29,21 @@ body::-webkit-scrollbar-track {
   background: transparent; /* color of the tracking area */
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #B35751; /* color of the scroll thumb */
+  background-color: #ed323d; /* color of the scroll thumb */
+}
+html,
+input,
+label,
+select,
+option {
+  cursor: url("assets/cursors/cursor.cur"), auto !important;
+}
+a,
+button,
+path,
+svg,
+rect,
+.inputSymbol,
+tspan {
+  cursor: url("assets/cursors/cursorPointer.cur"), auto !important;
 }

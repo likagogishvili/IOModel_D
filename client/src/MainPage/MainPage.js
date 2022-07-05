@@ -227,6 +227,12 @@ function MainPage(props) {
 
   return (
     <div>
+      {!languageChange ? (
+        <title>დარგების ეკონომიკური ანალიზი</title>
+      ) : (
+        <title>Economic analysis of Industries</title>
+      )}
+
       <ContentHeader
         languageChange={languageChange}
         SetLanguageChange={SetLanguageChange}

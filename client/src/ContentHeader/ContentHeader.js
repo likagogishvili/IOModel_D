@@ -4,6 +4,8 @@ import twitter from "./img/twitter.png";
 import youtube from "./img/youtube.png";
 import headerImage from "./img/headerBG.png";
 import headerLogo from "./img/headerLogo.png";
+import iconI from "./img/information.png";
+
 function ContentHeader(props) {
   return (
     <header
@@ -20,6 +22,7 @@ function ContentHeader(props) {
           >
             <img src={headerLogo} alt="" />
           </a>
+
           <div className="divHeaderCont2">
             {!props.languageChange ? (
               <p>დარგების ეკონომიკური ანალიზი</p>
@@ -28,6 +31,13 @@ function ContentHeader(props) {
             )}
           </div>
           <div className="imgDiv">
+            <a
+              href="ll"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={iconI} alt="" width={"100%"} height={"100%"} />
+            </a>
             <a
               href="https://www.facebook.com/geostat.ge/"
               target="_blank"
@@ -51,7 +61,7 @@ function ContentHeader(props) {
             </a>
             {!props.languageChange ? (
               <img
-                src={'http://juniors.geostat.ge/assets/img/icons/us.svg'}
+                src={"http://juniors.geostat.ge/assets/img/icons/us.svg"}
                 alt=""
                 width={"100%"}
                 height={"100%"}
@@ -59,7 +69,7 @@ function ContentHeader(props) {
               />
             ) : (
               <img
-                src={'http://juniors.geostat.ge/assets/img/icons/ge.svg'}
+                src={"http://juniors.geostat.ge/assets/img/icons/ge.svg"}
                 alt=""
                 width={"100%"}
                 height={"100%"}

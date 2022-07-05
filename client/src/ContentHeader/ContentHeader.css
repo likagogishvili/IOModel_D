@@ -9,6 +9,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #215986;
 }
 .contH > .divHeaderCont {
   display: flex;
@@ -54,14 +55,23 @@
   margin-right: 7%;
   cursor: pointer;
 }
-.imgDiv > a {
+.imgDiv a {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 12%;
+  width: 16%;
   height: 25%;
   cursor: pointer;
+}
+.imgDiv > :nth-child(2) :hover {
+  background-color: #4867aa;
+}
+.imgDiv > :nth-child(3) :hover {
+  background-color: #209beb;
+}
+.imgDiv > :nth-child(4) :hover {
+  background-color: #fe0000;
 }
 .headerContentSmall {
   width: 83%;
