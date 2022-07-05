@@ -90,15 +90,15 @@
   text-align: left;
   z-index: 10;
 }
-.InfoWindow h2{
+.InfoWindow h2 {
   text-align: center;
 }
-.InfoWindow > h3,p {
+.InfoWindow > h3,
+p {
   text-align: left;
   padding-left: 3%;
-
 }
-.InfoWindow > ul{
+.InfoWindow > ul {
   padding-left: 6%;
 }
 .closeBTN {
