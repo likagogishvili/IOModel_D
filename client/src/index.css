@@ -44,6 +44,8 @@ path,
 svg,
 rect,
 .inputSymbol,
+.swiper-button-next,
+.swiper-button-prev,
 tspan {
   cursor: url("assets/cursors/cursorPointer.cur"), auto !important;
 }

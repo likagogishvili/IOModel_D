@@ -215,7 +215,6 @@ input[type="number"] {
     height: 70px;
     font-size: 0.5rem;
   }
-
   .inputFieldDark {
     width: 100%;
     height: 70px;
@@ -291,23 +290,23 @@ input[type="number"] {
     font-size: 0.6rem;
   }
   .firT {
-    height: 50%;
-    font-size: 0.6rem;
+    height: 40%;
+    font-size: 0.3rem;
   }
   .inputFieldDark {
     font-size: 0.6rem;
   }
   .secT {
-    font-size: 0.6rem;
+    font-size: 0.45rem;
   }
   .thirdT {
-    font-size: 0.6rem;
+    font-size: 0.45rem;
   }
   .inputP > p {
-    font-size: 0.6rem;
+    font-size: 0.45rem;
   }
 
   .last2T {
-    font-size: 0.6rem;
+    font-size: 0.44rem;
   }
 }

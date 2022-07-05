@@ -10,7 +10,7 @@ function ContentHeader(props) {
   return (
     <header
       className="contH"
-      style={{ backgroundImage: `url(${headerImage})` }}
+      // style={{ backgroundImage: `url(${headerImage})` }}
     >
       <div className="divHeaderCont">
         <div className="headerContentSmall">
