@@ -153,6 +153,7 @@ function BottomCharts(props) {
         : "Compensation of employees, mil Gel.xls"
     );
   }
+
   return (
     <div>
       <div className="chartBottomDark">

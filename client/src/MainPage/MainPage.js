@@ -6,22 +6,31 @@ import InputRender from "./InputRender";
 import "./mainPage.css";
 import RightSide from "./RightSide";
 import { useEffect } from "react";
-import {useNavigate} from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 function MainPage(props) {
+  let navigate = useNavigate();
+  let location = useLocation();
+  let params = useParams();
+
   const [languageChange, SetLanguageChange] = useState(false);
   // dons't refresh
   useEffect(() => {
-    SetLanguageChange(
-      JSON.parse(window.sessionStorage.getItem("languageChange"))
-    );
+    if(params.lang){
+
+      window.sessionStorage.setItem("languageChange" , params.lang === "en" ? true : false)
+      SetLanguageChange(
+        JSON.parse(window.sessionStorage.getItem("languageChange"))
+      );
+    }
+
   }, []);
 
   useEffect(() => {
     window.sessionStorage.setItem("languageChange", languageChange);
   }, [languageChange]);
 
-  console.log(useNavigate)
+  console.log(useNavigate);
   const [infoprecent, SetInfoPrecent] = useState({
     a: "",
     b: "",
@@ -68,6 +77,11 @@ function MainPage(props) {
   });
 
   //language in routing
+  function LanguageChangeRender(e=null) {
+    let currentLang = params.lang === "ka" ? "en" : "ka"
+    SetLanguageChange(!languageChange);
+    return navigate(`/${currentLang}`, { replace: true });
+  }
 
   const [newval, setnewvalue] = useState([]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -239,6 +253,7 @@ function MainPage(props) {
       <ContentHeader
         languageChange={languageChange}
         SetLanguageChange={SetLanguageChange}
+        LanguageChangeRender={LanguageChangeRender}
       />
 
       <div className="inputCointeinerParent">

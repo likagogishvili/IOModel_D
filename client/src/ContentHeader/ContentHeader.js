@@ -194,7 +194,7 @@ function ContentHeader(props) {
                 alt=""
                 width={"100%"}
                 height={"100%"}
-                onClick={() => props.SetLanguageChange(!props.languageChange)}
+                onClick={(e) => props.LanguageChangeRender(e)}
               />
             ) : (
               <img
@@ -202,7 +202,7 @@ function ContentHeader(props) {
                 alt=""
                 width={"100%"}
                 height={"100%"}
-                onClick={() => props.SetLanguageChange(!props.languageChange)}
+                onClick={(e) => props.LanguageChangeRender(e)}
               />
             )}
           </div>
