@@ -133,7 +133,7 @@ function BottomCharts(props) {
   function downloadFourth() {
     exportData(
       fourthExcelValue,
-      !props.languageChange ? "იმპორტი, მლნ ლარი" : "Import, mil Gel.xls"
+      !props.languageChange ? "იმპორტი, მლნ ლარი.xls" : "Import, mil Gel.xls"
     );
   }
   function downloadFifth() {
@@ -141,7 +141,7 @@ function BottomCharts(props) {
       fifthExcelValue,
 
       !props.languageChange
-        ? "ძირითადი კაპიტალის ფორმირება, მლნ ლარი"
+        ? "ძირითადი კაპიტალის ფორმირება, მლნ ლარი.xls"
         : "Gross capital formation, mil Gel.xls"
     );
   }
@@ -149,7 +149,7 @@ function BottomCharts(props) {
     exportData(
       sixExcelValue,
       !props.languageChange
-        ? "შრომის ანაზღაურება, მლნ ლარი"
+        ? "შრომის ანაზღაურება, მლნ ლარი.xls"
         : "Compensation of employees, mil Gel.xls"
     );
   }

@@ -6,6 +6,7 @@ import InputRender from "./InputRender";
 import "./mainPage.css";
 import RightSide from "./RightSide";
 import { useEffect } from "react";
+import {useNavigate} from 'react-router-dom'
 
 function MainPage(props) {
   const [languageChange, SetLanguageChange] = useState(false);
@@ -20,6 +21,7 @@ function MainPage(props) {
     window.sessionStorage.setItem("languageChange", languageChange);
   }, [languageChange]);
 
+  console.log(useNavigate)
   const [infoprecent, SetInfoPrecent] = useState({
     a: "",
     b: "",
@@ -64,6 +66,8 @@ function MainPage(props) {
     s: "",
     t: "",
   });
+
+  //language in routing
 
   const [newval, setnewvalue] = useState([]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
