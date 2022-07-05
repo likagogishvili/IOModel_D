@@ -10,7 +10,6 @@ import { useNavigate, useParams } from "react-router-dom";
 
 function MainPage(props) {
   let navigate = useNavigate();
-  // let location = useLocation();
   let params = useParams();
 
   const [languageChange, SetLanguageChange] = useState(false);
@@ -25,6 +24,7 @@ function MainPage(props) {
         JSON.parse(window.sessionStorage.getItem("languageChange"))
       );
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
