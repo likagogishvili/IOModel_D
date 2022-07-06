@@ -246,51 +246,77 @@ input[type="number"] {
   /* Chrome, Safari, Edge, Opera */
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1400px) {
   .inputFieldWhite {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
   .firT {
     height: 80%;
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
   .inputFieldDark {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
   .secT {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
   .thirdT {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
   .inputP > p {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
 
   .last2T {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 1029px) {
   .inputFieldWhite {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
+  }
+  .firT {
+    height: 80%;
+    font-size: 0.5rem;
+  }
+  .inputFieldDark {
+    font-size: 0.5rem;
+  }
+  .secT {
+    font-size: 0.5rem;
+  }
+  .thirdT {
+    font-size: 0.5rem;
+  }
+  .inputP > p {
+    font-size: 0.5rem;
+  }
+
+  .last2T {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .inputFieldWhite {
+    font-size: 0.4rem;
   }
   .firT {
     height: 40%;
     font-size: 0.3rem;
   }
   .inputFieldDark {
-    font-size: 0.6rem;
+    font-size: 0.4rem;
   }
   .secT {
-    font-size: 0.45rem;
+    font-size: 0.4rem;
   }
   .thirdT {
-    font-size: 0.45rem;
+    font-size: 0.4rem;
   }
   .inputP > p {
-    font-size: 0.45rem;
+    font-size: 0.4rem;
   }
 
   .last2T {
