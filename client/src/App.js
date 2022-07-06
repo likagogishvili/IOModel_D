@@ -5,7 +5,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Data />} >
+        <Route path="/" element={<Data />}>
           <Route index element={<Data />} />
           <Route path=":lang" element={<Data />} />
         </Route>

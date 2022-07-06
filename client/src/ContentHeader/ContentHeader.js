@@ -13,6 +13,9 @@ function ContentHeader(props) {
   function ChangePopUp() {
     SetPopUp(!popUp);
   }
+  let url = "http://eap.geostat.ge/";
+  let encodedURL = encodeURI(url);
+
   return (
     <header
       className="contH"
@@ -168,9 +171,10 @@ function ContentHeader(props) {
               />
             </div>
             <a
-              href="https://www.facebook.com/geostat.ge/"
               target="_blank"
               rel="noreferrer"
+              href={`https://facebook.com/sharer/sharer.php?u=${encodedURL}`}
+              property="og:title"
             >
               <img src={facebook} alt="" width={"100%"} height={"100%"} />
             </a>

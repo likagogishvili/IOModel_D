@@ -188,6 +188,7 @@ p {
   }
   .contH > .divHeaderCont {
     font-size: 1.5rem;
+    white-space: nowrap;
   }
   .imgDiv > img {
     width: 18%;

@@ -31,7 +31,6 @@ function MainPage(props) {
     window.sessionStorage.setItem("languageChange", languageChange);
   }, [languageChange]);
 
-  console.log(useNavigate);
   const [infoprecent, SetInfoPrecent] = useState({
     a: "",
     b: "",
