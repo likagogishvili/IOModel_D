@@ -248,14 +248,14 @@ input[type="number"] {
 
 @media (max-width: 1400px) {
   .inputFieldWhite {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .firT {
     height: 80%;
     font-size: 0.6rem;
   }
   .inputFieldDark {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .secT {
     font-size: 0.6rem;
@@ -274,14 +274,14 @@ input[type="number"] {
 
 @media (max-width: 1029px) {
   .inputFieldWhite {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   .firT {
     height: 80%;
     font-size: 0.5rem;
   }
   .inputFieldDark {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   .secT {
     font-size: 0.5rem;
@@ -290,7 +290,7 @@ input[type="number"] {
     font-size: 0.5rem;
   }
   .inputP > p {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
 
   .last2T {
@@ -300,14 +300,14 @@ input[type="number"] {
 
 @media (max-width: 500px) {
   .inputFieldWhite {
-    font-size: 0.4rem;
+    font-size: 0.8rem;
   }
   .firT {
     height: 40%;
     font-size: 0.3rem;
   }
   .inputFieldDark {
-    font-size: 0.4rem;
+    font-size: 0.8rem;
   }
   .secT {
     font-size: 0.4rem;
@@ -316,7 +316,7 @@ input[type="number"] {
     font-size: 0.4rem;
   }
   .inputP > p {
-    font-size: 0.4rem;
+    font-size: 0.7rem;
   }
 
   .last2T {
