@@ -34,7 +34,7 @@ function ChartSwiper(props) {
             <p className="rightSideChartsp">
               {!props.languageChange
                 ? "მთლიანი შიდა პროდუქტი, მლნ ლარი"
-                : "GVA, Mil. Lari"}
+                : "GVA, Mil. Gel"}
             </p>
             <PieChart
               thirdDiagramValues1={props.thirdDiagramValues2}
@@ -50,7 +50,7 @@ function ChartSwiper(props) {
             <p className="rightSideChartsp">
               {!props.languageChange
                 ? "გამოშვება, მლნ ლარი"
-                : "Output, Mil. Lari"}
+                : "Output, Mil. Gel"}
             </p>
             <PieChart
               thirdDiagramValues1={props.thirdDiagramValues1}
@@ -81,7 +81,7 @@ function ChartSwiper(props) {
             style={{ backgroundImage: `url(${portali3})` }}
           >
             <p className="rightSideChartsp">
-              {!props.languageChange ? "იმპორტი, მლნ ლარი" : "Import Mil. Lari"}
+              {!props.languageChange ? "იმპორტი, მლნ ლარი" : "Import Mil. Gel"}
             </p>
             <PieChart
               thirdDiagramValues1={props.thirdDiagramValues4}
@@ -97,7 +97,7 @@ function ChartSwiper(props) {
             <p className="rightSideChartsp">
               {!props.languageChange
                 ? "ძირითადი კაპიტალის ფორმირება, მლნ ლარი"
-                : "GFCF Mil. Lari"}
+                : "GFCF Mil. Gel"}
             </p>
             <PieChart
               thirdDiagramValues1={props.thirdDiagramValues5}
@@ -113,7 +113,7 @@ function ChartSwiper(props) {
             <p className="rightSideChartsp">
               {!props.languageChange
                 ? "შრომის ანაზღაურება, მლნ ლარი"
-                : "Compensation of employees. Mil. Lari"}
+                : "Compensation of employees. Mil. Gel"}
             </p>
             <PieChart
               thirdDiagramValues1={props.thirdDiagramValues6}
