@@ -35,7 +35,6 @@ function ContentHeader(props) {
         <div className="headerContentSmall">
           <a
             href="http://eap.geostat.ge/"
-            target="_blank"
             rel="noreferrer"
             className="divHeaderCont1"
           >

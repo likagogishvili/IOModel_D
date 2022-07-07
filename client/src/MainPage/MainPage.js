@@ -246,22 +246,10 @@ function MainPage(props) {
     <div>
       {!languageChange ? (
         <div>
-          <meta property="og:title" content="ეკონომიკური ანალიზის პორტალი" />
-          <meta
-            property="og:image"
-            content="http://eap.geostat.ge/pageScreen.jpg"
-          />
-
           <title>ეკონომიკური ანალიზის პორტალი</title>
         </div>
       ) : (
         <div>
-          <meta property="og:title" content="Economic Analysis Portal" />
-          <meta
-            property="og:image"
-            content="http://eap.geostat.ge/pageScreenEng.jpg"
-          />
-
           <title>Economic Analysis Portal</title>
         </div>
       )}
