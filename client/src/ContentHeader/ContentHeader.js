@@ -3,7 +3,9 @@ import facebook from "./img/facebook.png";
 import twitter from "./img/twitter.png";
 import youtube from "./img/youtube.png";
 import headerImage from "./img/headerBG.png";
-import headerLogo from "./img/headerLogo.png";
+import headerLogo from "./img/headerLogo.svg";
+import headerLogoEng from "./img/logo_eng.svg";
+
 import iconI from "./img/information.png";
 import { useState } from "react";
 import InfoWindow from "./InfoWindow";
@@ -21,12 +23,13 @@ function ContentHeader(props) {
       className="contH"
       style={{ backgroundImage: `url(${headerImage})` }}
     >
-      {
-        popUp && 
-      <InfoWindow popUp={popUp} languageChange={props.languageChange} ChangePopUp = {ChangePopUp} />
-
-      }
-
+      {popUp && (
+        <InfoWindow
+          popUp={popUp}
+          languageChange={props.languageChange}
+          ChangePopUp={ChangePopUp}
+        />
+      )}
 
       <div className="divHeaderCont">
         <div className="headerContentSmall">
@@ -36,7 +39,11 @@ function ContentHeader(props) {
             rel="noreferrer"
             className="divHeaderCont1"
           >
-            <img src={headerLogo} alt="" />
+            {!props.languageChange ? (
+              <img src={headerLogo} alt="" />
+            ) : (
+              <img src={headerLogoEng} alt="" />
+            )}
           </a>
 
           <div className="divHeaderCont2">

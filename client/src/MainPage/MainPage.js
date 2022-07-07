@@ -245,9 +245,25 @@ function MainPage(props) {
   return (
     <div>
       {!languageChange ? (
-        <title>ეკონომიკური ანალიზის პორტალი</title>
+        <div>
+          <meta property="og:title" content="ეკონომიკური ანალიზის პორტალი" />
+          <meta
+            property="og:image"
+            content="http://eap.geostat.ge/pageScreen.jpg"
+          />
+
+          <title>ეკონომიკური ანალიზის პორტალი</title>
+        </div>
       ) : (
-        <title>Economic Analysis Portal</title>
+        <div>
+          <meta property="og:title" content="Economic Analysis Portal" />
+          <meta
+            property="og:image"
+            content="http://eap.geostat.ge/pageScreenEng.jpg"
+          />
+
+          <title>Economic Analysis Portal</title>
+        </div>
       )}
 
       <ContentHeader
