@@ -119,6 +119,9 @@ p {
 .imgDiv > :nth-child(4) :hover {
   background-color: #fe0000;
 }
+.Info :hover {
+  background-color: #397db9;
+}
 .headerContentSmall {
   width: 83%;
   display: flex;

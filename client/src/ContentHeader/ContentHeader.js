@@ -15,8 +15,17 @@ function ContentHeader(props) {
   function ChangePopUp() {
     SetPopUp(!popUp);
   }
-  let url = "http://eap.geostat.ge/";
+
+  var url;
+
+  if(!props.languageChange ){
+    url = "http://eap.geostat.ge:4001/share_ka";
+  }else{
+    url = "http://eap.geostat.ge:4001/share_en";
+  }
+
   let encodedURL = encodeURI(url);
+
 
   return (
     <header
