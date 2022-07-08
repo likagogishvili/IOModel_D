@@ -18,14 +18,13 @@ function ContentHeader(props) {
 
   var url;
 
-  if(!props.languageChange ){
+  if (!props.languageChange) {
     url = "http://eap.geostat.ge:4001/share_ka";
-  }else{
+  } else {
     url = "http://eap.geostat.ge:4001/share_en";
   }
 
   let encodedURL = encodeURI(url);
-
 
   return (
     <header

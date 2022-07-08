@@ -302,12 +302,13 @@ function InputRender(props) {
         >
           B
         </div>
-        <div
-          className="inputP"
-          onMouseEnter={() => setSymbol2(true)}
-          onMouseLeave={() => setSymbol2(false)}
-        >
-          <p>{namesarray[1]}</p>
+        <div className="inputP">
+          <p
+            onMouseEnter={() => setSymbol2(true)}
+            onMouseLeave={() => setSymbol2(false)}
+          >
+            {namesarray[1]}
+          </p>
         </div>
         <div className="sabolooMoxmareba">
           {(Math.round(props.data[1] * 10) / 10).toString()}
@@ -546,12 +547,14 @@ function InputRender(props) {
       </section>
 
       <section className="inputFieldWhite">
-        <div className="inputAlphabet">G</div>
         <div
-          className="inputP"
+          className="inputAlphabet"
           onMouseEnter={() => setSymbol7(true)}
           onMouseLeave={() => setSymbol7(false)}
         >
+          G
+        </div>
+        <div className="inputP">
           <p
             onMouseEnter={() => setSymbol7(true)}
             onMouseLeave={() => setSymbol7(false)}
