@@ -6,7 +6,7 @@ var cors = require("cors");
 app.use(cors());
 
 app.get("/GamoshvebisMult", function (req, res) {
-  let sql = "SELECT * FROM GamoshvebisMultipikatori";
+  let sql = "SELECT * FROM gamoshvebismultipikatori";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;
@@ -16,7 +16,7 @@ app.get("/GamoshvebisMult", function (req, res) {
 });
 
 app.get("/DamatebuliMult", function (req, res) {
-  let sql = "SELECT * FROM DamatebuliMultiplikatori";
+  let sql = "SELECT * FROM damatebulimultiplikatori";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;
@@ -26,7 +26,7 @@ app.get("/DamatebuliMult", function (req, res) {
 });
 
 app.get("/DasaqmebisMult", function (req, res) {
-  let sql = "SELECT * FROM DasaqmebisMultiplikatori1";
+  let sql = "SELECT * FROM dasaqmebismultiplikatori1";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;
@@ -36,7 +36,7 @@ app.get("/DasaqmebisMult", function (req, res) {
 });
 
 app.get("/ImportisMult", function (req, res) {
-  let sql = "SELECT * FROM ImportisMultiplikatori";
+  let sql = "SELECT * FROM importismultiplikatori";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;
@@ -45,7 +45,7 @@ app.get("/ImportisMult", function (req, res) {
   });
 });
 app.get("/DziritadiKapitaliMult", function (req, res) {
-  let sql = "SELECT * FROM DziritadiKapitaliMultiplikatori";
+  let sql = "SELECT * FROM dziritadikapitalimultiplikatori";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;
@@ -55,7 +55,7 @@ app.get("/DziritadiKapitaliMult", function (req, res) {
 });
 
 app.get("/ShromisAnazgaureba", function (req, res) {
-  let sql = "SELECT * FROM ShromisMultiplikatori";
+  let sql = "SELECT * FROM shromismultiplikatori";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;
@@ -65,7 +65,7 @@ app.get("/ShromisAnazgaureba", function (req, res) {
 });
 
 app.get("/MtlianiMultipikatorebi", function (req, res) {
-  let sql = "SELECT * FROM MtlianiMultiplikatorebi1";
+  let sql = "SELECT * FROM mtlianimultiplikatorebi1";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;
@@ -75,7 +75,7 @@ app.get("/MtlianiMultipikatorebi", function (req, res) {
 });
 
 app.get("/MimdinareGirebuleba", function (req, res) {
-  let sql = "SELECT * FROM MimdinareGirebulebaDzveli1";
+  let sql = "SELECT * FROM mimdinaregirebulebadzveli1";
   connection.query(sql, function (err, results) {
     connection.query(sql, function (err, results) {
       if (err) throw err;

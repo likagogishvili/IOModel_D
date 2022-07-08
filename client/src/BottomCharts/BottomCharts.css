@@ -12,6 +12,7 @@
   background-color: rgb(255, 255, 255);
   border: 1px solid black;
   font-family: "Ninomtavruli";
+
 }
 .arrow {
   border: solid black;
@@ -84,9 +85,11 @@
 @media only screen and (max-width: 600px) {
   .chartBottomDark {
     width: 100%;
+    margin-top: 4%;
   }
   .chartBottomLight {
     width: 100%;
+    margin-top: 4%;
   }
   .downloadBTN {
     width: 20%;
@@ -94,11 +97,5 @@
     margin-bottom: 2%;
     font-family: "Ninomtavruli";
   }
-  .renderingWithArrow {
-    padding-top: 6%;
-  }
-  .renderingWithArrow > p {
-    padding-top: 3%;
-    padding-bottom: 0;
-  }
+
 }
