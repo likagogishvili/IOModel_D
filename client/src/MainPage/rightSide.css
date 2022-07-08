@@ -47,7 +47,7 @@
   border-radius: 20px;
   font-size: 0.8rem;
   font-family: "Ninomtavruli";
-  background-color: #397db9;
+  background-color: #397db952;
 }
 .RightContent {
   width: 100%;
@@ -69,6 +69,7 @@
   color: white;
   background-color: rgb(56, 126, 185);
   border-radius: 20px;
+  padding: 1%;
 }
 .RightContentChild2 {
   width: 19%;
@@ -107,6 +108,7 @@
 @media only screen and (max-width: 900px) {
   .RightInformation {
     width: 100% !important;
+    margin-top: 5%;
   }
   .rightHeader {
     height: 60px;

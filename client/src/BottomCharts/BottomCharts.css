@@ -1,6 +1,5 @@
 .chartBottomDark {
   width: 80%;
-  margin: auto;
   background-color: rgb(232, 232, 232);
   border: 1px solid black;
   margin: 1%;
@@ -13,7 +12,6 @@
   background-color: rgb(255, 255, 255);
   border: 1px solid black;
   font-family: "Ninomtavruli";
-  margin: auto;
 }
 .arrow {
   border: solid black;
@@ -42,6 +40,8 @@
   width: 100%;
   text-align: center;
   font-size: 1.3rem;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 .downloadP {
   width: 15%;
@@ -93,5 +93,12 @@
     margin-left: 70%;
     margin-bottom: 2%;
     font-family: "Ninomtavruli";
+  }
+  .renderingWithArrow {
+    padding-top: 6%;
+  }
+  .renderingWithArrow > p {
+    padding-top: 3%;
+    padding-bottom: 0;
   }
 }
