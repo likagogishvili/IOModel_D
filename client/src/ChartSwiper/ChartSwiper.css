@@ -24,6 +24,7 @@
 }
 @media only screen and (max-width: 900px) {
   .swiperCharts {
+    margin-top: 6%;
     width: 100%;
     margin-right: 0;
   }
