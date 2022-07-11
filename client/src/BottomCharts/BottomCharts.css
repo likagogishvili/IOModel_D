@@ -12,7 +12,6 @@
   background-color: rgb(255, 255, 255);
   border: 1px solid black;
   font-family: "Ninomtavruli";
-
 }
 .arrow {
   border: solid black;
@@ -86,6 +85,7 @@
   .chartBottomDark {
     width: 100%;
     margin-top: 4%;
+    padding-left: 2%;
   }
   .chartBottomLight {
     width: 100%;

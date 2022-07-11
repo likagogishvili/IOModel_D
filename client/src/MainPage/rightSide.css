@@ -35,6 +35,7 @@
   color: white;
   font-family: "Ninomtavruli";
   font-size: 0.8rem;
+  padding: 1%;
 }
 .rightHeaderChild2 {
   width: 19%;
@@ -48,6 +49,7 @@
   font-size: 0.8rem;
   font-family: "Ninomtavruli";
   background-color: #397db952;
+  padding: 1%;
 }
 .RightContent {
   width: 100%;
@@ -117,16 +119,36 @@
 
   .rightHeaderChild2 {
     border-radius: 20px;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
   }
   .RightInformation {
     height: 1400px;
     width: 90%;
   }
   .RightContentChild1 {
-    font-size: 0.45rem;
+    font-size: 0.6rem;
   }
   .RightContentChild2 {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .rightHeaderChild2 {
+    border-radius: 15px;
+    font-size: 0.46rem;
+  }
+  .RightInformation {
+    height: 1400px;
+    width: 90%;
+  }
+  .RightContentChild1 {
+    font-size: 0.55rem;
+  }
+  .RightContentChild2 {
+    font-size: 0.7rem;
+  }
+  .RightContentChild3 {
+    font-size: 0.7rem;
   }
 }

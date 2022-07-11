@@ -10,7 +10,6 @@
   font-family: "Noto Sans Georgian", sans-serif;
   margin-top: 1%;
   margin-bottom: 1%;
-
 }
 .LeftInformation {
   width: 50%;
@@ -309,27 +308,68 @@ input[type="number"] {
 }
 
 @media (max-width: 500px) {
+  .inputHeader {
+    height: 80px;
+    width: 100%;
+    border-bottom: 2px solid rgb(107, 126, 181);
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    align-items: center;
+    font-family: "Ninomtavruli";
+  }
   .inputFieldWhite {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .firT {
     height: 40%;
-    font-size: 0.3rem;
+    font-size: 0.5rem;
   }
   .inputFieldDark {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .secT {
-    font-size: 0.4rem;
+    width: 30%;
+
+    font-size: 0.6rem;
   }
   .thirdT {
-    font-size: 0.4rem;
+    font-size: 0.55rem;
   }
   .inputP > p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   .last2T {
-    font-size: 0.44rem;
+    font-size: 0.6rem;
+    width: 23%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .inputFieldWhite {
+    font-size: 0.6rem;
+  }
+  .firT {
+    height: 40%;
+    font-size: 0.5rem;
+  }
+  .inputFieldDark {
+    font-size: 0.6rem;
+  }
+  .secT {
+    width: 30%;
+    font-size: 0.45rem;
+  }
+  .thirdT {
+    font-size: 0.45rem;
+  }
+  .inputP > p {
+    font-size: 0.6rem;
+  }
+
+  .last2T {
+    font-size: 0.4rem;
+    width: 23%;
   }
 }
