@@ -54,43 +54,43 @@ function HoverOni(props) {
       {props.symbol1 && <p className="onSymbolHover">{namesarray[0]}</p>}
 
       {props.symbol2 && (
-        <p className="onSymbolHover" style={{ top: 284 }}>
+        <p className="onSymbolHover" style={{ top: 289 }}>
           {namesarray[1]}
         </p>
       )}
 
       {props.symbol3 && (
-        <p className="onSymbolHover" style={{ top: 335 }}>
+        <p className="onSymbolHover" style={{ top: 336 }}>
           {namesarray[2]}
         </p>
       )}
 
       {props.symbol4 && (
-        <p className="onSymbolHover" style={{ top: 386 }}>
+        <p className="onSymbolHover" style={{ top: 389 }}>
           {namesarray[3]}
         </p>
       )}
 
       {props.symbol5 && (
-        <p className="onSymbolHover" style={{ top: 437 }}>
+        <p className="onSymbolHover" style={{ top: 442 }}>
           {namesarray[4]}
         </p>
       )}
 
       {props.symbol6 && (
-        <p className="onSymbolHover" style={{ top: 490 }}>
+        <p className="onSymbolHover" style={{ top: 495 }}>
           {namesarray[5]}
         </p>
       )}
 
       {props.symbol7 && (
-        <p className="onSymbolHover" style={{ top: 545 }}>
+        <p className="onSymbolHover" style={{ top: 548 }}>
           {namesarray[6]}
         </p>
       )}
 
       {props.symbol8 && (
-        <p className="onSymbolHover" style={{ top: 598 }}>
+        <p className="onSymbolHover" style={{ top: 599 }}>
           {namesarray[7]}
         </p>
       )}
@@ -101,62 +101,62 @@ function HoverOni(props) {
         </p>
       )}
       {props.symbol10 && (
-        <p className="onSymbolHover" style={{ top: 702 }}>
+        <p className="onSymbolHover" style={{ top: 705 }}>
           {namesarray[9]}
         </p>
       )}
       {props.symbol11 && (
-        <p className="onSymbolHover" style={{ top: 755 }}>
+        <p className="onSymbolHover" style={{ top: 759 }}>
           {namesarray[10]}
         </p>
       )}
 
       {props.symbol12 && (
-        <p className="onSymbolHover" style={{ top: 807 }}>
+        <p className="onSymbolHover" style={{ top: 809 }}>
           {namesarray[11]}
         </p>
       )}
       {props.symbol13 && (
-        <p className="onSymbolHover" style={{ top: 860 }}>
+        <p className="onSymbolHover" style={{ top: 868 }}>
           {namesarray[12]}
         </p>
       )}
       {props.symbol14 && (
-        <p className="onSymbolHover" style={{ top: 913 }}>
+        <p className="onSymbolHover" style={{ top: 922 }}>
           {namesarray[13]}
         </p>
       )}
       {props.symbol15 && (
-        <p className="onSymbolHover" style={{ top: 966 }}>
+        <p className="onSymbolHover" style={{ top: 970 }}>
           {namesarray[14]}
         </p>
       )}
 
       {props.symbol16 && (
-        <p className="onSymbolHover" style={{ top: 1019 }}>
+        <p className="onSymbolHover" style={{ top: 1025 }}>
           {namesarray[15]}
         </p>
       )}
       {props.symbol17 && (
-        <p className="onSymbolHover" style={{ top: 1071 }}>
+        <p className="onSymbolHover" style={{ top: 1079 }}>
           {namesarray[16]}
         </p>
       )}
 
       {props.symbol18 && (
-        <p className="onSymbolHover" style={{ top: 1124 }}>
+        <p className="onSymbolHover" style={{ top: 1130 }}>
           {namesarray[17]}
         </p>
       )}
 
       {props.symbol19 && (
-        <p className="onSymbolHover" style={{ top: 1177 }}>
+        <p className="onSymbolHover" style={{ top: 1182 }}>
           {namesarray[18]}
         </p>
       )}
 
       {props.symbol20 && (
-        <p className="onSymbolHover" style={{ top: 1230 }}>
+        <p className="onSymbolHover" style={{ top: 1236 }}>
           {namesarray[19]}
         </p>
       )}
