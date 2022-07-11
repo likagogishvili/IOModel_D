@@ -12,6 +12,8 @@
   background-color: rgb(255, 255, 255);
   border: 1px solid black;
   font-family: "Ninomtavruli";
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 .arrow {
   border: solid black;
@@ -30,7 +32,7 @@
 }
 .renderingWithArrow {
   width: 100%;
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,8 +42,6 @@
   width: 100%;
   text-align: center;
   font-size: 1.3rem;
-  padding-top: 2%;
-  padding-bottom: 2%;
 }
 .downloadP {
   width: 15%;
@@ -74,6 +74,8 @@
   border: none;
   background-color: transparent;
   font-family: "Ninomtavruli";
+  font-size: 1.1rem;
+  color: #86342e;
 }
 .btnsDownload {
   width: 100%;
@@ -81,7 +83,7 @@
   justify-content: space-between;
   font-family: "Ninomtavruli";
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .chartBottomDark {
     width: 100%;
     margin-top: 4%;
@@ -92,10 +94,10 @@
     margin-top: 4%;
   }
   .downloadBTN {
-    width: 20%;
-    margin-left: 70%;
+    width: 30%;
+    margin-left: 60%;
     margin-bottom: 2%;
     font-family: "Ninomtavruli";
+    font-size: 1rem;
   }
-
 }
