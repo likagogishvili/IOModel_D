@@ -13,18 +13,20 @@ function Credits(props) {
           : "National Statistics Office of Georgia (Geostat)"}
       </p>
 
-      <p style={{ fontSize: "11px" }}>
+      <p style={{ fontSize: "11px", color:'#5A80B8' }}>
         {props.languageChange === false ? (
           <a
             href="https://www.geostat.ge/ka/page/monacemta-gamoyenebis-pirobebi"
-            style={{ color: "#000"}}
+            style={{ color: "#5A80B8"}}
+            target="_blank"
           >
             მონაცემთა გამოყენების პირობები
           </a>
         ) : (
           <a
             href="https://www.geostat.ge/en/page/monacemta-gamoyenebis-pirobebi"
-            style={{ color: "#000"}}
+            style={{ color: "#5A80B8"}}
+            target="_blank"
           >
             Terms of Use
           </a>
