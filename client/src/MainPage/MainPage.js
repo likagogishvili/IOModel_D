@@ -7,6 +7,7 @@ import "./mainPage.css";
 import RightSide from "./RightSide";
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Credits from "../Credits/Credits";
 
 function MainPage(props) {
   let navigate = useNavigate();
@@ -323,6 +324,8 @@ function MainPage(props) {
         shromaSxvaobasecondValue={sixthDiagramValue}
         languageChange={languageChange}
       />
+
+      <Credits         languageChange={languageChange} />
     </div>
   );
 }

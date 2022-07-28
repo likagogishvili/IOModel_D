@@ -1,0 +1,13 @@
+.creditsdiv {
+    background-color: #f4f4f4;
+    padding-top: 1%;
+    font-size: 0.625rem;
+    color: #808083;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Ninomtavruli";
+  }
+.creditsdiv >p{
+    text-align: center;
+}

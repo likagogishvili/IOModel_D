@@ -1,7 +1,6 @@
 import MainPage from "../MainPage/MainPage";
 import Axios from "axios";
 import { useEffect, useState } from "react";
-
 function Data() {
   const [gamoshvebisMult, SetGamoshvebisMult] = useState([]);
   const [damatebuliMult, SetDamatebuliMult] = useState([]);
@@ -448,7 +447,8 @@ function Data() {
         dzveliShroma={dzveliShroma}
         axaliMtlianiMultiplikatorebi={axaliMtlianiMultiplikatorebi}
       />
-      <p></p>
+
+      
     </div>
   );
 }
