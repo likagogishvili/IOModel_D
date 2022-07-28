@@ -325,7 +325,7 @@ function MainPage(props) {
         languageChange={languageChange}
       />
 
-      <Credits         languageChange={languageChange} />
+      <Credits languageChange={languageChange} />
     </div>
   );
 }

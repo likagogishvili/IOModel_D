@@ -4,12 +4,12 @@ function Credits(props) {
     <div className="creditsdiv">
       <p style={{ fontSize: "10px" }}>
         {props.languageChange === false
-          ? "© 2022 | ყველა უფლება დაცულია"
+          ? "© 2022  ყველა უფლება დაცულია"
           : "© 2022 All rights reserved."}
       </p>
       <p style={{ fontSize: "12px" }}>
         {props.languageChange === false
-          ? "სტატისტიკის ეროვნული სამსახური"
+          ? "საქართველოს სტატისტიკის ეროვნული სამსახური (საქსტატი)"
           : "National Statistics Office of Georgia (Geostat)"}
       </p>
 
